@@ -1,25 +1,106 @@
 
-/* =========================================
-   MEJORAS DEL PORTAFOLIO · OCTUBRE 2026
-   ========================================= */
+/* ==========================================
+   PORTAFOLIO CURRICULAR
+   ASPIRANTE PMJ TOLUCA 2026
+   Hoja de estilos principal
+   ========================================== */
 
-/* Encabezado */
+/* 1. Variables y configuración general */
+:root {
+  --paper: #f6f3ed;
+  --white: #ffffff;
+  --ink: #292929;
+  --muted: #706b67;
+  --line: #e5dfd6;
+  --burgundy: #762d40;
+  --burgundy-dark: #592030;
+  --soft: #eee8e0;
+  --max: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--burgundy);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--burgundy);
+  color: var(--white);
+}
+
+/* 2. Encabezado y navegación */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   background: rgba(250, 248, 244, 0.96);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid #ded5cb;
   box-shadow: 0 4px 20px rgba(41, 29, 25, 0.035);
 }
 
 .header-inner {
+  max-width: var(--max);
+  margin: auto;
+  padding: 17px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 30px;
-  padding-top: 17px;
-  padding-bottom: 17px;
 }
 
 .brand {
+  display: block;
   flex-shrink: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
   font-size: 1.16rem;
+  font-weight: 700;
+  line-height: 1.25;
   letter-spacing: -0.025em;
+}
+
+.brand:hover {
+  color: var(--burgundy);
+  text-decoration: none;
 }
 
 .brand-name {
@@ -27,52 +108,133 @@
 }
 
 .brand small {
-  font-size: 0.62rem;
+  display: block;
+  margin-top: 6px;
+  color: var(--burgundy);
+  font: 700 0.62rem/1.5 Arial, sans-serif;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 5px;
 }
 
 .nav a {
   padding: 9px 10px;
   border-radius: 3px;
+  color: var(--muted);
   font-size: 0.77rem;
+  white-space: nowrap;
   transition: background 0.2s ease, color 0.2s ease;
 }
 
 .nav a:hover {
-  background: #eee7df;
+  background: var(--soft);
   color: var(--burgundy);
   text-decoration: none;
 }
 
 .nav a[aria-current="page"] {
   background: var(--burgundy);
-  color: white;
+  color: var(--white);
+  font-weight: 700;
 }
 
 .menu-toggle {
-  cursor: pointer;
-  font: inherit;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--white);
+  padding: 9px 12px;
+  color: var(--ink);
   font-size: 0.83rem;
+  cursor: pointer;
 }
 
 .menu-toggle:hover {
   border-color: var(--burgundy);
 }
 
-/* Presentación principal */
+/* 3. Contenedores generales */
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: auto;
+  padding: 0 24px;
+}
+
+main {
+  min-height: 65vh;
+}
+
+/* 4. Tipografía */
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  line-height: 1.14;
+}
+
+h1 {
+  margin: 18px 0 22px;
+  font-size: clamp(2.6rem, 5.8vw, 5.1rem);
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.9rem, 3.2vw, 3rem);
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+p {
+  margin: 0 0 16px;
+}
+
+.eyebrow,
+.kicker {
+  color: var(--burgundy);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.kicker {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+}
+
+/* 5. Portada principal */
 .hero {
-  padding-top: 88px;
-  padding-bottom: 78px;
+  padding: 88px 0 78px;
   background:
-    radial-gradient(ellipse at 85% 15%, rgba(118, 45, 64, 0.055), transparent 34%),
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(118, 45, 64, 0.055),
+      transparent 34%
+    ),
     var(--paper);
 }
 
 .hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
   gap: clamp(35px, 6vw, 78px);
 }
 
@@ -84,10 +246,60 @@
   line-height: 1.8;
 }
 
+.lead {
+  max-width: 660px;
+  color: #55504c;
+  font-size: 1.13rem;
+  line-height: 1.8;
+}
+
 .quote {
   max-width: 600px;
-  border-left-width: 3px;
-  font-size: 1.22rem;
+  margin: 28px 0;
+  padding: 5px 0 5px 18px;
+  border-left: 3px solid var(--burgundy);
+  color: var(--burgundy);
+  font: italic 1.22rem/1.6 Georgia, "Times New Roman", serif;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 17px;
+  border: 1px solid var(--burgundy);
+  border-radius: 2px;
+  background: var(--burgundy);
+  color: var(--white);
+  font-size: 0.86rem;
+  text-align: center;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  background: var(--burgundy-dark);
+  text-decoration: none;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--burgundy);
+}
+
+.button.secondary:hover {
+  background: var(--burgundy);
+  color: var(--white);
 }
 
 .hero-caption {
@@ -96,15 +308,34 @@
   font-size: 0.76rem;
 }
 
+/* 6. Fotografía de portada */
 .portrait {
+  position: relative;
+  display: flex;
   min-height: 480px;
-  border-color: #ded5cb;
-  background:
-    linear-gradient(145deg, #e9e0d7, #f8f5ef);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid #ded5cb;
+  background: linear-gradient(145deg, #e9e0d7, #f8f5ef);
 }
 
-.portrait .placeholder {
+.portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  position: relative;
+  z-index: 1;
   max-width: 340px;
+  padding: 32px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 .portrait .placeholder strong {
@@ -121,14 +352,21 @@
 }
 
 .portrait .placeholder span {
-  color: var(--muted);
   font-size: 0.75rem;
 }
 
-/* Títulos de sección */
+/* 7. Secciones generales */
+.section {
+  padding: 64px 0;
+  border-top: 1px solid var(--line);
+}
+
 .section-heading {
-  align-items: end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: 40px;
+  margin-bottom: 30px;
 }
 
 .section-heading h2 {
@@ -136,14 +374,27 @@
 }
 
 .section-heading p {
+  max-width: 520px;
+  margin-bottom: 0;
+  color: var(--muted);
   line-height: 1.8;
 }
 
-/* Indicadores */
+/* 8. Indicadores */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .stat {
   padding: 26px 23px;
+  border: 1px solid var(--line);
   border-radius: 4px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--white);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .stat:hover {
@@ -152,18 +403,45 @@
 }
 
 .stat strong {
+  display: block;
+  color: var(--burgundy);
+  font: 500 clamp(1.8rem, 3vw, 2.5rem)/1.1 Georgia, "Times New Roman", serif;
   letter-spacing: -0.04em;
 }
 
+.stat span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
 .evidence-note {
+  padding: 12px 0;
+  color: var(--muted);
+  font-size: 0.82rem;
   line-height: 1.7;
 }
 
-/* Tarjetas de áreas */
+/* 9. Tarjetas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
   overflow: hidden;
+  border: 1px solid var(--line);
   border-radius: 4px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--white);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card:hover {
@@ -172,13 +450,24 @@
 }
 
 .visual-placeholder {
-  background:
-    linear-gradient(135deg, #e7ddd3, #f8f5ef);
+  display: flex;
+  aspect-ratio: 4 / 3;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(135deg, #e7ddd3, #f8f5ef);
   color: #6e5c56;
+  font-size: 0.8rem;
   line-height: 1.6;
+  text-align: center;
 }
 
 .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 25px;
 }
 
@@ -196,15 +485,28 @@
 }
 
 .card p {
+  color: var(--muted);
+  font-size: 0.92rem;
   line-height: 1.8;
 }
 
 .card .text-link {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
 }
 
-/* Panel de continuidad */
+.text-link {
+  color: var(--burgundy);
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* 10. Panel de proyección */
 .projection-panel {
   max-width: 880px;
   margin: 0 auto;
@@ -229,54 +531,162 @@
   margin-top: 12px;
 }
 
-/* Pie de página centrado en una sola columna */
+/* 11. Encabezados de páginas interiores */
+.page-hero {
+  padding: 66px 0 46px;
+  border-bottom: 1px solid var(--line);
+}
+
+.page-hero h1 {
+  max-width: 900px;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+}
+
+.page-hero .lead {
+  max-width: 780px;
+}
+
+.content-section {
+  padding: 42px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.content-section:last-child {
+  border-bottom: 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 44px;
+}
+
+.content-grid p {
+  color: #56514d;
+}
+
+.list-clean {
+  margin: 0;
+  padding-left: 20px;
+  color: #56514d;
+}
+
+.list-clean li {
+  margin-bottom: 10px;
+}
+
+/* 12. Bloques destacados y paneles */
+.callout {
+  margin: 20px 0;
+  padding: 24px 26px;
+  border-left: 3px solid var(--burgundy);
+  background: #eee8e0;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.mini-panel {
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.quote-card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.1rem;
+}
+
+.quote-card small {
+  display: block;
+  margin-top: 15px;
+  color: var(--muted);
+  font: 0.8rem Arial, sans-serif;
+}
+
+.tag {
+  display: inline-block;
+  margin: 3px 4px 3px 0;
+  padding: 5px 9px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.small-label {
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* 13. Pie de página: una sola columna centrada */
 .site-footer {
   margin-top: 0;
-  background: #eee8e0;
   border-top: 1px solid #ded5cb;
+  background: #eee8e0;
 }
 
 .footer-inner {
   display: flex;
+  max-width: 800px;
   flex-direction: column;
   align-items: center;
-  gap: 0;
-  max-width: 800px;
+  margin: auto;
   padding: 48px 24px 30px;
+  gap: 0;
   text-align: center;
 }
 
 .footer-monogram {
   display: flex;
-  align-items: center;
-  justify-content: center;
   width: 48px;
   height: 48px;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 17px;
   border: 1px solid rgba(118, 45, 64, 0.35);
   border-radius: 50%;
   color: var(--burgundy);
   font: 500 1.05rem Georgia, "Times New Roman", serif;
   letter-spacing: 0.04em;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .footer-monogram:hover {
   background: var(--burgundy);
-  color: white;
+  color: var(--white);
   text-decoration: none;
 }
 
 .footer-name {
   margin-bottom: 7px;
-  font-size: 1.5rem;
+  font: 500 1.5rem Georgia, "Times New Roman", serif;
 }
 
 .footer-note {
   max-width: 620px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.77rem;
   line-height: 1.75;
 }
 
 .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 10px 23px;
   margin: 22px 0;
@@ -287,8 +697,7 @@
   font-size: 0.82rem;
 }
 
-.footer-links a:hover,
-.footer-home:hover {
+.footer-links a:hover {
   text-decoration: underline;
 }
 
@@ -311,13 +720,28 @@
   font-weight: 700;
 }
 
+.footer-home:hover {
+  text-decoration: underline;
+}
+
 .footer-copyright {
   margin: 24px 0 0;
   color: var(--muted);
   font-size: 0.7rem;
 }
 
-/* Adaptación a pantallas medianas */
+footer a {
+  color: var(--burgundy);
+}
+
+/* 14. Accesibilidad: foco visible al usar teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #a66a7a;
+  outline-offset: 3px;
+}
+
+/* 15. Pantallas medianas */
 @media (max-width: 1050px) {
   .header-inner {
     flex-wrap: wrap;
@@ -327,20 +751,38 @@
     justify-content: flex-start;
   }
 
+  .nav a {
+    font-size: 0.75rem;
+  }
+
   .hero {
     padding-top: 65px;
+  }
+
+  .hero-grid {
+    gap: 30px;
   }
 
   .portrait {
     min-height: 400px;
   }
+
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-/* Adaptación a celulares */
+/* 16. Celulares y pantallas pequeñas */
 @media (max-width: 700px) {
+  html {
+    scroll-padding-top: 75px;
+  }
+
   .header-inner {
     align-items: center;
+    flex-wrap: nowrap;
     gap: 12px;
+    padding: 13px 18px;
   }
 
   .brand {
@@ -355,8 +797,7 @@
 
   .menu-toggle {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    flex-shrink: 0;
     padding: 9px 11px;
   }
 
@@ -364,14 +805,14 @@
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
     right: 0;
+    left: 0;
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
     padding: 15px 18px 20px;
-    background: #faf8f4;
     border-bottom: 1px solid var(--line);
+    background: #faf8f4;
     box-shadow: 0 12px 20px rgba(41, 29, 25, 0.06);
   }
 
@@ -384,6 +825,10 @@
     font-size: 0.9rem;
   }
 
+  .container {
+    padding: 0 18px;
+  }
+
   .hero {
     padding: 45px 0 48px;
   }
@@ -393,17 +838,21 @@
     gap: 28px;
   }
 
-  .portrait {
-    min-height: 300px;
-    order: -1;
-  }
-
   .hero h1 {
     font-size: clamp(2.5rem, 12vw, 3.8rem);
   }
 
+  .lead {
+    font-size: 1.02rem;
+  }
+
   .quote {
     font-size: 1.08rem;
+  }
+
+  .portrait {
+    min-height: 300px;
+    order: -1;
   }
 
   .section {
@@ -435,6 +884,16 @@
     grid-template-columns: 1fr;
   }
 
+  .page-hero {
+    padding: 48px 0 34px;
+  }
+
+  .content-grid,
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
   .projection-panel {
     padding: 27px 22px;
   }
@@ -448,6 +907,7 @@
   }
 }
 
+/* 17. Teléfonos muy pequeños */
 @media (max-width: 360px) {
   .stats {
     grid-template-columns: 1fr;
@@ -458,5 +918,32 @@
     padding: 8px;
     font-size: 0.76rem;
   }
+
+  .brand {
+    font-size: 0.94rem;
+  }
+
+  .brand small {
+    font-size: 0.53rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
- 
+
+/* 18. Respeto a la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
