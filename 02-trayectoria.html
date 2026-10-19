@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Trayectoria académica | Javier Palma Romero</title>
+  <meta name="description" content="Formación académica, reconocimientos, distinciones, cursos y certificaciones de Javier Palma Romero.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Elementos específicos de la página Trayectoria */
+
+    .trajectory-intro {
+      max-width: 850px;
+    }
+
+    .trajectory-group {
+      margin-bottom: 36px;
+    }
+
+    .trajectory-group > h3 {
+      margin-bottom: 18px;
+    }
+
+    .trajectory-card {
+      margin-bottom: 22px;
+    }
+
+    .trajectory-card .card-body > p:last-child {
+      margin-bottom: 0;
+    }
+
+    .academic-period {
+      display: inline-block;
+      margin-top: 4px;
+      font-size: 0.92rem;
+      opacity: 0.8;
+    }
+
+    .award-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .award-card {
+      min-width: 0;
+    }
+
+    .award-card .card-body {
+      height: 100%;
+    }
+
+    .award-card h4 {
+      margin-top: 0;
+    }
+
+    .evidence-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(135px, 175px));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .evidence-item {
+      margin: 0;
+      min-width: 0;
+    }
+
+    .evidence-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 1px solid #d9d9d9;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f5f5f5;
+      cursor: zoom-in;
+    }
+
+    .evidence-button img {
+      display: block;
+      width: 100%;
+      height: 145px;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+
+    .evidence-button:hover img,
+    .evidence-button:focus-visible img {
+      transform: scale(1.04);
+    }
+
+    .evidence-caption {
+      margin-top: 7px;
+      font-size: 0.86rem;
+      line-height: 1.4;
+    }
+
+    .evidence-placeholder {
+      display: flex;
+      min-height: 105px;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      border: 1px dashed #aaa;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      text-align: center;
+      opacity: 0.8;
+    }
+
+    .evidence-link {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .course-card {
+      margin-bottom: 16px;
+    }
+
+    .course-card h4 {
+      margin-bottom: 8px;
+    }
+
+    /* Visor para ampliar las evidencias */
+
+    .evidence-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 55px 20px 65px;
+      background: rgba(0, 0, 0, 0.91);
+    }
+
+    .evidence-modal.is-open {
+      display: flex;
+    }
+
+    .evidence-modal img {
+      display: block;
+      max-width: 95%;
+      max-height: 82vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+
+    .evidence-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      width: 46px;
+      height: 46px;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      font-size: 34px;
+      cursor: pointer;
+    }
+
+    .evidence-modal-caption {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      color: #fff;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .award-list {
+        grid-template-columns: 1fr;
+      }
+
+      .evidence-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .evidence-button img {
+        height: 125px;
+      }
+
+      .evidence-modal {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .evidence-modal img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        Javier Palma Romero
+        <small>Aspirante · PMJ Toluca 2026</small>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav">
+        Menú ☰
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="01-perfil.html">Perfil</a>
+        <a href="02-trayectoria.html" aria-current="page">Trayectoria</a>
+        <a href="03-liderazgo.html">Liderazgo</a>
+        <a href="04-proyectos.html">Proyectos</a>
+        <a href="05-publicaciones.html">Publicaciones</a>
+        <a href="06-servicio.html">Servicio</a>
+        <a href="07-testimonios.html">Testimonios</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="page-hero">
+      <p class="kicker">Trayectoria académica</p>
+
+      <h1>Formación, reconocimientos y aprendizaje</h1>
+
+      <p class="lead trajectory-intro">
+        Mi trayectoria académica reúne mi formación escolar y técnica,
+        los reconocimientos obtenidos por mi desempeño, mi participación
+        en concursos y las actividades de capacitación que han contribuido
+        al desarrollo de mis competencias.
+      </p>
+    </section>
+
+
+    <!-- SECCIÓN 1. FORMACIÓN ACADÉMICA -->
+
+    <section class="content-section" id="formacion">
+
+      <div class="section-heading">
+        <p class="kicker">Formación</p>
+        <h2>Formación académica</h2>
+      </div>
+
+      <div class="cards">
+
+        <article class="card trajectory-card">
+          <div class="card-body">
+            <span class="tag">2015–2021</span>
+            <h3>Educación primaria</h3>
+            <p>
+              <strong>Escuela Primaria “Daniel Delgadillo”</strong>
+            </p>
+            <p>CCT: 15DPR0320J</p>
+            <p class="academic-period">Periodo escolar: 2015–2021</p>
+          </div>
+        </article>
+
+        <article class="card trajectory-card">
+          <div class="card-body">
+            <span class="tag">2021–2024</span>
+            <h3>Educación secundaria</h3>
+            <p>
+              <strong>
+                Escuela Secundaria Oficial No. 0324
+                “Lic. Alberto García Pliego”
+              </strong>
+            </p>
+            <p>CCT: 15EES0487I</p>
+            <p class="academic-period">Periodo escolar: 2021–2024</p>
+          </div>
+        </article>
+
+        <article class="card trajectory-card">
+          <div class="card-body">
+            <span class="tag">2024–presente</span>
+            <h3>Educación media superior</h3>
+            <p>
+              <strong>
+                Plantel “Cuauhtémoc” de la Escuela Preparatoria de la UAEMéx
+              </strong>
+            </p>
+            <p>CCT: 15UBH0008Y</p>
+            <p class="academic-period">Periodo escolar: 2024–presente</p>
+          </div>
+        </article>
+
+        <article class="card trajectory-card">
+          <div class="card-body">
+            <span class="tag">2022–2024</span>
+            <h3>Formación técnica</h3>
+            <p>
+              <strong>
+                Instituto Nacional de Computación Aplicada (INCA),
+                Plantel Toluca
+              </strong>
+            </p>
+            <p>Programa: Técnico en Informática</p>
+            <p class="academic-period">Periodo de formación: 2022–2024</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- SECCIÓN 2. RECONOCIMIENTOS Y DISTINCIONES -->
+
+    <section class="content-section" id="reconocimientos">
+
+      <div class="section-heading">
+        <p class="kicker">Méritos y logros</p>
+        <h2>Reconocimientos y distinciones académicas</h2>
+      </div>
+
+      <p class="lead">
+        A lo largo de mi trayectoria académica he recibido diversos
+        reconocimientos por mi desempeño escolar, mi participación en
+        diferentes concursos institucionales, mi vocación científica,
+        mi oratoria y otras actividades universitarias.
+      </p>
+
+
+      <!-- EXCELENCIA ACADÉMICA Y CIENTÍFICA -->
+
+      <div class="trajectory-group">
+        <h3>Excelencia académica y científica</h3>
+
+        <div class="award-list">
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2026</span>
+              <h4>Primer lugar en la Olimpiada Estatal de Química del Estado de México</h4>
+              <p>
+                Destaqué a nivel estatal por mis conocimientos químicos,
+                representando con orgullo al Plantel y a mi Universidad.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/olimpiada-quimica.jpg"
+                    data-caption="Primer lugar en la Olimpiada Estatal de Química del Estado de México 2026"
+                    aria-label="Ampliar evidencia de la Olimpiada Estatal de Química">
+                    <img
+                      src="assets/evidencias/olimpiada-quimica.jpg"
+                      alt="Evidencia del primer lugar en la Olimpiada Estatal de Química"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Reconocimiento de la Olimpiada Estatal de Química
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2025B · 2026A · 2026B</span>
+              <h4>
+                Estímulo Talento Científico y Cultural “José Antonio Alzate”
+              </h4>
+              <p>
+                Apoyo otorgado por la UAEMéx en reconocimiento a mi
+                trayectoria académica, divulgación científica y actitud
+                innovadora. Obtenido durante tres periodos escolares.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/estimulo-alzate.jpg"
+                    data-caption="Estímulo Talento Científico y Cultural José Antonio Alzate">
+                    <img
+                      src="assets/evidencias/estimulo-alzate.jpg"
+                      alt="Evidencia del estímulo José Antonio Alzate"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Evidencia del estímulo
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2024–2025</span>
+              <h4>
+                Segundo lugar en el proceso de selección de nuevo ingreso
+                al Plantel “Cuauhtémoc”
+              </h4>
+              <p>
+                Resultado obtenido en el proceso de ingreso a la Escuela
+                Preparatoria de la UAEMéx, entre más de 2,200 aspirantes,
+                considerando el desempeño académico y el resultado del
+                EXANI-I CENEVAL.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/ingreso-preparatoria.jpg"
+                    data-caption="Segundo lugar en el proceso de selección de nuevo ingreso al Plantel Cuauhtémoc">
+                    <img
+                      src="assets/evidencias/ingreso-preparatoria.jpg"
+                      alt="Evidencia del resultado en el proceso de ingreso a preparatoria"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Reconocimiento de ingreso
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2021–2024</span>
+              <h4>Mejor aprovechamiento académico de secundaria</h4>
+              <p>
+                Reconocimiento por el mejor aprovechamiento académico
+                de la generación 2021–2024 de la Escuela Secundaria Oficial
+                No. 0324 “Lic. Alberto García Pliego”.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/mejor-promedio-secundaria.jpg"
+                    data-caption="Reconocimiento por mejor aprovechamiento académico de secundaria">
+                    <img
+                      src="assets/evidencias/mejor-promedio-secundaria.jpg"
+                      alt="Reconocimiento por aprovechamiento académico de secundaria"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Reconocimiento de secundaria
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2015–2021</span>
+              <h4>Mejor aprovechamiento académico de primaria</h4>
+              <p>
+                Reconocimiento por el mejor aprovechamiento académico
+                de la generación 2015–2021 de la Escuela Primaria
+                “Daniel Delgadillo”.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/mejor-promedio-primaria.jpg"
+                    data-caption="Reconocimiento por mejor aprovechamiento académico de primaria">
+                    <img
+                      src="assets/evidencias/mejor-promedio-primaria.jpg"
+                      alt="Reconocimiento por aprovechamiento académico de primaria"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Reconocimiento de primaria
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <h4>
+                Selección para integrar el Club Nacional de Excelencia
+                Académica “Niños de Oro”
+              </h4>
+              <p>
+                Seleccionado para formar parte del Club Nacional de
+                Excelencia Académica “Niños de Oro”.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/ninos-de-oro.jpg"
+                    data-caption="Selección para integrar el Club Nacional de Excelencia Académica Niños de Oro">
+                    <img
+                      src="assets/evidencias/ninos-de-oro.jpg"
+                      alt="Evidencia de selección para el Club Niños de Oro"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Evidencia de selección
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+      <!-- RECONOCIMIENTOS INTERPREPARATORIANOS -->
+
+      <div class="trajectory-group">
+        <h3>Reconocimientos interpreparatorianos</h3>
+
+        <div class="award-list">
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2026</span>
+              <h4>
+                Segundo lugar en el Certamen de Oratoria Estudiantil
+                sobre Historia, Memoria y Pertenencia Universitaria
+                del Nivel Medio Superior de la UAEMéx
+              </h4>
+              <p>
+                Participación en una competencia universitaria de expresión
+                oral sobre la historia, la identidad y los valores de la UAEMéx.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/oratoria-historia-memoria.jpg"
+                    data-caption="Segundo lugar en el Certamen de Oratoria Estudiantil 2026">
+                    <img
+                      src="assets/evidencias/oratoria-historia-memoria.jpg"
+                      alt="Evidencia del certamen interpreparatoriano de oratoria"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Certamen de oratoria 2026
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">UAEMéx</span>
+              <h4>
+                Segundo lugar en el Primer Rally de Conocimientos
+                de Cultura Digital del Nivel Medio Superior
+              </h4>
+              <p>
+                Reconocimiento en una competencia de conocimientos
+                y habilidades relacionadas con la cultura digital.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/rally-cultura-digital-interpreparatoriano.jpg"
+                    data-caption="Segundo lugar en el Rally de Conocimientos de Cultura Digital del Nivel Medio Superior">
+                    <img
+                      src="assets/evidencias/rally-cultura-digital-interpreparatoriano.jpg"
+                      alt="Evidencia del rally interpreparatoriano de cultura digital"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Rally de Cultura Digital
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2026</span>
+              <h4>
+                Segundo lugar en el Certamen Estudiantil de Conocimientos
+                sobre Historia, Memoria y Pertenencia Universitaria
+                del Nivel Medio Superior de la UAEMéx
+              </h4>
+              <p>
+                Participación en una competencia de conocimientos sobre
+                la historia, la memoria, la identidad y los valores
+                universitarios.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/certamen-conocimientos-uaemex.jpg"
+                    data-caption="Segundo lugar en el Certamen Estudiantil de Conocimientos sobre Historia, Memoria y Pertenencia Universitaria">
+                    <img
+                      src="assets/evidencias/certamen-conocimientos-uaemex.jpg"
+                      alt="Evidencia del certamen de conocimientos universitarios"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Certamen de conocimientos
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2024</span>
+              <h4>
+                Tercer lugar en el Concurso Universitario de Oratoria
+                Estudiantil sobre Valores, Símbolos e Historia de la UAEMéx
+              </h4>
+              <p>
+                Reconocimiento a la expresión oral, la argumentación
+                y el conocimiento de la historia y los símbolos universitarios.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/oratoria-valores-simbolos.jpg"
+                    data-caption="Tercer lugar en el Concurso Universitario de Oratoria Estudiantil 2024">
+                    <img
+                      src="assets/evidencias/oratoria-valores-simbolos.jpg"
+                      alt="Evidencia del concurso universitario de oratoria de 2024"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Concurso universitario de oratoria 2024
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+      <!-- RECONOCIMIENTOS INTERNOS -->
+
+      <div class="trajectory-group">
+        <h3>Reconocimientos internos del Plantel “Cuauhtémoc”</h3>
+
+        <div class="award-list">
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2025</span>
+              <h4>Ganador del CEBRATÓN UAEMéx</h4>
+              <p>
+                Diseño ganador del CEBRATÓN UAEMéx 2025 en el Plantel
+                “Cuauhtémoc”. El diseño fue plasmado en un cruce peatonal
+                exterior del Plantel, con presencia en el entorno
+                universitario y la comunidad de Toluca.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/cebraton-uaemex.jpg"
+                    data-caption="Diseño ganador del CEBRATÓN UAEMéx 2025">
+                    <img
+                      src="assets/evidencias/cebraton-uaemex.jpg"
+                      alt="Evidencia del diseño ganador del CEBRATÓN UAEMéx"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Diseño del CEBRATÓN UAEMéx
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <h4>
+                Primer lugar en el Primer Rally de Conocimientos
+                de Cultura Digital del Plantel “Cuauhtémoc”
+              </h4>
+              <p>
+                Reconocimiento por el desempeño en una competencia
+                de conocimientos sobre cultura digital y tecnologías.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/rally-digital-plantel.jpg"
+                    data-caption="Primer lugar en el Rally de Cultura Digital del Plantel Cuauhtémoc">
+                    <img
+                      src="assets/evidencias/rally-digital-plantel.jpg"
+                      alt="Evidencia del primer lugar en el rally digital del Plantel"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Rally de Cultura Digital del Plantel
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <h4>
+                Primer lugar en la fase de selección interna
+                para la Olimpiada Estatal de Química
+              </h4>
+              <p>
+                Resultado obtenido en la fase de selección del Plantel
+                “Cuauhtémoc” para representar a la institución
+                en la Olimpiada Estatal de Química.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/seleccion-interna-quimica.jpg"
+                    data-caption="Primer lugar en la selección interna para la Olimpiada Estatal de Química">
+                    <img
+                      src="assets/evidencias/seleccion-interna-quimica.jpg"
+                      alt="Evidencia de la selección interna de química"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Selección interna de Química
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2026</span>
+              <h4>Segundo lugar en el Rally de las Matemáticas</h4>
+              <p>
+                Reconocimiento obtenido en el Rally de las Matemáticas
+                2026 del Plantel “Cuauhtémoc”.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/rally-matematicas.jpg"
+                    data-caption="Segundo lugar en el Rally de las Matemáticas 2026">
+                    <img
+                      src="assets/evidencias/rally-matematicas.jpg"
+                      alt="Evidencia del segundo lugar en el Rally de las Matemáticas"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Rally de las Matemáticas 2026
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <h4>
+                Segundo lugar en el Concurso de Oratoria
+                “El poder de la palabra en la actualidad”
+              </h4>
+              <p>
+                Reconocimiento por las habilidades de expresión oral,
+                argumentación y comunicación en público.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/oratoria-poder-palabra.jpg"
+                    data-caption="Segundo lugar en el concurso de oratoria El poder de la palabra en la actualidad">
+                    <img
+                      src="assets/evidencias/oratoria-poder-palabra.jpg"
+                      alt="Evidencia del concurso de oratoria El poder de la palabra"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Concurso de oratoria
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+      <!-- OTROS RECONOCIMIENTOS -->
+
+      <div class="trajectory-group">
+        <h3>Otros reconocimientos</h3>
+
+        <div class="award-list">
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2023</span>
+              <h4>Segundo lugar en el concurso escolar “Spelling Bee”</h4>
+              <p>
+                Reconocimiento obtenido en una competencia escolar
+                de deletreo y dominio del idioma inglés.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/spelling-bee.jpg"
+                    data-caption="Segundo lugar en el concurso escolar Spelling Bee 2023">
+                    <img
+                      src="assets/evidencias/spelling-bee.jpg"
+                      alt="Evidencia del segundo lugar en el Spelling Bee"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Spelling Bee 2023
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card award-card">
+            <div class="card-body">
+              <span class="tag">2020</span>
+              <h4>
+                Seleccionado para representar a la Escuela Primaria
+                “Daniel Delgadillo” en la Olimpiada del Conocimiento Infantil
+              </h4>
+              <p>
+                Seleccionado para representar a la escuela en la
+                Olimpiada del Conocimiento Infantil 2020. La siguiente
+                etapa fue suspendida debido a la contingencia sanitaria
+                por COVID-19.
+              </p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/olimpiada-conocimiento-infantil.jpg"
+                    data-caption="Selección para representar a la Escuela Primaria Daniel Delgadillo en la Olimpiada del Conocimiento Infantil 2020">
+                    <img
+                      src="assets/evidencias/olimpiada-conocimiento-infantil.jpg"
+                      alt="Evidencia de selección para la Olimpiada del Conocimiento Infantil"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Olimpiada del Conocimiento Infantil
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 3. CURSOS, TALLERES Y CERTIFICACIONES -->
+
+    <section class="content-section" id="capacitacion">
+
+      <div class="section-heading">
+        <p class="kicker">Aprendizaje continuo</p>
+        <h2>Cursos, talleres y certificaciones</h2>
+      </div>
+
+      <p class="lead">
+        Con la intención de fortalecer mis competencias y habilidades
+        académicas, tecnológicas y sociales, he participado en diversos
+        cursos y talleres impartidos por instituciones educativas,
+        organismos públicos y plataformas especializadas.
+      </p>
+
+
+      <!-- DIPLOMADO Y CERTIFICACIÓN -->
+
+      <div class="trajectory-group">
+        <h3>Diplomado y certificación</h3>
+
+        <div class="cards">
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">2024–2025</span>
+              <h4>Diplomado “Creación de Páginas Web”</h4>
+              <p><strong>Institución:</strong> Instituto Nacional de Computación Aplicada (INCA).</p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/diplomado-paginas-web.jpg"
+                    data-caption="Diplomado Creación de Páginas Web, INCA">
+                    <img
+                      src="assets/evidencias/diplomado-paginas-web.jpg"
+                      alt="Diploma de Creación de Páginas Web"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Diploma de formación web
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Octubre de 2026</span>
+              <h4>
+                Certificación en el Estándar de Competencia EC0105:
+                “Atención al ciudadano en el sector público”
+              </h4>
+              <p><strong>Organismos:</strong> CONOCER y Secretaría de Educación Pública (SEP).</p>
+
+              <div class="evidence-gallery">
+                <figure class="evidence-item">
+                  <button
+                    class="evidence-button"
+                    type="button"
+                    data-full="assets/evidencias/certificacion-ec0105.jpg"
+                    data-caption="Certificación en el Estándar de Competencia EC0105">
+                    <img
+                      src="assets/evidencias/certificacion-ec0105.jpg"
+                      alt="Certificación del estándar EC0105"
+                      loading="lazy">
+                  </button>
+                  <figcaption class="evidence-caption">
+                    Certificación EC0105
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+      <!-- TECNOLOGÍA, DATOS E INTELIGENCIA ARTIFICIAL -->
+
+      <div class="trajectory-group">
+        <h3>Tecnología, análisis de datos e inteligencia artificial</h3>
+
+        <div class="cards">
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Enero de 2026</span>
+              <h4>“Acelerador de Carrera con Power BI + IA”</h4>
+              <p><strong>Institución:</strong> Daxus LATAM.</p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Enero de 2026</span>
+              <h4>“Domina la IA con Gemini”</h4>
+              <p><strong>Institución:</strong> Google España.</p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Enero de 2026</span>
+              <h4>Taller “Power Point I”</h4>
+              <p><strong>Institución:</strong> Instituto Nacional de Computación Aplicada (INCA).</p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Junio de 2026</span>
+              <h4>“Excel: de intermedio a avanzado”</h4>
+              <p><strong>Plataforma:</strong> Santander Open Academy.</p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Junio de 2026</span>
+              <h4>“Fundamentos de ChatGPT”</h4>
+              <p><strong>Plataforma:</strong> Santander Open Academy.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+      <!-- COMUNICACIÓN Y EXPRESIÓN ORAL -->
+
+      <div class="trajectory-group">
+        <h3>Comunicación, escritura y expresión oral</h3>
+
+        <div class="cards">
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">2024B y 2025B</span>
+              <h4>Curso-Taller de Oratoria</h4>
+              <p>
+                <strong>Institución:</strong>
+                Plantel “Cuauhtémoc” de la Escuela Preparatoria de la UAEMéx.
+              </p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">60 horas · 2026</span>
+              <h4>Taller “Lectura y redacción de textos académicos”</h4>
+              <p><strong>Institución:</strong> Universidad Abierta y a Distancia de México (UnADM).</p>
+              <p><strong>Periodo:</strong> 9 de junio al 17 de agosto de 2026.</p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">15 horas · 2026</span>
+              <h4>“Pensamiento crítico y reflexivo en ambientes digitales”</h4>
+              <p><strong>Institución:</strong> Dirección General @prende.mx.</p>
+              <p><strong>Periodo:</strong> 15 de junio al 9 de agosto de 2026.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+      <!-- LIDERAZGO, CIUDADANÍA Y SERVICIO -->
+
+      <div class="trajectory-group">
+        <h3>Liderazgo, ciudadanía y servicio</h3>
+
+        <div class="cards">
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Mayo de 2026</span>
+              <h4>Curso “La virtud de servir”</h4>
+              <p><strong>Institución:</strong> Fundación Carlos Slim.</p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Mayo de 2026</span>
+              <h4>Curso “Autoridad”</h4>
+              <p><strong>Institución:</strong> Fundación Carlos Slim.</p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Mayo de 2026</span>
+              <h4>Curso “Liderazgo”</h4>
+              <p><strong>Institución:</strong> Fundación Carlos Slim.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+      <!-- ESTADÍSTICA Y DIVULGACIÓN -->
+
+      <div class="trajectory-group">
+        <h3>Estadística, análisis y divulgación del conocimiento</h3>
+
+        <div class="cards">
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">Noviembre de 2025</span>
+              <h4>Curso “Estadísticas para las Juventudes”</h4>
+              <p><strong>Instituciones:</strong> Instituto Mexicano de la Juventud (IMJUVE) e Instituto Nacional de Estadística y Geografía (INEGI).</p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">14 horas · 2026</span>
+              <h4>Curso “Introducción al análisis demográfico”</h4>
+              <p><strong>Institución:</strong> El Colegio de México (COLMEX).</p>
+              <p><strong>Periodo:</strong> 20 de abril al 18 de septiembre de 2026.</p>
+            </div>
+          </article>
+
+          <article class="card course-card">
+            <div class="card-body">
+              <span class="tag">6 horas · Julio de 2026</span>
+              <h4>Conferencia “El Derecho a la Ciencia y el Beneficio del Acceso al Conocimiento”</h4>
+              <p><strong>Institución:</strong> Comité Nacional de Jóvenes por México.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- VISOR DE EVIDENCIAS -->
+
+  <div
+    class="evidence-modal"
+    id="evidence-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Vista ampliada de la evidencia">
+
+    <button
+      class="evidence-modal-close"
+      id="evidence-modal-close"
+      type="button"
+      aria-label="Cerrar imagen ampliada">
+      &times;
+    </button>
+
+    <img id="evidence-modal-image" src="" alt="">
+
+    <p
+      class="evidence-modal-caption"
+      id="evidence-modal-caption">
+    </p>
+  </div>
+
+
+  <!-- PIE DE PÁGINA -->
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Javier Palma Romero</div>
+        <div class="footer-note">
+          Aspirante a obtener el Premio Municipal de la Juventud Toluca 2026
+        </div>
+        <div class="footer-note">
+          Modalidad: Trayectoria Académica, Innovación y Emprendimiento
+        </div>
+        <div class="footer-note">Categoría “A” (12-17 años)</div>
+
+        <div class="footer-links">
+          <a href="tel:+527222029221">722 202 9221</a>
+          <a href="mailto:javierpalmaromero09@gmail.com">
+            javierpalmaromero09@gmail.com
+          </a>
+          <a
+            href="https://www.instagram.com/tu_usuario/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Instagram
+          </a>
+        </div>
+
+        <div class="footer-note">© 2026</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- FUNCIONES DE LA PÁGINA -->
+
+  <script src="script.js"></script>
+
+  <script>
+    (() => {
+      const modal = document.getElementById("evidence-modal");
+      const modalImage = document.getElementById("evidence-modal-image");
+      const modalCaption = document.getElementById("evidence-modal-caption");
+      const closeButton = document.getElementById("evidence-modal-close");
+
+      let previousFocus = null;
+
+      function openEvidence(button) {
+        const imagePath = button.dataset.full;
+        const caption = button.dataset.caption || "";
+
+        if (!imagePath) return;
+
+        previousFocus = button;
+
+        modalImage.src = imagePath;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
+
+        modal.classList.add("is-open");
+        document.body.classList.add("modal-open");
+        closeButton.focus();
+      }
+
+      function closeEvidence() {
+        modal.classList.remove("is-open");
+        document.body.classList.remove("modal-open");
+
+        modalImage.src = "";
+        modalImage.alt = "";
+        modalCaption.textContent = "";
+
+        if (previousFocus) {
+          previousFocus.focus();
+        }
+      }
+
+      document.querySelectorAll(".evidence-button").forEach((button) => {
+        button.addEventListener("click", () => openEvidence(button));
+      });
+
+      closeButton.addEventListener("click", closeEvidence);
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeEvidence();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && modal.classList.contains("is-open")) {
+          closeEvidence();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
