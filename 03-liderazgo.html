@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Liderazgo y representación estudiantil | Javier Palma Romero</title>
+  <meta name="description" content="Trayectoria de liderazgo, representación estudiantil, iniciativas de apoyo académico y participación institucional de Javier Palma Romero.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Estilos específicos de la página */
+
+    .leadership-intro {
+      max-width: 850px;
+    }
+
+    .leadership-section {
+      margin-bottom: 38px;
+    }
+
+    .leadership-section > h3 {
+      margin-bottom: 18px;
+    }
+
+    .leadership-card {
+      margin-bottom: 22px;
+      min-width: 0;
+    }
+
+    .leadership-card h3,
+    .leadership-card h4 {
+      margin-top: 8px;
+    }
+
+    .leadership-period {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-size: 0.92rem;
+      opacity: 0.8;
+    }
+
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .leadership-grid .card {
+      min-width: 0;
+    }
+
+    .leadership-grid .card-body {
+      height: 100%;
+    }
+
+    .activity-list {
+      padding-left: 20px;
+      margin: 12px 0;
+    }
+
+    .activity-list li {
+      margin-bottom: 8px;
+    }
+
+    .leadership-timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .timeline-item {
+      padding: 15px;
+      border: 1px solid rgba(128, 128, 128, 0.3);
+      border-radius: 12px;
+    }
+
+    .timeline-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item span {
+      font-size: 0.9rem;
+    }
+
+    .evidence-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(135px, 175px));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .evidence-item {
+      margin: 0;
+      min-width: 0;
+    }
+
+    .evidence-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 1px solid #d9d9d9;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f5f5f5;
+      cursor: zoom-in;
+    }
+
+    .evidence-button img {
+      display: block;
+      width: 100%;
+      height: 145px;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+
+    .evidence-button:hover img,
+    .evidence-button:focus-visible img {
+      transform: scale(1.04);
+    }
+
+    .evidence-caption {
+      margin-top: 7px;
+      font-size: 0.86rem;
+      line-height: 1.4;
+    }
+
+    .evidence-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 110px;
+      padding: 14px;
+      border: 1px dashed #aaa;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 0.88rem;
+      opacity: 0.8;
+    }
+
+    .evidence-link {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .impact-highlight {
+      margin: 18px 0;
+    }
+
+    .leadership-quote {
+      margin-top: 20px;
+    }
+
+    /* Visor de imágenes ampliadas */
+
+    .evidence-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 55px 20px 65px;
+      background: rgba(0, 0, 0, 0.91);
+    }
+
+    .evidence-modal.is-open {
+      display: flex;
+    }
+
+    .evidence-modal img {
+      display: block;
+      max-width: 95%;
+      max-height: 82vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+
+    .evidence-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      width: 46px;
+      height: 46px;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      font-size: 34px;
+      cursor: pointer;
+    }
+
+    .evidence-modal-caption {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      color: #fff;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .leadership-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .leadership-timeline {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .evidence-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .evidence-button img {
+        height: 125px;
+      }
+
+      .evidence-modal {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .evidence-modal img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO Y NAVEGACIÓN -->
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        Javier Palma Romero
+        <small>Aspirante · PMJ Toluca 2026</small>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav">
+        Menú ☰
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="01-perfil.html">Perfil</a>
+        <a href="02-trayectoria.html">Trayectoria</a>
+        <a href="03-liderazgo.html" aria-current="page">Liderazgo</a>
+        <a href="04-proyectos.html">Proyectos</a>
+        <a href="05-publicaciones.html">Publicaciones</a>
+        <a href="06-servicio.html">Servicio</a>
+        <a href="07-testimonios.html">Testimonios</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="page-hero">
+      <p class="kicker">Liderazgo y representación estudiantil</p>
+
+      <h1>Participación, organización e iniciativas estudiantiles</h1>
+
+      <p class="lead leadership-intro">
+        Mi trayectoria de liderazgo se ha desarrollado a través de la
+        representación de mis compañeros, la administración de espacios
+        de apoyo estudiantil, la coordinación de proyectos y la participación
+        en organizaciones universitarias y juveniles. Estas responsabilidades
+        han implicado organizar actividades, compartir recursos, comunicar
+        información y colaborar con distintas comunidades educativas.
+      </p>
+    </section>
+
+
+    <!-- SECCIÓN 1. APOYO ESTUDIANTIL -->
+
+    <section class="content-section leadership-section" id="apoyo-estudiantil">
+
+      <div class="section-heading">
+        <p class="kicker">Organización y colaboración</p>
+        <h2>Administración de los grupos de apoyo estudiantil</h2>
+      </div>
+
+      <div class="card leadership-card">
+        <div class="card-body">
+
+          <span class="tag">2024–presente</span>
+
+          <h3>Administrador de grupos de apoyo estudiantil</h3>
+
+          <p>
+            Desde 2024 administro grupos de apoyo estudiantil que reúnen
+            a una comunidad de aproximadamente 550 integrantes. Estos
+            espacios facilitan el intercambio de información académica,
+            materiales de estudio y recursos útiles para la vida escolar.
+          </p>
+
+          <h4>Actividades implementadas</h4>
+
+          <ul class="activity-list">
+            <li>
+              Organización y administración de grupos de comunicación
+              entre estudiantes de distintas generaciones.
+            </li>
+            <li>
+              Difusión de avisos escolares, pendientes académicos e
+              información de utilidad para la comunidad estudiantil.
+            </li>
+            <li>
+              Elaboración y distribución de materiales de estudio,
+              compendios y documentos de apoyo para distintas asignaturas.
+            </li>
+            <li>
+              Publicación cotidiana de mensajes con información sobre
+              actividades y tareas escolares durante periodos de seguimiento.
+            </li>
+            <li>
+              Ampliación del alcance de los recursos académicos hacia
+              estudiantes de otros planteles de la Escuela Preparatoria
+              de la UAEMéx.
+            </li>
+          </ul>
+
+          <div class="stats impact-highlight">
+            <div class="stat">
+              <strong>550</strong>
+              <span>Integrantes aproximados</span>
+            </div>
+
+            <div class="stat">
+              <strong>2024</strong>
+              <span>Inicio de la iniciativa</span>
+            </div>
+
+            <div class="stat">
+              <strong>3</strong>
+              <span>Generaciones alcanzadas por los materiales académicos</span>
+            </div>
+          </div>
+
+          <h4>Evidencias de la iniciativa</h4>
+
+          <p>
+            Las capturas de los grupos, las publicaciones de avisos y
+            los materiales distribuidos permiten documentar tanto la
+            administración de estos espacios como su funcionamiento.
+          </p>
+
+          <div class="evidence-gallery">
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/liderazgo-grupos-apoyo.jpg"
+                data-caption="Grupos de apoyo estudiantil administrados desde 2024">
+                <img
+                  src="assets/evidencias/liderazgo-grupos-apoyo.jpg"
+                  alt="Captura de los grupos de apoyo estudiantil"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Organización de los grupos estudiantiles
+              </figcaption>
+            </figure>
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/liderazgo-avisos-escolares.jpg"
+                data-caption="Difusión de información y avisos académicos">
+                <img
+                  src="assets/evidencias/liderazgo-avisos-escolares.jpg"
+                  alt="Ejemplo de avisos académicos compartidos"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Difusión de avisos escolares
+              </figcaption>
+            </figure>
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/liderazgo-materiales-estudio.jpg"
+                data-caption="Materiales de estudio compartidos con estudiantes">
+                <img
+                  src="assets/evidencias/liderazgo-materiales-estudio.jpg"
+                  alt="Ejemplo de materiales académicos compartidos"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Materiales de apoyo académico
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 2. POLINIZANDO CONOCIMIENTO -->
+
+    <section class="content-section leadership-section" id="polinizando">
+
+      <div class="section-heading">
+        <p class="kicker">Divulgación y colaboración</p>
+        <h2>Coordinación del proyecto “Polinizando Conocimiento”</h2>
+      </div>
+
+      <div class="card leadership-card">
+        <div class="card-body">
+
+          <span class="tag">2025–presente</span>
+
+          <h3>Coordinador del proyecto</h3>
+
+          <p>
+            Desde 2025 coordino el proyecto “Polinizando Conocimiento”,
+            una iniciativa que forma parte de mi participación en actividades
+            de divulgación y colaboración educativa.
+          </p>
+
+          <h4>Responsabilidades de coordinación</h4>
+
+          <ul class="activity-list">
+            <li>
+              Coordinación y organización de las actividades vinculadas
+              con el proyecto.
+            </li>
+            <li>
+              Colaboración con las personas participantes para impulsar
+              las acciones de la iniciativa.
+            </li>
+            <li>
+              Seguimiento y documentación de las actividades realizadas.
+            </li>
+          </ul>
+
+          <p>
+            La descripción de las actividades específicas puede ampliarse
+            conforme se incorporen evidencias de las jornadas, materiales,
+            colaboraciones y resultados concretos del proyecto.
+          </p>
+
+          <h4>Evidencias del proyecto</h4>
+
+          <div class="evidence-gallery">
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/polinizando-conocimiento-proyecto.jpg"
+                data-caption="Proyecto Polinizando Conocimiento">
+                <img
+                  src="assets/evidencias/polinizando-conocimiento-proyecto.jpg"
+                  alt="Evidencia general del proyecto Polinizando Conocimiento"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Identidad o presentación del proyecto
+              </figcaption>
+            </figure>
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/polinizando-conocimiento-actividad.jpg"
+                data-caption="Actividad realizada como parte de Polinizando Conocimiento">
+                <img
+                  src="assets/evidencias/polinizando-conocimiento-actividad.jpg"
+                  alt="Fotografía de una actividad del proyecto"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Actividad del proyecto
+              </figcaption>
+            </figure>
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/polinizando-conocimiento-materiales.jpg"
+                data-caption="Materiales o productos del proyecto Polinizando Conocimiento">
+                <img
+                  src="assets/evidencias/polinizando-conocimiento-materiales.jpg"
+                  alt="Materiales elaborados para el proyecto"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Materiales y productos
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 3. REPRESENTACIÓN GRUPAL -->
+
+    <section class="content-section leadership-section" id="representacion">
+
+      <div class="section-heading">
+        <p class="kicker">Representación estudiantil</p>
+        <h2>Representante grupal</h2>
+      </div>
+
+      <div class="card leadership-card">
+        <div class="card-body">
+
+          <span class="tag">2024–presente</span>
+
+          <h3>Representación de distintos grupos escolares</h3>
+
+          <p>
+            He desempeñado funciones de representación estudiantil
+            durante distintos periodos escolares, manteniendo una
+            participación continua como enlace entre mis compañeros
+            y la organización académica del grupo.
+          </p>
+
+          <h4>Trayectoria de representación</h4>
+
+          <div class="leadership-timeline">
+
+            <div class="timeline-item">
+              <strong>2024B</strong>
+              <span>Grupo 104</span>
+            </div>
+
+            <div class="timeline-item">
+              <strong>2025A</strong>
+              <span>Grupo 204</span>
+            </div>
+
+            <div class="timeline-item">
+              <strong>2025B</strong>
+              <span>Grupo 304</span>
+            </div>
+
+            <div class="timeline-item">
+              <strong>2026A</strong>
+              <span>Grupo 404</span>
+            </div>
+
+            <div class="timeline-item">
+              <strong>2026B</strong>
+              <span>Grupo 501</span>
+            </div>
+
+          </div>
+
+          <h4>Actividades de representación</h4>
+
+          <ul class="activity-list">
+            <li>
+              Comunicación de información relevante para los integrantes
+              del grupo.
+            </li>
+            <li>
+              Canalización de preguntas, necesidades e inquietudes
+              estudiantiles.
+            </li>
+            <li>
+              Colaboración en la organización y seguimiento de actividades
+              grupales.
+            </li>
+            <li>
+              Apoyo a la comunicación entre estudiantes y las instancias
+              escolares correspondientes.
+            </li>
+          </ul>
+
+          <h4>Evidencias de la representación</h4>
+
+          <div class="evidence-gallery">
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/representacion-grupal-nombramiento.jpg"
+                data-caption="Evidencia de nombramiento o elección como representante grupal">
+                <img
+                  src="assets/evidencias/representacion-grupal-nombramiento.jpg"
+                  alt="Nombramiento o evidencia de representación grupal"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Nombramiento o elección
+              </figcaption>
+            </figure>
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/representacion-grupal-actividades.jpg"
+                data-caption="Actividades desarrolladas como representante grupal">
+                <img
+                  src="assets/evidencias/representacion-grupal-actividades.jpg"
+                  alt="Evidencia de actividades de representación"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Actividades de representación
+              </figcaption>
+            </figure>
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/representacion-grupal-comunicacion.jpg"
+                data-caption="Comunicación de información al grupo">
+                <img
+                  src="assets/evidencias/representacion-grupal-comunicacion.jpg"
+                  alt="Ejemplo de comunicación dirigida al grupo"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Comunicación con el grupo
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 4. EMBAJADOR LÍDER -->
+
+    <section class="content-section leadership-section" id="embajador">
+
+      <div class="section-heading">
+        <p class="kicker">Liderazgo universitario</p>
+        <h2>Embajador Líder de “Vamos por el mismo camino UAEMéx”</h2>
+      </div>
+
+      <div class="card leadership-card">
+        <div class="card-body">
+
+          <span class="tag">2024B–2025A</span>
+
+          <h3>Embajador Líder</h3>
+
+          <p>
+            Participé como Embajador Líder de “Vamos por el mismo camino
+            UAEMéx”, iniciativa vinculada con la comunidad universitaria.
+          </p>
+
+          <h4>Participación y actividades</h4>
+
+          <ul class="activity-list">
+            <li>
+              Participación en las actividades correspondientes al programa
+              durante el periodo de nombramiento.
+            </li>
+            <li>
+              Colaboración en acciones de participación y vinculación
+              con la comunidad universitaria.
+            </li>
+          </ul>
+
+          <p>
+            Para documentar esta experiencia, conviene incorporar las
+            actividades específicas realizadas, las convocatorias en las
+            que se participó y los resultados obtenidos.
+          </p>
+
+          <h4>Evidencias</h4>
+
+          <div class="evidence-gallery">
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/embajador-lider-nombramiento.jpg"
+                data-caption="Nombramiento como Embajador Líder de Vamos por el mismo camino UAEMéx">
+                <img
+                  src="assets/evidencias/embajador-lider-nombramiento.jpg"
+                  alt="Nombramiento de Embajador Líder"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Nombramiento de Embajador Líder
+              </figcaption>
+            </figure>
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/embajador-lider-actividades.jpg"
+                data-caption="Actividades realizadas como Embajador Líder">
+                <img
+                  src="assets/evidencias/embajador-lider-actividades.jpg"
+                  alt="Fotografía de una actividad como Embajador Líder"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Actividades del programa
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 5. SOMOS JUCAM -->
+
+    <section class="content-section leadership-section" id="jucam">
+
+      <div class="section-heading">
+        <p class="kicker">Comunicación institucional</p>
+        <h2>Secretaría de Comunicación y Propaganda en SOMOS JUCAM A.C.</h2>
+      </div>
+
+      <div class="card leadership-card">
+        <div class="card-body">
+
+          <span class="tag">2025</span>
+
+          <h3>
+            Secretario de Comunicación y Propaganda del Comité Directivo
+            Municipal de Toluca
+          </h3>
+
+          <p>
+            Durante 2025 ocupé la Secretaría de Comunicación y Propaganda
+            en el Comité Directivo Municipal de Toluca de SOMOS JUCAM A.C.,
+            con una función vinculada con la comunicación y difusión
+            institucional.
+          </p>
+
+          <h4>Ámbitos de participación</h4>
+
+          <ul class="activity-list">
+            <li>
+              Participación en las tareas de comunicación correspondientes
+              a la secretaría.
+            </li>
+            <li>
+              Colaboración en la difusión de información y actividades
+              de la organización, según las responsabilidades desempeñadas.
+            </li>
+          </ul>
+
+          <h4>Evidencias</h4>
+
+          <div class="evidence-gallery">
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/somos-jucam-nombramiento.jpg"
+                data-caption="Nombramiento en la Secretaría de Comunicación y Propaganda de SOMOS JUCAM A.C.">
+                <img
+                  src="assets/evidencias/somos-jucam-nombramiento.jpg"
+                  alt="Nombramiento en SOMOS JUCAM A.C."
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Nombramiento institucional
+              </figcaption>
+            </figure>
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/somos-jucam-comunicacion.jpg"
+                data-caption="Evidencia de actividades de comunicación y difusión institucional">
+                <img
+                  src="assets/evidencias/somos-jucam-comunicacion.jpg"
+                  alt="Material de comunicación o difusión institucional"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Comunicación y difusión
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 6. COMITÉ PRO-GENERACIÓN -->
+
+    <section class="content-section leadership-section" id="pro-generacion">
+
+      <div class="section-heading">
+        <p class="kicker">Organización estudiantil</p>
+        <h2>Comité Pro-Generación 2024–2027</h2>
+      </div>
+
+      <div class="card leadership-card">
+        <div class="card-body">
+
+          <span class="tag">2026–presente</span>
+
+          <h3>Integrante del Comité Pro-Generación</h3>
+
+          <p>
+            Formo parte del Comité Pro-Generación 2024–2027 de mi
+            preparatoria, un espacio de participación estudiantil
+            relacionado con la organización de actividades de la generación.
+          </p>
+
+          <h4>Participación y actividades</h4>
+
+          <ul class="activity-list">
+            <li>
+              Participación en la organización y coordinación de asuntos
+              vinculados con la generación.
+            </li>
+            <li>
+              Colaboración con los demás integrantes del comité en las
+              actividades que se acuerden.
+            </li>
+          </ul>
+
+          <h4>Evidencias</h4>
+
+          <div class="evidence-gallery">
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/comite-pro-generacion.jpg"
+                data-caption="Participación en el Comité Pro-Generación 2024–2027">
+                <img
+                  src="assets/evidencias/comite-pro-generacion.jpg"
+                  alt="Evidencia de integración al Comité Pro-Generación"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Integración del comité
+              </figcaption>
+            </figure>
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/comite-pro-generacion-actividades.jpg"
+                data-caption="Actividad organizada o desarrollada por el Comité Pro-Generación">
+                <img
+                  src="assets/evidencias/comite-pro-generacion-actividades.jpg"
+                  alt="Fotografía de una actividad del comité"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Actividades de la generación
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 7. LIDERAZGO EN SECUNDARIA -->
+
+    <section class="content-section leadership-section" id="secundaria">
+
+      <div class="section-heading">
+        <p class="kicker">Antecedentes de liderazgo</p>
+        <h2>Coordinador del Grupo “A” durante la secundaria</h2>
+      </div>
+
+      <div class="card leadership-card">
+        <div class="card-body">
+
+          <span class="tag">2021–2024</span>
+
+          <h3>Coordinación estudiantil en secundaria</h3>
+
+          <p>
+            Durante mi educación secundaria fui coordinador del Grupo “A”,
+            experiencia que constituyó uno de mis primeros espacios
+            de organización y participación estudiantil.
+          </p>
+
+          <h4>Funciones de coordinación</h4>
+
+          <ul class="activity-list">
+            <li>
+              Apoyo en la organización y comunicación de asuntos del grupo.
+            </li>
+            <li>
+              Colaboración con los compañeros en las actividades escolares
+              correspondientes.
+            </li>
+          </ul>
+
+          <h4>Evidencias</h4>
+
+          <div class="evidence-gallery">
+
+            <figure class="evidence-item">
+              <button
+                class="evidence-button"
+                type="button"
+                data-full="assets/evidencias/coordinador-grupo-secundaria.jpg"
+                data-caption="Experiencia como coordinador del Grupo A durante la secundaria">
+                <img
+                  src="assets/evidencias/coordinador-grupo-secundaria.jpg"
+                  alt="Evidencia de coordinación del Grupo A en secundaria"
+                  loading="lazy">
+              </button>
+              <figcaption class="evidence-caption">
+                Coordinación del Grupo “A”
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- VISOR PARA AMPLIAR LAS EVIDENCIAS -->
+
+  <div
+    class="evidence-modal"
+    id="evidence-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Vista ampliada de la evidencia">
+
+    <button
+      class="evidence-modal-close"
+      id="evidence-modal-close"
+      type="button"
+      aria-label="Cerrar imagen ampliada">
+      &times;
+    </button>
+
+    <img id="evidence-modal-image" src="" alt="">
+
+    <p
+      class="evidence-modal-caption"
+      id="evidence-modal-caption">
+    </p>
+
+  </div>
+
+
+  <!-- PIE DE PÁGINA -->
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+
+        <div class="footer-name">Javier Palma Romero</div>
+
+        <div class="footer-note">
+          Aspirante a obtener el Premio Municipal de la Juventud Toluca 2026
+        </div>
+
+        <div class="footer-note">
+          Modalidad: Trayectoria Académica, Innovación y Emprendimiento
+        </div>
+
+        <div class="footer-note">Categoría “A” (12-17 años)</div>
+
+        <div class="footer-links">
+          <a href="tel:+527222029221">722 202 9221</a>
+
+          <a href="mailto:javierpalmaromero09@gmail.com">
+            javierpalmaromero09@gmail.com
+          </a>
+
+          <a
+            href="https://www.instagram.com/tu_usuario/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Instagram
+          </a>
+        </div>
+
+        <div class="footer-note">© 2026</div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- SCRIPTS -->
+
+  <script src="script.js"></script>
+
+  <script>
+    (() => {
+      const modal = document.getElementById("evidence-modal");
+      const modalImage = document.getElementById("evidence-modal-image");
+      const modalCaption = document.getElementById("evidence-modal-caption");
+      const closeButton = document.getElementById("evidence-modal-close");
+
+      let previousFocus = null;
+
+      function openEvidence(button) {
+        const imagePath = button.dataset.full;
+        const caption = button.dataset.caption || "";
+
+        if (!imagePath) return;
+
+        previousFocus = button;
+
+        modalImage.src = imagePath;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
+
+        modal.classList.add("is-open");
+        document.body.classList.add("modal-open");
+
+        closeButton.focus();
+      }
+
+      function closeEvidence() {
+        modal.classList.remove("is-open");
+        document.body.classList.remove("modal-open");
+
+        modalImage.src = "";
+        modalImage.alt = "";
+        modalCaption.textContent = "";
+
+        if (previousFocus) {
+          previousFocus.focus();
+        }
+      }
+
+      document.querySelectorAll(".evidence-button").forEach((button) => {
+        button.addEventListener("click", () => {
+          openEvidence(button);
+        });
+      });
+
+      closeButton.addEventListener("click", closeEvidence);
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeEvidence();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (
+          event.key === "Escape" &&
+          modal.classList.contains("is-open")
+        ) {
+          closeEvidence();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
