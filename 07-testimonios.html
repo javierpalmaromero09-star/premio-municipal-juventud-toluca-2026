@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Testimonios sobre el impacto académico, el liderazgo y la contribución estudiantil de Javier Palma Romero.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Testimonios | Javier Palma Romero — PMJ Toluca 2026</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Estilos específicos de esta página -->
+  <style>
+    .testimonials-intro {
+      max-width: 850px;
+    }
+
+    .testimonials-intro p {
+      color: #56514d;
+    }
+
+    .testimonial-group {
+      margin-top: 30px;
+    }
+
+    .testimonial-group h3 {
+      margin-bottom: 8px;
+    }
+
+    .group-description {
+      color: var(--muted);
+      font-size: .92rem;
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .testimonial-item {
+      min-width: 0;
+      background: var(--white);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .testimonial-image-link {
+      display: block;
+      overflow: hidden;
+      background: var(--soft);
+      border-bottom: 1px solid var(--line);
+      cursor: zoom-in;
+    }
+
+    .testimonial-image-link img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      padding: 10px;
+      transition: transform .2s ease;
+    }
+
+    .testimonial-image-link:hover img {
+      transform: scale(1.025);
+    }
+
+    .testimonial-item-body {
+      padding: 17px;
+    }
+
+    .testimonial-item-body h4 {
+      margin: 0 0 7px;
+      font: 600 1rem/1.4 Arial, Helvetica, sans-serif;
+      color: var(--ink);
+    }
+
+    .testimonial-item-body p {
+      color: var(--muted);
+      font-size: .86rem;
+      margin: 0;
+    }
+
+    .evidence-type {
+      display: inline-block;
+      margin-bottom: 9px;
+      color: var(--burgundy);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .subsection-heading {
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 20px;
+    }
+
+    .subsection-heading .kicker {
+      display: block;
+      margin-bottom: 9px;
+    }
+
+    .testimonial-note {
+      padding: 18px 20px;
+      margin-top: 22px;
+      background: var(--soft);
+      border-left: 3px solid var(--burgundy);
+      color: #56514d;
+      font-size: .9rem;
+    }
+
+    .testimonial-note p:last-child {
+      margin-bottom: 0;
+    }
+
+    .video-placeholder {
+      min-height: 190px;
+      background: var(--soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+      padding: 22px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .video-placeholder svg {
+      width: 38px;
+      height: 38px;
+      stroke: var(--burgundy);
+      fill: none;
+      stroke-width: 1.5;
+    }
+
+    .video-placeholder span {
+      font-size: .82rem;
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(25, 22, 22, .88);
+    }
+
+    .lightbox.is-open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: min(1100px, 100%);
+      max-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lightbox img {
+      display: block;
+      max-width: 100%;
+      max-height: 82vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      background: white;
+    }
+
+    .lightbox-caption {
+      color: white;
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      z-index: 1;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 50%;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .lightbox-close:hover {
+      background: white;
+    }
+
+    @media (max-width: 900px) {
+      .testimonial-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lightbox {
+        padding: 14px;
+      }
+
+      .lightbox-close {
+        top: -12px;
+        right: -5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        Javier Palma Romero
+        <small>Aspirante · PMJ Toluca 2026</small>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        Menú ☰
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="01-perfil.html">Perfil</a>
+        <a href="02-trayectoria.html">Trayectoria</a>
+        <a href="03-liderazgo.html">Liderazgo</a>
+        <a href="04-proyectos.html">Proyectos</a>
+        <a href="05-publicaciones.html">Publicaciones</a>
+        <a href="06-servicio.html">Servicio</a>
+        <a href="07-testimonios.html" aria-current="page">Testimonios</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Presentación -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="kicker">Testimonios · PMJ Toluca 2026</div>
+        <h1>Las experiencias que dan cuenta del trabajo realizado</h1>
+        <p class="lead testimonials-intro">
+          Esta sección reúne testimonios y evidencias de personas que han conocido
+          el trabajo académico, el apoyo entre pares, el liderazgo y la participación
+          estudiantil desarrollados a lo largo de mi trayectoria.
+        </p>
+      </div>
+    </section>
+
+    <!-- 8.1 -->
+    <section class="content-section" id="impacto-academico">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">8.1</span>
+            <h2>Impacto de los materiales académicos y apoyo entre pares</h2>
+          </div>
+          <p>
+            Experiencias de estudiantes que han utilizado guías de estudio,
+            formularios, series de ejercicios y otros materiales de apoyo.
+          </p>
+        </div>
+
+        <p class="testimonials-intro">
+          La elaboración y distribución de materiales académicos busca facilitar
+          el estudio, reforzar contenidos escolares y promover el intercambio
+          de conocimientos entre estudiantes.
+        </p>
+
+        <!-- 8.1.1 -->
+        <div class="testimonial-group">
+          <div class="subsection-heading">
+            <span class="kicker">8.1.1</span>
+            <h3>Alumnado de primer semestre</h3>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-item">
+              <a class="testimonial-image-link"
+                 href="assets/evidencia-pendiente.svg"
+                 data-lightbox
+                 data-caption="Testimonio de alumnado de primer semestre"
+                 aria-label="Ampliar evidencia de alumnado de primer semestre">
+                <img src="assets/evidencia-pendiente.svg"
+                     alt="Espacio provisional para un testimonio de alumnado de primer semestre">
+              </a>
+              <div class="testimonial-item-body">
+                <span class="evidence-type">Evidencia pendiente</span>
+                <h4>Experiencia con los materiales académicos</h4>
+                <p>Espacio para una captura de mensaje, carta o testimonio autorizado.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- 8.1.2 -->
+        <div class="testimonial-group">
+          <div class="subsection-heading">
+            <span class="kicker">8.1.2</span>
+            <h3>Alumnado de tercer semestre</h3>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-item">
+              <a class="testimonial-image-link"
+                 href="assets/evidencia-pendiente.svg"
+                 data-lightbox
+                 data-caption="Testimonio de alumnado de tercer semestre"
+                 aria-label="Ampliar evidencia de alumnado de tercer semestre">
+                <img src="assets/evidencia-pendiente.svg"
+                     alt="Espacio provisional para un testimonio de alumnado de tercer semestre">
+              </a>
+              <div class="testimonial-item-body">
+                <span class="evidence-type">Evidencia pendiente</span>
+                <h4>Uso de guías y recursos de estudio</h4>
+                <p>Espacio para una captura de mensaje, carta o testimonio autorizado.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- 8.1.3 -->
+        <div class="testimonial-group">
+          <div class="subsection-heading">
+            <span class="kicker">8.1.3</span>
+            <h3>Alumnado de quinto semestre</h3>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-item">
+              <a class="testimonial-image-link"
+                 href="assets/evidencia-pendiente.svg"
+                 data-lightbox
+                 data-caption="Testimonio de alumnado de quinto semestre"
+                 aria-label="Ampliar evidencia de alumnado de quinto semestre">
+                <img src="assets/evidencia-pendiente.svg"
+                     alt="Espacio provisional para un testimonio de alumnado de quinto semestre">
+              </a>
+              <div class="testimonial-item-body">
+                <span class="evidence-type">Evidencia pendiente</span>
+                <h4>Apoyo académico entre estudiantes</h4>
+                <p>Espacio para una captura de mensaje, carta o testimonio autorizado.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- 8.1.4 -->
+        <div class="testimonial-group">
+          <div class="subsection-heading">
+            <span class="kicker">8.1.4</span>
+            <h3>Alumnado de otros planteles de la Escuela Preparatoria</h3>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-item">
+              <a class="testimonial-image-link"
+                 href="assets/evidencia-pendiente.svg"
+                 data-lightbox
+                 data-caption="Testimonio de alumnado de otros planteles"
+                 aria-label="Ampliar evidencia de alumnado de otros planteles">
+                <img src="assets/evidencia-pendiente.svg"
+                     alt="Espacio provisional para un testimonio de alumnado de otros planteles">
+              </a>
+              <div class="testimonial-item-body">
+                <span class="evidence-type">Evidencia pendiente</span>
+                <h4>Alcance de los materiales académicos</h4>
+                <p>Espacio para una captura de mensaje, carta o testimonio autorizado.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8.2 -->
+    <section class="content-section" id="liderazgo-estudiantil">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">8.2</span>
+            <h2>Liderazgo, responsabilidad y convivencia estudiantil</h2>
+          </div>
+          <p>
+            Testimonios de compañeros que han compartido actividades académicas,
+            organización grupal y experiencias de representación estudiantil.
+          </p>
+        </div>
+
+        <p class="testimonials-intro">
+          La representación estudiantil implica mantener comunicación con el grupo,
+          atender inquietudes, compartir información útil y colaborar en las
+          actividades escolares.
+        </p>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-item">
+            <a class="testimonial-image-link"
+               href="assets/evidencia-pendiente.svg"
+               data-lightbox
+               data-caption="Testimonio sobre representación estudiantil"
+               aria-label="Ampliar testimonio sobre representación estudiantil">
+              <img src="assets/evidencia-pendiente.svg"
+                   alt="Espacio provisional para un testimonio sobre representación estudiantil">
+            </a>
+            <div class="testimonial-item-body">
+              <span class="evidence-type">Evidencia pendiente</span>
+              <h4>Representación y organización grupal</h4>
+              <p>Espacio para un mensaje o testimonio autorizado.</p>
+            </div>
+          </article>
+
+          <article class="testimonial-item">
+            <a class="testimonial-image-link"
+               href="assets/evidencia-pendiente.svg"
+               data-lightbox
+               data-caption="Testimonio sobre colaboración entre compañeros"
+               aria-label="Ampliar testimonio sobre colaboración entre compañeros">
+              <img src="assets/evidencia-pendiente.svg"
+                   alt="Espacio provisional para un testimonio sobre colaboración entre compañeros">
+            </a>
+            <div class="testimonial-item-body">
+              <span class="evidence-type">Evidencia pendiente</span>
+              <h4>Colaboración y apoyo cotidiano</h4>
+              <p>Espacio para un mensaje o testimonio autorizado.</p>
+            </div>
+          </article>
+
+          <article class="testimonial-item">
+            <a class="testimonial-image-link"
+               href="assets/evidencia-pendiente.svg"
+               data-lightbox
+               data-caption="Testimonio sobre responsabilidad y convivencia"
+               aria-label="Ampliar testimonio sobre responsabilidad y convivencia">
+              <img src="assets/evidencia-pendiente.svg"
+                   alt="Espacio provisional para un testimonio sobre responsabilidad y convivencia">
+            </a>
+            <div class="testimonial-item-body">
+              <span class="evidence-type">Evidencia pendiente</span>
+              <h4>Responsabilidad y convivencia</h4>
+              <p>Espacio para un mensaje, carta o testimonio autorizado.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8.3 -->
+    <section class="content-section" id="desempeno-academico">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">8.3</span>
+            <h2>Desempeño académico y compromiso personal</h2>
+          </div>
+          <p>
+            Valoraciones de docentes que conocen el desempeño escolar, la participación,
+            la constancia y las iniciativas académicas.
+          </p>
+        </div>
+
+        <p class="testimonials-intro">
+          Las siguientes subsecciones permiten reunir testimonios de distintas
+          etapas formativas, destacando experiencias y aportaciones que puedan
+          describirse de manera directa y verificable.
+        </p>
+
+        <!-- Primaria -->
+        <div class="testimonial-group">
+          <div class="subsection-heading">
+            <span class="kicker">A</span>
+            <h3>Educación primaria</h3>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-item">
+              <a class="testimonial-image-link"
+                 href="assets/evidencia-pendiente.svg"
+                 data-lightbox
+                 data-caption="Testimonio docente de educación primaria"
+                 aria-label="Ampliar testimonio docente de primaria">
+                <img src="assets/evidencia-pendiente.svg"
+                     alt="Espacio provisional para una carta testimonial de educación primaria">
+              </a>
+              <div class="testimonial-item-body">
+                <span class="evidence-type">Carta o testimonio</span>
+                <h4>Experiencia durante la formación primaria</h4>
+                <p>Espacio para una carta o valoración docente autorizada.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Secundaria -->
+        <div class="testimonial-group">
+          <div class="subsection-heading">
+            <span class="kicker">B</span>
+            <h3>Educación secundaria</h3>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-item">
+              <a class="testimonial-image-link"
+                 href="assets/evidencia-pendiente.svg"
+                 data-lightbox
+                 data-caption="Testimonio docente de educación secundaria"
+                 aria-label="Ampliar testimonio docente de secundaria">
+                <img src="assets/evidencia-pendiente.svg"
+                     alt="Espacio provisional para una carta testimonial de educación secundaria">
+              </a>
+              <div class="testimonial-item-body">
+                <span class="evidence-type">Carta o testimonio</span>
+                <h4>Desempeño y compromiso escolar</h4>
+                <p>Espacio para una carta o valoración docente autorizada.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Formación técnica -->
+        <div class="testimonial-group">
+          <div class="subsection-heading">
+            <span class="kicker">C</span>
+            <h3>Formación técnica</h3>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-item">
+              <a class="testimonial-image-link"
+                 href="assets/evidencia-pendiente.svg"
+                 data-lightbox
+                 data-caption="Testimonio docente de formación técnica"
+                 aria-label="Ampliar testimonio docente de formación técnica">
+                <img src="assets/evidencia-pendiente.svg"
+                     alt="Espacio provisional para una carta testimonial de formación técnica">
+              </a>
+              <div class="testimonial-item-body">
+                <span class="evidence-type">Carta o testimonio</span>
+                <h4>Formación técnica e iniciativa personal</h4>
+                <p>Espacio para una carta o valoración docente autorizada.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Preparatoria -->
+        <div class="testimonial-group">
+          <div class="subsection-heading">
+            <span class="kicker">D</span>
+            <h3>Educación media superior</h3>
+          </div>
+
+          <div class="testimonial-grid">
+            <article class="testimonial-item">
+              <a class="testimonial-image-link"
+                 href="assets/evidencia-pendiente.svg"
+                 data-lightbox
+                 data-caption="Testimonio docente de educación media superior"
+                 aria-label="Ampliar testimonio docente de preparatoria">
+                <img src="assets/evidencia-pendiente.svg"
+                     alt="Espacio provisional para una carta testimonial de educación media superior">
+              </a>
+              <div class="testimonial-item-body">
+                <span class="evidence-type">Carta o testimonio</span>
+                <h4>Trayectoria académica y participación</h4>
+                <p>Espacio para una carta o valoración docente autorizada.</p>
+              </div>
+            </article>
+
+            <article class="testimonial-item">
+              <div class="video-placeholder" aria-label="Espacio provisional para un video testimonial">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="m10 9 5 3-5 3z"></path>
+                </svg>
+                <span>Espacio reservado para un video testimonial</span>
+              </div>
+              <div class="testimonial-item-body">
+                <span class="evidence-type">Video</span>
+                <h4>Experiencia docente</h4>
+                <p>El video se incorporará cuando esté disponible y autorizado.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8.4 -->
+    <section class="content-section" id="contribucion-institucional">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">8.4</span>
+            <h2>Trayectoria, representación y contribución institucional</h2>
+          </div>
+          <p>
+            Perspectivas de personas que conocen directamente la participación
+            estudiantil y las aportaciones realizadas en proyectos o actividades.
+          </p>
+        </div>
+
+        <p class="testimonials-intro">
+          Este apartado reúne evidencias que permiten documentar la responsabilidad,
+          la colaboración y la participación en iniciativas académicas e institucionales.
+        </p>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-item">
+            <a class="testimonial-image-link"
+               href="assets/evidencia-pendiente.svg"
+               data-lightbox
+               data-caption="Testimonio sobre representación estudiantil e institucional"
+               aria-label="Ampliar testimonio institucional">
+              <img src="assets/evidencia-pendiente.svg"
+                   alt="Espacio provisional para una carta o testimonio institucional">
+            </a>
+            <div class="testimonial-item-body">
+              <span class="evidence-type">Carta o testimonio</span>
+              <h4>Representación estudiantil</h4>
+              <p>Espacio para una valoración autorizada sobre el trabajo de representación.</p>
+            </div>
+          </article>
+
+          <article class="testimonial-item">
+            <a class="testimonial-image-link"
+               href="assets/evidencia-pendiente.svg"
+               data-lightbox
+               data-caption="Testimonio sobre colaboración en programas o proyectos"
+               aria-label="Ampliar testimonio sobre colaboración en proyectos">
+              <img src="assets/evidencia-pendiente.svg"
+                   alt="Espacio provisional para una carta o testimonio sobre colaboración en proyectos">
+            </a>
+            <div class="testimonial-item-body">
+              <span class="evidence-type">Carta o testimonio</span>
+              <h4>Colaboración en proyectos e iniciativas</h4>
+              <p>Espacio para una valoración autorizada sobre la participación en actividades.</p>
+            </div>
+          </article>
+
+          <article class="testimonial-item">
+            <div class="video-placeholder" aria-label="Espacio provisional para un video testimonial institucional">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m10 9 5 3-5 3z"></path>
+              </svg>
+              <span>Espacio reservado para un video testimonial</span>
+            </div>
+            <div class="testimonial-item-body">
+              <span class="evidence-type">Video</span>
+              <h4>Perspectiva institucional</h4>
+              <p>El video se incorporará cuando esté disponible y autorizado.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="testimonial-note">
+          <p>
+            Las evidencias se incorporarán conforme se obtengan las autorizaciones
+            correspondientes. Los testimonios deberán conservar su sentido original
+            y representar experiencias reales.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Visor para ampliar imágenes -->
+  <div class="lightbox" id="testimonial-lightbox"
+       role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+    <div class="lightbox-content">
+      <button class="lightbox-close" type="button"
+              aria-label="Cerrar imagen ampliada">&times;</button>
+      <img src="" alt="" id="lightbox-image">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Pie de página compacto -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Javier Palma Romero</div>
+        <div class="footer-note">Aspirante a obtener el Premio Municipal de la Juventud Toluca 2026</div>
+        <div class="footer-note">Modalidad: Trayectoria Académica, Innovación y Emprendimiento</div>
+        <div class="footer-note">Categoría “A” (12-17 años)</div>
+        <div class="footer-links">
+          <a href="tel:+527222029221">722 202 9221</a>
+          <a href="mailto:javierpalmaromero09@gmail.com">javierpalmaromero09@gmail.com</a>
+          <a href="https://www.instagram.com/tu_usuario/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+        <div class="footer-note">© 2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Comportamiento del visor de imágenes -->
+  <script>
+    (() => {
+      const lightbox = document.getElementById("testimonial-lightbox");
+      const lightboxImage = document.getElementById("lightbox-image");
+      const lightboxCaption = document.getElementById("lightbox-caption");
+      const closeButton = lightbox.querySelector(".lightbox-close");
+      let previousFocus = null;
+
+      function openLightbox(link) {
+        previousFocus = document.activeElement;
+        lightboxImage.src = link.href;
+        lightboxImage.alt = link.querySelector("img")?.alt || "Testimonio ampliado";
+        lightboxCaption.textContent = link.dataset.caption || "";
+        lightbox.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+        closeButton.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("is-open");
+        lightboxImage.src = "";
+        document.body.style.overflow = "";
+        if (previousFocus) previousFocus.focus();
+      }
+
+      document.querySelectorAll("[data-lightbox]").forEach(link => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          openLightbox(link);
+        });
+      });
+
+      closeButton.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener("keydown", event => {
+        if (event.key === "Escape" && lightbox.classList.contains("is-open")) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
