@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,7 +11,7 @@
   <link rel="stylesheet" href="styles.css">
 
   <style>
-    /* Elementos específicos de la página Trayectoria */
+    /* Presentación de la trayectoria académica */
 
     .trajectory-intro {
       max-width: 850px;
@@ -22,6 +23,7 @@
 
     .trajectory-group > h3 {
       margin-bottom: 18px;
+      line-height: 1.4;
     }
 
     .trajectory-card {
@@ -39,35 +41,50 @@
       opacity: 0.8;
     }
 
+    /* Tarjetas de reconocimientos */
+
     .award-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
       gap: 20px;
       align-items: stretch;
     }
 
     .award-card {
       min-width: 0;
+      height: 100%;
     }
 
     .award-card .card-body {
+      display: flex;
+      flex-direction: column;
       height: 100%;
+      min-width: 0;
     }
 
     .award-card h4 {
       margin-top: 0;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
     }
+
+    .award-card .card-body > p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    /* Galería de evidencias */
 
     .evidence-gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(135px, 175px));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 145px), 175px));
       gap: 14px;
       margin-top: 18px;
+      align-items: start;
     }
 
     .evidence-item {
-      margin: 0;
       min-width: 0;
+      margin: 0;
     }
 
     .evidence-button {
@@ -94,10 +111,16 @@
       transform: scale(1.04);
     }
 
+    .evidence-button:focus-visible {
+      outline: 3px solid #8b2635;
+      outline-offset: 3px;
+    }
+
     .evidence-caption {
       margin-top: 7px;
       font-size: 0.86rem;
-      line-height: 1.4;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
     }
 
     .evidence-placeholder {
@@ -118,15 +141,25 @@
       margin-top: 10px;
     }
 
+    /* Cursos y talleres */
+
     .course-card {
+      min-width: 0;
       margin-bottom: 16px;
     }
 
     .course-card h4 {
+      margin-top: 0;
       margin-bottom: 8px;
+      line-height: 1.45;
+      overflow-wrap: anywhere;
     }
 
-    /* Visor para ampliar las evidencias */
+    .course-card .card-body > p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Visor ampliado de evidencias */
 
     .evidence-modal {
       position: fixed;
@@ -135,8 +168,9 @@
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 55px 20px 65px;
-      background: rgba(0, 0, 0, 0.91);
+      padding: 60px 20px 75px;
+      background: rgba(0, 0, 0, 0.93);
+      overscroll-behavior: contain;
     }
 
     .evidence-modal.is-open {
@@ -146,7 +180,7 @@
     .evidence-modal img {
       display: block;
       max-width: 95%;
-      max-height: 82vh;
+      max-height: 80vh;
       width: auto;
       height: auto;
       object-fit: contain;
@@ -156,24 +190,41 @@
     .evidence-modal-close {
       position: absolute;
       top: 12px;
-      right: 20px;
+      right: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 46px;
       height: 46px;
       color: #fff;
       background: transparent;
-      border: 0;
+      border: 1px solid transparent;
+      border-radius: 8px;
       font-size: 34px;
+      line-height: 1;
       cursor: pointer;
+    }
+
+    .evidence-modal-close:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .evidence-modal-close:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
     }
 
     .evidence-modal-caption {
       position: absolute;
-      right: 15px;
+      right: 20px;
       bottom: 15px;
-      left: 15px;
+      left: 20px;
+      max-width: 900px;
+      margin: 0 auto;
       color: #fff;
       text-align: center;
       font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     body.modal-open {
@@ -181,12 +232,18 @@
     }
 
     @media (max-width: 600px) {
+      .trajectory-group {
+        margin-bottom: 30px;
+      }
+
       .award-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
       }
 
       .evidence-gallery {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
       }
 
       .evidence-button img {
@@ -194,12 +251,30 @@
       }
 
       .evidence-modal {
-        padding-right: 10px;
-        padding-left: 10px;
+        padding: 60px 10px 80px;
       }
 
       .evidence-modal img {
         max-width: 100%;
+        max-height: 76vh;
+      }
+
+      .evidence-modal-close {
+        top: 8px;
+        right: 8px;
+      }
+
+      .evidence-modal-caption {
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        font-size: 0.88rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .evidence-button img {
+        transition: none;
       }
     }
   </style>
@@ -207,29 +282,9 @@
 
 <body>
 
-  <!-- ENCABEZADO Y NAVEGACIÓN -->
+  <!-- ENCABEZADO COMPARTIDO -->
 
-
-<header class="site-header">
-  <div class="header-inner">
-    <a class="brand" href="index.html">
-      Javier Palma Romero
-      <small>Aspirante · PMJ TOLUCA 2026</small>
-    </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menú ☰</button>
-    <nav class="nav" id="site-nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="01-perfil.html">Perfil</a>
-      <a href="02-trayectoria.html" aria-current="page">Trayectoria</a>
-      <a href="03-liderazgo.html">Liderazgo</a>
-      <a href="04-proyectos.html">Proyectos</a>
-      <a href="05-publicaciones.html">Publicaciones</a>
-      <a href="06-servicio.html">Servicio</a>
-      <a href="07-testimonios.html">Testimonios</a>
-    </nav>
-  </div>
-</header>
-
+  <div id="header-container"></div>
 
   <main class="container">
 
@@ -248,7 +303,6 @@
       </p>
     </section>
 
-
     <!-- SECCIÓN 1. FORMACIÓN ACADÉMICA -->
 
     <section class="content-section" id="formacion">
@@ -264,9 +318,7 @@
           <div class="card-body">
             <span class="tag">2015–2021</span>
             <h3>Educación primaria</h3>
-            <p>
-              <strong>Escuela Primaria “Daniel Delgadillo”</strong>
-            </p>
+            <p><strong>Escuela Primaria “Daniel Delgadillo”</strong></p>
             <p>CCT: 15DPR0320J</p>
             <p class="academic-period">Periodo escolar: 2015–2021</p>
           </div>
@@ -319,7 +371,6 @@
       </div>
     </section>
 
-
     <!-- SECCIÓN 2. RECONOCIMIENTOS Y DISTINCIONES -->
 
     <section class="content-section" id="reconocimientos">
@@ -335,7 +386,6 @@
         diferentes concursos institucionales, mi vocación científica,
         mi oratoria y otras actividades universitarias.
       </p>
-
 
       <!-- EXCELENCIA ACADÉMICA Y CIENTÍFICA -->
 
@@ -355,14 +405,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/olimpiada-quimica.jpg"
                     data-caption="Primer lugar en la Olimpiada Estatal de Química del Estado de México 2026"
-                    aria-label="Ampliar evidencia de la Olimpiada Estatal de Química">
-                    <img
-                      src="assets/evidencias/olimpiada-quimica.jpg"
+                    aria-label="Ampliar evidencia de la Olimpiada Estatal de Química"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/olimpiada-quimica.jpg"
                       alt="Evidencia del primer lugar en la Olimpiada Estatal de Química"
                       loading="lazy">
                   </button>
@@ -377,9 +425,7 @@
           <article class="card award-card">
             <div class="card-body">
               <span class="tag">2025B · 2026A · 2026B</span>
-              <h4>
-                Estímulo Talento Científico y Cultural “José Antonio Alzate”
-              </h4>
+              <h4>Estímulo Talento Científico y Cultural “José Antonio Alzate”</h4>
               <p>
                 Apoyo otorgado por la UAEMéx en reconocimiento a mi
                 trayectoria académica, divulgación científica y actitud
@@ -388,13 +434,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/estimulo-alzate.jpg"
-                    data-caption="Estímulo Talento Científico y Cultural José Antonio Alzate">
-                    <img
-                      src="assets/evidencias/estimulo-alzate.jpg"
+                    data-caption="Estímulo Talento Científico y Cultural José Antonio Alzate"
+                    aria-label="Ampliar evidencia del estímulo José Antonio Alzate"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/estimulo-alzate.jpg"
                       alt="Evidencia del estímulo José Antonio Alzate"
                       loading="lazy">
                   </button>
@@ -422,13 +467,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/ingreso-preparatoria.jpg"
-                    data-caption="Segundo lugar en el proceso de selección de nuevo ingreso al Plantel Cuauhtémoc">
-                    <img
-                      src="assets/evidencias/ingreso-preparatoria.jpg"
+                    data-caption="Segundo lugar en el proceso de selección de nuevo ingreso al Plantel Cuauhtémoc"
+                    aria-label="Ampliar evidencia del resultado de ingreso a preparatoria"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/ingreso-preparatoria.jpg"
                       alt="Evidencia del resultado en el proceso de ingreso a preparatoria"
                       loading="lazy">
                   </button>
@@ -452,13 +496,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/mejor-promedio-secundaria.jpg"
-                    data-caption="Reconocimiento por mejor aprovechamiento académico de secundaria">
-                    <img
-                      src="assets/evidencias/mejor-promedio-secundaria.jpg"
+                    data-caption="Reconocimiento por mejor aprovechamiento académico de secundaria"
+                    aria-label="Ampliar reconocimiento de secundaria"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/mejor-promedio-secundaria.jpg"
                       alt="Reconocimiento por aprovechamiento académico de secundaria"
                       loading="lazy">
                   </button>
@@ -482,13 +525,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/mejor-promedio-primaria.jpg"
-                    data-caption="Reconocimiento por mejor aprovechamiento académico de primaria">
-                    <img
-                      src="assets/evidencias/mejor-promedio-primaria.jpg"
+                    data-caption="Reconocimiento por mejor aprovechamiento académico de primaria"
+                    aria-label="Ampliar reconocimiento de primaria"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/mejor-promedio-primaria.jpg"
                       alt="Reconocimiento por aprovechamiento académico de primaria"
                       loading="lazy">
                   </button>
@@ -513,13 +555,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/ninos-de-oro.jpg"
-                    data-caption="Selección para integrar el Club Nacional de Excelencia Académica Niños de Oro">
-                    <img
-                      src="assets/evidencias/ninos-de-oro.jpg"
+                    data-caption="Selección para integrar el Club Nacional de Excelencia Académica Niños de Oro"
+                    aria-label="Ampliar evidencia del Club Niños de Oro"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/ninos-de-oro.jpg"
                       alt="Evidencia de selección para el Club Niños de Oro"
                       loading="lazy">
                   </button>
@@ -533,7 +574,6 @@
 
         </div>
       </div>
-
 
       <!-- RECONOCIMIENTOS INTERPREPARATORIANOS -->
 
@@ -557,13 +597,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/oratoria-historia-memoria.jpg"
-                    data-caption="Segundo lugar en el Certamen de Oratoria Estudiantil 2026">
-                    <img
-                      src="assets/evidencias/oratoria-historia-memoria.jpg"
+                    data-caption="Segundo lugar en el Certamen de Oratoria Estudiantil 2026"
+                    aria-label="Ampliar evidencia del certamen de oratoria"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/oratoria-historia-memoria.jpg"
                       alt="Evidencia del certamen interpreparatoriano de oratoria"
                       loading="lazy">
                   </button>
@@ -589,13 +628,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/rally-cultura-digital-interpreparatoriano.jpg"
-                    data-caption="Segundo lugar en el Rally de Conocimientos de Cultura Digital del Nivel Medio Superior">
-                    <img
-                      src="assets/evidencias/rally-cultura-digital-interpreparatoriano.jpg"
+                    data-caption="Segundo lugar en el Rally de Conocimientos de Cultura Digital del Nivel Medio Superior"
+                    aria-label="Ampliar evidencia del rally interpreparatoriano de cultura digital"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/rally-cultura-digital-interpreparatoriano.jpg"
                       alt="Evidencia del rally interpreparatoriano de cultura digital"
                       loading="lazy">
                   </button>
@@ -623,13 +661,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/certamen-conocimientos-uaemex.jpg"
-                    data-caption="Segundo lugar en el Certamen Estudiantil de Conocimientos sobre Historia, Memoria y Pertenencia Universitaria">
-                    <img
-                      src="assets/evidencias/certamen-conocimientos-uaemex.jpg"
+                    data-caption="Segundo lugar en el Certamen Estudiantil de Conocimientos sobre Historia, Memoria y Pertenencia Universitaria"
+                    aria-label="Ampliar evidencia del certamen de conocimientos universitarios"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/certamen-conocimientos-uaemex.jpg"
                       alt="Evidencia del certamen de conocimientos universitarios"
                       loading="lazy">
                   </button>
@@ -655,13 +692,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/oratoria-valores-simbolos.jpg"
-                    data-caption="Tercer lugar en el Concurso Universitario de Oratoria Estudiantil 2024">
-                    <img
-                      src="assets/evidencias/oratoria-valores-simbolos.jpg"
+                    data-caption="Tercer lugar en el Concurso Universitario de Oratoria Estudiantil 2024"
+                    aria-label="Ampliar evidencia del concurso universitario de oratoria de 2024"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/oratoria-valores-simbolos.jpg"
                       alt="Evidencia del concurso universitario de oratoria de 2024"
                       loading="lazy">
                   </button>
@@ -675,7 +711,6 @@
 
         </div>
       </div>
-
 
       <!-- RECONOCIMIENTOS INTERNOS -->
 
@@ -697,13 +732,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/cebraton-uaemex.jpg"
-                    data-caption="Diseño ganador del CEBRATÓN UAEMéx 2025">
-                    <img
-                      src="assets/evidencias/cebraton-uaemex.jpg"
+                    data-caption="Diseño ganador del CEBRATÓN UAEMéx 2025"
+                    aria-label="Ampliar evidencia del CEBRATÓN UAEMéx"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/cebraton-uaemex.jpg"
                       alt="Evidencia del diseño ganador del CEBRATÓN UAEMéx"
                       loading="lazy">
                   </button>
@@ -728,13 +762,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/rally-digital-plantel.jpg"
-                    data-caption="Primer lugar en el Rally de Cultura Digital del Plantel Cuauhtémoc">
-                    <img
-                      src="assets/evidencias/rally-digital-plantel.jpg"
+                    data-caption="Primer lugar en el Rally de Cultura Digital del Plantel Cuauhtémoc"
+                    aria-label="Ampliar evidencia del rally digital del Plantel"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/rally-digital-plantel.jpg"
                       alt="Evidencia del primer lugar en el rally digital del Plantel"
                       loading="lazy">
                   </button>
@@ -760,13 +793,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/seleccion-interna-quimica.jpg"
-                    data-caption="Primer lugar en la selección interna para la Olimpiada Estatal de Química">
-                    <img
-                      src="assets/evidencias/seleccion-interna-quimica.jpg"
+                    data-caption="Primer lugar en la selección interna para la Olimpiada Estatal de Química"
+                    aria-label="Ampliar evidencia de la selección interna de química"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/seleccion-interna-quimica.jpg"
                       alt="Evidencia de la selección interna de química"
                       loading="lazy">
                   </button>
@@ -789,13 +821,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/rally-matematicas.jpg"
-                    data-caption="Segundo lugar en el Rally de las Matemáticas 2026">
-                    <img
-                      src="assets/evidencias/rally-matematicas.jpg"
+                    data-caption="Segundo lugar en el Rally de las Matemáticas 2026"
+                    aria-label="Ampliar evidencia del Rally de las Matemáticas"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/rally-matematicas.jpg"
                       alt="Evidencia del segundo lugar en el Rally de las Matemáticas"
                       loading="lazy">
                   </button>
@@ -820,13 +851,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/oratoria-poder-palabra.jpg"
-                    data-caption="Segundo lugar en el concurso de oratoria El poder de la palabra en la actualidad">
-                    <img
-                      src="assets/evidencias/oratoria-poder-palabra.jpg"
+                    data-caption="Segundo lugar en el concurso de oratoria El poder de la palabra en la actualidad"
+                    aria-label="Ampliar evidencia del concurso de oratoria"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/oratoria-poder-palabra.jpg"
                       alt="Evidencia del concurso de oratoria El poder de la palabra"
                       loading="lazy">
                   </button>
@@ -840,7 +870,6 @@
 
         </div>
       </div>
-
 
       <!-- OTROS RECONOCIMIENTOS -->
 
@@ -860,13 +889,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/spelling-bee.jpg"
-                    data-caption="Segundo lugar en el concurso escolar Spelling Bee 2023">
-                    <img
-                      src="assets/evidencias/spelling-bee.jpg"
+                    data-caption="Segundo lugar en el concurso escolar Spelling Bee 2023"
+                    aria-label="Ampliar evidencia del Spelling Bee"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/spelling-bee.jpg"
                       alt="Evidencia del segundo lugar en el Spelling Bee"
                       loading="lazy">
                   </button>
@@ -894,13 +922,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/olimpiada-conocimiento-infantil.jpg"
-                    data-caption="Selección para representar a la Escuela Primaria Daniel Delgadillo en la Olimpiada del Conocimiento Infantil 2020">
-                    <img
-                      src="assets/evidencias/olimpiada-conocimiento-infantil.jpg"
+                    data-caption="Selección para representar a la Escuela Primaria Daniel Delgadillo en la Olimpiada del Conocimiento Infantil 2020"
+                    aria-label="Ampliar evidencia de la Olimpiada del Conocimiento Infantil"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/olimpiada-conocimiento-infantil.jpg"
                       alt="Evidencia de selección para la Olimpiada del Conocimiento Infantil"
                       loading="lazy">
                   </button>
@@ -916,7 +943,6 @@
       </div>
 
     </section>
-
 
     <!-- SECCIÓN 3. CURSOS, TALLERES Y CERTIFICACIONES -->
 
@@ -934,7 +960,6 @@
         organismos públicos y plataformas especializadas.
       </p>
 
-
       <!-- DIPLOMADO Y CERTIFICACIÓN -->
 
       <div class="trajectory-group">
@@ -950,13 +975,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/diplomado-paginas-web.jpg"
-                    data-caption="Diplomado Creación de Páginas Web, INCA">
-                    <img
-                      src="assets/evidencias/diplomado-paginas-web.jpg"
+                    data-caption="Diplomado Creación de Páginas Web, INCA"
+                    aria-label="Ampliar diploma de Creación de Páginas Web"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/diplomado-paginas-web.jpg"
                       alt="Diploma de Creación de Páginas Web"
                       loading="lazy">
                   </button>
@@ -979,13 +1003,12 @@
 
               <div class="evidence-gallery">
                 <figure class="evidence-item">
-                  <button
-                    class="evidence-button"
-                    type="button"
+                  <button class="evidence-button" type="button"
                     data-full="assets/evidencias/certificacion-ec0105.jpg"
-                    data-caption="Certificación en el Estándar de Competencia EC0105">
-                    <img
-                      src="assets/evidencias/certificacion-ec0105.jpg"
+                    data-caption="Certificación en el Estándar de Competencia EC0105"
+                    aria-label="Ampliar certificación EC0105"
+                    aria-haspopup="dialog">
+                    <img src="assets/evidencias/certificacion-ec0105.jpg"
                       alt="Certificación del estándar EC0105"
                       loading="lazy">
                   </button>
@@ -999,7 +1022,6 @@
 
         </div>
       </div>
-
 
       <!-- TECNOLOGÍA, DATOS E INTELIGENCIA ARTIFICIAL -->
 
@@ -1051,7 +1073,6 @@
         </div>
       </div>
 
-
       <!-- COMUNICACIÓN Y EXPRESIÓN ORAL -->
 
       <div class="trajectory-group">
@@ -1091,7 +1112,6 @@
         </div>
       </div>
 
-
       <!-- LIDERAZGO, CIUDADANÍA Y SERVICIO -->
 
       <div class="trajectory-group">
@@ -1125,7 +1145,6 @@
 
         </div>
       </div>
-
 
       <!-- ESTADÍSTICA Y DIVULGACIÓN -->
 
@@ -1166,7 +1185,6 @@
 
   </main>
 
-
   <!-- VISOR DE EVIDENCIAS -->
 
   <div
@@ -1174,7 +1192,9 @@
     id="evidence-modal"
     role="dialog"
     aria-modal="true"
-    aria-label="Vista ampliada de la evidencia">
+    aria-hidden="true"
+    aria-label="Vista ampliada de la evidencia"
+    tabindex="-1">
 
     <button
       class="evidence-modal-close"
@@ -1192,15 +1212,15 @@
     </p>
   </div>
 
+  <!-- PIE DE PÁGINA COMPARTIDO -->
 
-  <!-- PIE DE PÁGINA -->
+  <div id="footer-container"></div>
 
- <div id="footer-container"></div>
-
-
-  <!-- FUNCIONES DE LA PÁGINA -->
+  <!-- FUNCIONES COMPARTIDAS DEL SITIO -->
 
   <script src="script.js"></script>
+
+  <!-- FUNCIONES DEL VISOR DE EVIDENCIAS -->
 
   <script>
     (() => {
@@ -1208,6 +1228,11 @@
       const modalImage = document.getElementById("evidence-modal-image");
       const modalCaption = document.getElementById("evidence-modal-caption");
       const closeButton = document.getElementById("evidence-modal-close");
+      const evidenceButtons = document.querySelectorAll(".evidence-button");
+
+      if (!modal || !modalImage || !modalCaption || !closeButton) {
+        return;
+      }
 
       let previousFocus = null;
 
@@ -1215,7 +1240,9 @@
         const imagePath = button.dataset.full;
         const caption = button.dataset.caption || "";
 
-        if (!imagePath) return;
+        if (!imagePath) {
+          return;
+        }
 
         previousFocus = button;
 
@@ -1224,25 +1251,36 @@
         modalCaption.textContent = caption;
 
         modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
         document.body.classList.add("modal-open");
+
         closeButton.focus();
       }
 
       function closeEvidence() {
+        if (!modal.classList.contains("is-open")) {
+          return;
+        }
+
         modal.classList.remove("is-open");
+        modal.setAttribute("aria-hidden", "true");
         document.body.classList.remove("modal-open");
 
         modalImage.src = "";
         modalImage.alt = "";
         modalCaption.textContent = "";
 
-        if (previousFocus) {
+        if (previousFocus && document.contains(previousFocus)) {
           previousFocus.focus();
         }
+
+        previousFocus = null;
       }
 
-      document.querySelectorAll(".evidence-button").forEach((button) => {
-        button.addEventListener("click", () => openEvidence(button));
+      evidenceButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          openEvidence(button);
+        });
       });
 
       closeButton.addEventListener("click", closeEvidence);
@@ -1254,8 +1292,19 @@
       });
 
       document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && modal.classList.contains("is-open")) {
+        if (!modal.classList.contains("is-open")) {
+          return;
+        }
+
+        if (event.key === "Escape") {
+          event.preventDefault();
           closeEvidence();
+          return;
+        }
+
+        if (event.key === "Tab") {
+          event.preventDefault();
+          closeButton.focus();
         }
       });
     })();
