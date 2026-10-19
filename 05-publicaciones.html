@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Publicaciones y divulgación | Javier Palma Romero</title>
+  <meta name="description" content="Artículos de divulgación, infografías, publicaciones independientes y proyectos de investigación de Javier Palma Romero.">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .publication-intro {
+      max-width: 850px;
+    }
+
+    .publication-section {
+      margin-bottom: 42px;
+    }
+
+    .publication-section > h3 {
+      margin-bottom: 18px;
+    }
+
+    .publication-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .publication-card {
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .publication-card .card-body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .publication-card h3,
+    .publication-card h4 {
+      margin-top: 8px;
+    }
+
+    .publication-cover {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+
+    .publication-meta {
+      font-size: 0.9rem;
+      opacity: 0.82;
+      margin-bottom: 10px;
+    }
+
+    .publication-link {
+      display: inline-block;
+      margin-top: auto;
+      padding-top: 14px;
+    }
+
+    .publication-link a {
+      text-underline-offset: 3px;
+    }
+
+    .visual-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .visual-item {
+      min-width: 0;
+      margin: 0;
+    }
+
+    .visual-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid rgba(128, 128, 128, 0.35);
+      border-radius: 10px;
+      background: #f3f3f3;
+      cursor: zoom-in;
+    }
+
+    .visual-button img {
+      display: block;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.2s ease;
+    }
+
+    .visual-button:hover img,
+    .visual-button:focus-visible img {
+      transform: scale(1.04);
+    }
+
+    .visual-caption {
+      margin-top: 8px;
+      font-size: 0.88rem;
+      line-height: 1.4;
+    }
+
+    .publication-status {
+      display: inline-block;
+      margin-bottom: 8px;
+      padding: 5px 9px;
+      border: 1px solid rgba(128, 128, 128, 0.35);
+      border-radius: 20px;
+      font-size: 0.78rem;
+    }
+
+    .project-feature {
+      margin-bottom: 22px;
+    }
+
+    .project-feature .card-body {
+      padding: 22px;
+    }
+
+    .publication-note {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+
+    .publication-number {
+      font-size: 0.83rem;
+      opacity: 0.75;
+    }
+
+    .publication-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 55px 20px 65px;
+      background: rgba(0, 0, 0, 0.92);
+    }
+
+    .publication-modal.is-open {
+      display: flex;
+    }
+
+    .publication-modal img {
+      max-width: 95%;
+      max-height: 82vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 5px;
+    }
+
+    .publication-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      background: transparent;
+      color: white;
+      font-size: 34px;
+      cursor: pointer;
+    }
+
+    .publication-modal-caption {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      right: 15px;
+      color: white;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    @media (max-width: 600px) {
+      .publication-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .visual-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .visual-button img {
+        height: 145px;
+      }
+
+      .publication-modal {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .publication-modal img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO -->
+
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a class="brand" href="index.html">
+        Javier Palma Romero
+        <small>Aspirante · PMJ Toluca 2026</small>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav">
+        Menú ☰
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="01-perfil.html">Perfil</a>
+        <a href="02-trayectoria.html">Trayectoria</a>
+        <a href="03-liderazgo.html">Liderazgo</a>
+        <a href="04-proyectos.html">Proyectos</a>
+        <a href="05-publicaciones.html" aria-current="page">Publicaciones</a>
+        <a href="06-servicio.html">Servicio</a>
+        <a href="07-testimonios.html">Testimonios</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="page-hero">
+      <p class="kicker">Publicaciones y divulgación</p>
+
+      <h1>Comunicar el conocimiento</h1>
+
+      <p class="lead publication-intro">
+        La divulgación del conocimiento constituye una parte importante
+        de mi trayectoria. A través de infografías, artículos, talleres
+        y proyectos de investigación, he buscado acercar temas científicos,
+        sociales, tecnológicos y universitarios a distintos públicos.
+      </p>
+    </section>
+
+
+    <!-- SECCIÓN 1. POLINIZANDO CONOCIMIENTO -->
+
+    <section class="content-section publication-section" id="polinizando">
+
+      <div class="section-heading">
+        <p class="kicker">Divulgación visual</p>
+        <h2>Polinizando Conocimiento</h2>
+      </div>
+
+      <div class="card project-feature">
+        <div class="card-body">
+
+          <span class="tag">2025–presente</span>
+
+          <h3>Infografías y actividades de divulgación</h3>
+
+          <p>
+            Como parte del proyecto “Polinizando Conocimiento”, he elaborado
+            dieciséis infografías educativas sobre temas de neurociencia,
+            historia, química y matemáticas, con el objetivo de promover
+            un aprendizaje atractivo y significativo entre las comunidades
+            digitales.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>16</strong>
+              <span>Infografías educativas elaboradas</span>
+            </div>
+            <div class="stat">
+              <strong>4</strong>
+              <span>Áreas temáticas principales</span>
+            </div>
+          </div>
+
+          <p class="publication-note">
+            Selección de materiales elaborados para el proyecto.
+            Pulsa una imagen para ampliarla.
+          </p>
+
+          <div class="visual-gallery">
+
+            <figure class="visual-item">
+              <button
+                class="visual-button"
+                type="button"
+                data-full="assets/evidencias/infografia-neurociencia.jpg"
+                data-caption="Infografía de divulgación sobre neurociencia">
+                <img
+                  src="assets/evidencias/infografia-neurociencia.jpg"
+                  alt="Infografía educativa sobre neurociencia"
+                  loading="lazy">
+              </button>
+              <figcaption class="visual-caption">
+                Neurociencia
+              </figcaption>
+            </figure>
+
+            <figure class="visual-item">
+              <button
+                class="visual-button"
+                type="button"
+                data-full="assets/evidencias/infografia-historia.jpg"
+                data-caption="Infografía de divulgación sobre historia">
+                <img
+                  src="assets/evidencias/infografia-historia.jpg"
+                  alt="Infografía educativa sobre historia"
+                  loading="lazy">
+              </button>
+              <figcaption class="visual-caption">
+                Historia
+              </figcaption>
+            </figure>
+
+            <figure class="visual-item">
+              <button
+                class="visual-button"
+                type="button"
+                data-full="assets/evidencias/infografia-quimica.jpg"
+                data-caption="Infografía de divulgación sobre química">
+                <img
+                  src="assets/evidencias/infografia-quimica.jpg"
+                  alt="Infografía educativa sobre química"
+                  loading="lazy">
+              </button>
+              <figcaption class="visual-caption">
+                Química
+              </figcaption>
+            </figure>
+
+            <figure class="visual-item">
+              <button
+                class="visual-button"
+                type="button"
+                data-full="assets/evidencias/infografia-matematicas.jpg"
+                data-caption="Infografía de divulgación sobre matemáticas">
+                <img
+                  src="assets/evidencias/infografia-matematicas.jpg"
+                  alt="Infografía educativa sobre matemáticas"
+                  loading="lazy">
+              </button>
+              <figcaption class="visual-caption">
+                Matemáticas
+              </figcaption>
+            </figure>
+
+          </div>
+
+          <p class="publication-note">
+            Las imágenes anteriores son espacios reservados: sustituye
+            las rutas por las infografías reales que quieras mostrar.
+            Se pueden agregar más tarjetas para presentar la colección
+            completa de dieciséis materiales.
+          </p>
+
+        </div>
+      </div>
+
+
+      <!-- TALLER IMPARTIDO -->
+
+      <div class="card project-feature">
+        <div class="card-body">
+
+          <h3>Taller de divulgación</h3>
+
+          <p>
+            Además de la elaboración de materiales visuales, participé
+            en actividades de divulgación mediante la impartición de un
+            taller. En este apartado se puede documentar su contenido,
+            el público al que estuvo dirigido y la actividad realizada.
+          </p>
+
+          <p>
+            <strong>Nombre del taller:</strong> pendiente de incorporar.
+          </p>
+
+          <p>
+            <strong>Fecha e institución:</strong> pendientes de incorporar.
+          </p>
+
+          <h4>Evidencias del taller</h4>
+
+          <div class="visual-gallery">
+
+            <figure class="visual-item">
+              <button
+                class="visual-button"
+                type="button"
+                data-full="assets/evidencias/taller-divulgacion.jpg"
+                data-caption="Impartición del taller de divulgación">
+                <img
+                  src="assets/evidencias/taller-divulgacion.jpg"
+                  alt="Fotografía de la impartición del taller"
+                  loading="lazy">
+              </button>
+              <figcaption class="visual-caption">
+                Impartición del taller
+              </figcaption>
+            </figure>
+
+            <figure class="visual-item">
+              <button
+                class="visual-button"
+                type="button"
+                data-full="assets/evidencias/taller-materiales.jpg"
+                data-caption="Materiales utilizados durante el taller">
+                <img
+                  src="assets/evidencias/taller-materiales.jpg"
+                  alt="Materiales utilizados en el taller"
+                  loading="lazy">
+              </button>
+              <figcaption class="visual-caption">
+                Materiales de trabajo
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- CONCURSO DE FOTOGRAFÍA -->
+
+      <div class="card project-feature">
+        <div class="card-body">
+
+          <h3>Participación en concurso de fotografía</h3>
+
+          <p>
+            Este espacio está destinado a documentar la participación
+            vinculada con el concurso de fotografía, mostrando la obra
+            presentada y, cuando corresponda, la convocatoria o evidencia
+            de participación.
+          </p>
+
+          <div class="visual-gallery">
+
+            <figure class="visual-item">
+              <button
+                class="visual-button"
+                type="button"
+                data-full="assets/evidencias/concurso-fotografia-obra.jpg"
+                data-caption="Obra presentada en el concurso de fotografía">
+                <img
+                  src="assets/evidencias/concurso-fotografia-obra.jpg"
+                  alt="Fotografía presentada en el concurso"
+                  loading="lazy">
+              </button>
+              <figcaption class="visual-caption">
+                Obra fotográfica
+              </figcaption>
+            </figure>
+
+            <figure class="visual-item">
+              <button
+                class="visual-button"
+                type="button"
+                data-full="assets/evidencias/concurso-fotografia-participacion.jpg"
+                data-caption="Evidencia de participación en el concurso de fotografía">
+                <img
+                  src="assets/evidencias/concurso-fotografia-participacion.jpg"
+                  alt="Evidencia de participación en el concurso"
+                  loading="lazy">
+              </button>
+              <figcaption class="visual-caption">
+                Evidencia de participación
+              </figcaption>
+            </figure>
+
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 2. ARTÍCULOS CONECTE UAEMÉX -->
+
+    <section class="content-section publication-section" id="conecte">
+
+      <div class="section-heading">
+        <p class="kicker">Artículos publicados</p>
+        <h2>Artículos en CONECTE UAEMéx</h2>
+      </div>
+
+      <p class="lead">
+        Con el propósito de favorecer el interés juvenil por asuntos
+        científicos, sociales y tecnológicos, he escrito trece artículos
+        de divulgación en la revista CONECTE UAEMéx, dirigida al nivel
+        medio superior.
+      </p>
+
+      <p class="publication-note">
+        Cada tarjeta incluye el título, la fecha de publicación,
+        el número de edición y el enlace al artículo original.
+      </p>
+
+      <div class="publication-grid">
+
+        <!-- ARTÍCULO 1 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-dopamina.jpg"
+            alt="Imagen del artículo La dopamina detrás de las notificaciones"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 01</span>
+            <h3>La dopamina detrás de las notificaciones</h3>
+            <p class="publication-meta">Febrero de 2026 · Edición 30</p>
+            <p>
+              Divulgación sobre neurociencia y la relación entre las
+              notificaciones digitales y los mecanismos de recompensa.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-30/la-dopamina-detr%C3%A1s-de-las-notificaciones/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 2 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-madre-tierra.jpg"
+            alt="Imagen del artículo sobre el Día Internacional de la Madre Tierra"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 02</span>
+            <h3>Día Internacional de la Madre Tierra: un recordatorio para cuidar nuestro hogar</h3>
+            <p class="publication-meta">Abril de 2026 · Edición 32</p>
+            <p>
+              Reflexión divulgativa sobre el cuidado del planeta
+              y la responsabilidad ambiental.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-32/d%C3%ADa-internacional-de-la-madre-tierra-un-recordatorio-para-cuidar-nuestro-hogar/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 3 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-reciclaje.jpg"
+            alt="Imagen del artículo sobre el Día Mundial del Reciclaje"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 03</span>
+            <h3>Día Mundial del Reciclaje: ¿Lo que tiras realmente es basura?</h3>
+            <p class="publication-meta">Mayo de 2026 · Edición 33</p>
+            <p>
+              Divulgación sobre los residuos, el reciclaje y la
+              manera de reconsiderar aquello que se desecha.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-33/d%C3%ADa-mundial-del-reciclaje-loque-tiras-realmente-es-basura/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 4 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-six-seven.jpg"
+            alt="Imagen del artículo Six-Seven: el número tendencioso"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 04</span>
+            <h3>Six-Seven: el número tendencioso</h3>
+            <p class="publication-meta">Mayo de 2026 · Edición 33</p>
+            <p>
+              Análisis de una tendencia digital desde una perspectiva
+              de divulgación.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-33/six-seven-el-n%C3%BAmero-tendencioso/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 5 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-fomo.jpg"
+            alt="Imagen del artículo FOMO: el miedo a perderse algo en la digitalidad"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 05</span>
+            <h3>FOMO: el miedo a perderse algo en la digitalidad</h3>
+            <p class="publication-meta">Junio de 2026 · Edición 34</p>
+            <p>
+              Aproximación al fenómeno FOMO y su relación con la
+              experiencia de las personas en entornos digitales.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-34/fomo-el-miedo-a-perdese-algo-en-la-digitalidad/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 6 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-juego.jpg"
+            alt="Imagen del artículo sobre el Día Internacional del Juego"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 06</span>
+            <h3>Día Internacional del juego: 1,2,3 por mí y por toda la infancia</h3>
+            <p class="publication-meta">Junio de 2026 · Edición 34</p>
+            <p>
+              Divulgación sobre la importancia del juego durante
+              la infancia.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-34/d%C3%ADa-internacional-del-juego-1-2-y-3-por-m%C3%AD-y-por-toda-la-infancia/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 7 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-amistad.jpg"
+            alt="Imagen del artículo sobre el Día Internacional de la Amistad"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 07</span>
+            <h3>Día Internacional de la Amistad: el vínculo que transforma nuestras vidas</h3>
+            <p class="publication-meta">Julio de 2026 · Edición 35</p>
+            <p>
+              Reflexión sobre la amistad y su importancia en las
+              relaciones humanas.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-35/d%C3%ADa-internacional-de-la-amistad/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 8 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-grupo-04.jpg"
+            alt="Imagen del artículo El grupo 04: cuatro semestres de historia compartida"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 08</span>
+            <h3>El grupo 04: cuatro semestres de historia compartida</h3>
+            <p class="publication-meta">Agosto de 2026 · Edición 36</p>
+            <p>
+              Texto sobre la memoria y las experiencias compartidas
+              de una comunidad estudiantil.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-36/el-grupo-04/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 9 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-peaton.jpg"
+            alt="Imagen del artículo La figura del peatón"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 09</span>
+            <h3>La figura del peatón: hacia una movilidad más segura</h3>
+            <p class="publication-meta">Agosto de 2026 · Edición 36</p>
+            <p>
+              Divulgación sobre el papel del peatón y la importancia
+              de la seguridad en la movilidad urbana.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-36/la-figura-del-peat%C3%B3n/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 10 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-paz.jpg"
+            alt="Imagen del artículo sobre el Día Internacional de la Paz"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 10</span>
+            <h3>Más allá de la ausencia de la guerra: Día Internacional de la Paz</h3>
+            <p class="publication-meta">Septiembre de 2026 · Edición 37</p>
+            <p>
+              Aproximación a la paz desde una perspectiva que trasciende
+              la ausencia de conflictos armados.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-37/mas-all%C3%A1-de-la-ausencia-de-guerra/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 11 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-algoritmos.jpg"
+            alt="Imagen del artículo sobre los algoritmos en el entorno digital"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 11</span>
+            <h3>¿Quién decide lo que vemos? Los algoritmos en nuestro scroll digital</h3>
+            <p class="publication-meta">Septiembre de 2026 · Edición 37</p>
+            <p>
+              Divulgación sobre los algoritmos y su influencia
+              en los contenidos que aparecen en las plataformas digitales.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-37/los-algoritmos-en-nuestro-scroll-digital/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 12 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-deuda-ciencia.jpg"
+            alt="Imagen del artículo La deuda pendiente de la ciencia"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 12</span>
+            <h3>La deuda pendiente de la ciencia: lo que todavía no sabemos</h3>
+            <p class="publication-meta">Octubre de 2026 · Edición 38</p>
+            <p>
+              Reflexión divulgativa sobre las preguntas científicas
+              que continúan abiertas y los límites del conocimiento.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-38/lo-que-todav%C3%ADa-no-sabemos/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+
+        <!-- ARTÍCULO 13 -->
+
+        <article class="card publication-card">
+          <img
+            class="publication-cover"
+            src="assets/evidencias/conecte-huellas-dactilares.jpg"
+            alt="Imagen del artículo Las huellas dactilares"
+            loading="lazy">
+
+          <div class="card-body">
+            <span class="publication-number">Artículo 13</span>
+            <h3>Las huellas dactilares: nuestro identificador por “default”</h3>
+            <p class="publication-meta">Octubre de 2026 · Edición 38</p>
+            <p>
+              Artículo de divulgación sobre las huellas dactilares
+              como elemento de identificación.
+            </p>
+            <p class="publication-link">
+              <a
+                href="https://conecteuaemex.jimdofree.com/edici%C3%B3n-38/las-huellas-dactilares/"
+                target="_blank"
+                rel="noopener noreferrer">
+                Leer artículo original ↗
+              </a>
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 3. PUBLICACIONES INDEPENDIENTES -->
+
+    <section class="content-section publication-section" id="independientes">
+
+      <div class="section-heading">
+        <p class="kicker">Producción escrita</p>
+        <h2>Publicaciones independientes y trabajos de investigación</h2>
+      </div>
+
+      <p class="lead">
+        Además de los artículos publicados en CONECTE UAEMéx, he
+        desarrollado textos de divulgación, trabajos sobre identidad
+        universitaria y proyectos de investigación relacionados con
+        asuntos educativos y sociales.
+      </p>
+
+      <div class="publication-grid">
+
+        <article class="card publication-card">
+          <div class="card-body">
+            <span class="publication-status">Artículo</span>
+            <h3>2026, año de Elena Cárdenas Guerrero</h3>
+            <p class="publication-meta">Enero de 2026</p>
+            <p>
+              Texto dedicado a Elena Cárdenas Guerrero.
+            </p>
+            <p class="publication-note">
+              Incorpora aquí la descripción definitiva y el enlace
+              a la versión publicada, cuando corresponda.
+            </p>
+          </div>
+        </article>
+
+        <article class="card publication-card">
+          <div class="card-body">
+            <span class="publication-status">Artículo</span>
+            <h3>Descripción espacial del Plantel “Cuauhtémoc” de la Escuela Preparatoria</h3>
+            <p class="publication-meta">Febrero de 2026</p>
+            <p>
+              Trabajo relacionado con la descripción espacial del
+              Plantel “Cuauhtémoc” de la Escuela Preparatoria de la UAEMéx.
+            </p>
+            <p class="publication-note">
+              Añade aquí la revista, plataforma o medio de publicación
+              y el enlace correspondiente.
+            </p>
+          </div>
+        </article>
+
+        <article class="card publication-card">
+          <div class="card-body">
+            <span class="publication-status">Investigación</span>
+            <h3>
+              Educación Sexual en el alumnado del Plantel “Cuauhtémoc”
+              de la Escuela Preparatoria de la Universidad Autónoma
+              del Estado de México durante el periodo 2026A
+            </h3>
+            <p class="publication-meta">Proyecto de investigación</p>
+            <p>
+              Proyecto de investigación desarrollado en coautoría,
+              enfocado en la educación sexual del alumnado del Plantel
+              “Cuauhtémoc” durante el periodo 2026A.
+            </p>
+            <p class="publication-note">
+              Aquí pueden incorporarse el resumen del trabajo, la
+              participación como coautor y el documento o enlace
+              público, si está disponible.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- SECCIÓN 4. TRABAJOS EN PROCESO EDITORIAL -->
+
+    <section class="content-section publication-section" id="proceso-editorial">
+
+      <div class="section-heading">
+        <p class="kicker">Proyección editorial</p>
+        <h2>Colaboraciones y trabajos en proceso editorial</h2>
+      </div>
+
+      <p>
+        Esta sección distingue los trabajos que todavía se encuentran
+        en proceso editorial de aquellos que ya fueron publicados.
+        La recepción, evaluación o revisión de un manuscrito no equivale
+        a su publicación definitiva.
+      </p>
+
+      <div class="publication-grid">
+
+        <article class="card publication-card">
+          <div class="card-body">
+            <span class="publication-status">En proceso editorial</span>
+            <h3>Trabajo para la revista Pulsar Ciencia</h3>
+            <p>
+              Artículo en proceso editorial para una revista de divulgación
+              científica.
+            </p>
+            <p class="publication-note">
+              Añade el título definitivo y actualiza el estado cuando
+              exista una resolución editorial.
+            </p>
+          </div>
+        </article>
+
+        <article class="card publication-card">
+          <div class="card-body">
+            <span class="publication-status">En revisión editorial</span>
+            <h3>Colaboración con Identidad Universitaria</h3>
+            <p>
+              Trabajo sometido a revisión editorial en el medio
+              universitario Identidad Universitaria de la UAEMéx.
+            </p>
+            <p class="publication-note">
+              Sustituye esta descripción por el título y el estado
+              exactos del manuscrito.
+            </p>
+          </div>
+        </article>
+
+        <article class="card publication-card">
+          <div class="card-body">
+            <span class="publication-status">En revisión editorial</span>
+            <h3>Colaboración con Pardalis</h3>
+            <p>
+              Trabajo sometido a revisión editorial para la publicación
+              Pardalis.
+            </p>
+            <p class="publication-note">
+              Añade el título definitivo y actualiza el estado cuando
+              se comunique una decisión editorial.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- VISOR DE IMÁGENES -->
+
+  <div
+    class="publication-modal"
+    id="publication-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Vista ampliada de la imagen">
+
+    <button
+      class="publication-modal-close"
+      id="publication-modal-close"
+      type="button"
+      aria-label="Cerrar imagen ampliada">
+      &times;
+    </button>
+
+    <img id="publication-modal-image" src="" alt="">
+
+    <p
+      class="publication-modal-caption"
+      id="publication-modal-caption">
+    </p>
+
+  </div>
+
+
+  <!-- PIE DE PÁGINA -->
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+
+        <div class="footer-name">Javier Palma Romero</div>
+
+        <div class="footer-note">
+          Aspirante a obtener el Premio Municipal de la Juventud Toluca 2026
+        </div>
+
+        <div class="footer-note">
+          Modalidad: Trayectoria Académica, Innovación y Emprendimiento
+        </div>
+
+        <div class="footer-note">Categoría “A” (12-17 años)</div>
+
+        <div class="footer-links">
+          <a href="tel:+527222029221">722 202 9221</a>
+
+          <a href="mailto:javierpalmaromero09@gmail.com">
+            javierpalmaromero09@gmail.com
+          </a>
+
+          <a
+            href="https://www.instagram.com/tu_usuario/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Instagram
+          </a>
+        </div>
+
+        <div class="footer-note">© 2026</div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+  <script>
+    (() => {
+      const modal = document.getElementById("publication-modal");
+      const modalImage = document.getElementById("publication-modal-image");
+      const modalCaption = document.getElementById("publication-modal-caption");
+      const closeButton = document.getElementById("publication-modal-close");
+
+      let previousFocus = null;
+
+      function openImage(button) {
+        const path = button.dataset.full;
+        const caption = button.dataset.caption || "";
+
+        if (!path) return;
+
+        previousFocus = button;
+        modalImage.src = path;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
+
+        modal.classList.add("is-open");
+        document.body.classList.add("modal-open");
+        closeButton.focus();
+      }
+
+      function closeImage() {
+        modal.classList.remove("is-open");
+        document.body.classList.remove("modal-open");
+
+        modalImage.src = "";
+        modalImage.alt = "";
+        modalCaption.textContent = "";
+
+        if (previousFocus) previousFocus.focus();
+      }
+
+      document.querySelectorAll(".visual-button").forEach((button) => {
+        button.addEventListener("click", () => openImage(button));
+      });
+
+      closeButton.addEventListener("click", closeImage);
+
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeImage();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (
+          event.key === "Escape" &&
+          modal.classList.contains("is-open")
+        ) {
+          closeImage();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html> 
