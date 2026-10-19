@@ -1036,3 +1036,7 @@ button:focus-visible {
   border-bottom-color: var(--burgundy, #762d40);
 }
 
+.nav a.active {
+  color: var(--burgundy, #762d40);
+  border-bottom: 2px solid var(--burgundy, #762d40);
+}
