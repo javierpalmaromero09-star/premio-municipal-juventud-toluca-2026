@@ -953,23 +953,23 @@ button:focus-visible {
    AJUSTES FINALES DE PRESENTACIÓN
    ========================================== */
 
-/* Divisiones más visibles entre secciones */
+/* Líneas divisorias más visibles */
 .section {
-  border-top: 1.5px solid #d4c8bc;
+  border-top: 2px solid #b9a69a;
 }
 
 .content-section {
-  border-bottom: 1.5px solid #d4c8bc;
+  border-bottom: 2px solid #b9a69a;
 }
 
 .site-footer {
-  border-top: 1.5px solid #cfc1b5;
+  border-top: 2px solid #b9a69a;
 }
 
 .footer-divider {
-  max-width: 440px;
-  background: #cfc1b5;
-  height: 1.5px;
+  height: 2px;
+  background-color: #b9a69a;
+  opacity: 1;
 }
 
 /* Pie de página compacto y centrado */
