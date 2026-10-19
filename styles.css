@@ -955,19 +955,19 @@ button:focus-visible {
 
 /* Líneas divisorias más visibles */
 .section {
-  border-top: 2px solid #b9a69a;
+  border-top: 5px solid #b9a69a;
 }
 
 .content-section {
-  border-bottom: 2px solid #b9a69a;
+  border-bottom: 5px solid #b9a69a;
 }
 
 .site-footer {
-  border-top: 2px solid #b9a69a;
+  border-top: 5px solid #b9a69a;
 }
 
 .footer-divider {
-  height: 2px;
+  height: 5px;
   background-color: #b9a69a;
   opacity: 1;
 }
