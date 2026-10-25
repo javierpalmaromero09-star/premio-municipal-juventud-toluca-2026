@@ -12,28 +12,42 @@
 
   <meta name="theme-color" content="#702632">
 
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Javier Palma Romero | PMJ Toluca 2026">
+  <meta
+    property="og:description"
+    content="Excelencia académica, innovación educativa, divulgación científica y compromiso con la comunidad."
+  >
+
   <title>Inicio | Javier Palma Romero — PMJ Toluca 2026</title>
 
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
+  <!-- ACCESIBILIDAD -->
+  <a class="skip-link" href="#contenido">
+    Saltar al contenido principal
+  </a>
+
   <!-- ENCABEZADO COMPARTIDO -->
   <div id="header-container"></div>
 
-  <main>
+  <main id="contenido">
 
     <!-- PORTADA -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
 
         <div class="hero-content">
+
           <span class="eyebrow">
             Premio Municipal de la Juventud Toluca 2026
           </span>
 
-          <h1>
+          <h1 id="hero-title">
             Javier Palma Romero
           </h1>
 
@@ -50,21 +64,36 @@
           </p>
 
           <div class="hero-actions">
+
             <a class="button button-primary" href="01-perfil.html">
               Conocer mi perfil
+              <span aria-hidden="true">↗</span>
             </a>
 
             <a class="button button-secondary" href="02-trayectoria.html">
               Explorar mi trayectoria
+              <span aria-hidden="true">→</span>
             </a>
+
           </div>
         </div>
 
-        <div class="hero-visual">
+        <div
+          class="hero-visual"
+          aria-label="Identidad de Javier Palma Romero"
+        >
           <div class="hero-photo-placeholder">
-            <span class="hero-monogram">JP</span>
+
+            <span class="hero-monogram" aria-hidden="true">
+              JP
+            </span>
+
             <p>Javier Palma Romero</p>
-            <span>Trayectoria académica · 2026</span>
+
+            <span>
+              Trayectoria académica · 2026
+            </span>
+
           </div>
         </div>
 
@@ -72,26 +101,38 @@
     </section>
 
     <!-- CIFRAS DESTACADAS -->
-    <section class="section stats-section" aria-label="Cifras destacadas">
+    <section
+      class="section stats-section"
+      aria-labelledby="stats-title"
+    >
       <div class="container">
 
         <div class="section-heading">
+
           <div>
-            <span class="eyebrow">Resultados y alcance</span>
-            <h2>Una trayectoria en cifras</h2>
+            <span class="eyebrow">
+              Resultados y alcance
+            </span>
+
+            <h2 id="stats-title">
+              Una trayectoria en cifras
+            </h2>
           </div>
 
           <p>
             Algunas cifras representativas de las actividades
             académicas, educativas y editoriales realizadas.
           </p>
+
         </div>
 
         <div class="stats-grid">
 
           <article class="stat-card">
             <span class="stat-number">65</span>
+
             <h3>Materiales educativos</h3>
+
             <p>
               Guías de estudio, formularios y series de ejercicios
               elaborados para el bachillerato.
@@ -100,7 +141,9 @@
 
           <article class="stat-card">
             <span class="stat-number">550+</span>
+
             <h3>Beneficiarios directos</h3>
+
             <p>
               Estudiantes alcanzados mediante la distribución
               de materiales y recursos educativos.
@@ -109,7 +152,9 @@
 
           <article class="stat-card">
             <span class="stat-number">31</span>
+
             <h3>Personas asesoradas</h3>
+
             <p>
               Apoyo académico en asignaturas de Matemáticas,
               Física y Química.
@@ -118,7 +163,9 @@
 
           <article class="stat-card">
             <span class="stat-number">13</span>
+
             <h3>Artículos publicados</h3>
+
             <p>
               Colaboraciones de divulgación en la revista
               CONECTE UAEMéx.
@@ -130,26 +177,39 @@
     </section>
 
     <!-- ÁREAS DE LA TRAYECTORIA -->
-    <section class="section" id="areas">
+    <section
+      class="section"
+      id="areas"
+      aria-labelledby="areas-title"
+    >
       <div class="container">
 
         <div class="section-heading">
+
           <div>
             <span class="eyebrow">Mi trayectoria</span>
-            <h2>Conoce las áreas de mi trabajo</h2>
+
+            <h2 id="areas-title">
+              Conoce las áreas de mi trabajo
+            </h2>
           </div>
 
           <p>
             Diferentes ámbitos que reflejan mi formación,
             mis iniciativas y mi participación en la comunidad.
           </p>
+
         </div>
 
         <div class="cards">
 
+          <!-- PERFIL -->
           <article class="card">
             <div class="card-body">
-              <span class="card-eyebrow">01 · Formación</span>
+
+              <span class="card-eyebrow">
+                01 · Formación
+              </span>
 
               <h3>Perfil del aspirante</h3>
 
@@ -159,14 +219,20 @@
               </p>
 
               <a class="text-link" href="01-perfil.html">
-                Conocer mi perfil →
+                Conocer mi perfil
+                <span aria-hidden="true">→</span>
               </a>
+
             </div>
           </article>
 
+          <!-- TRAYECTORIA -->
           <article class="card">
             <div class="card-body">
-              <span class="card-eyebrow">02 · Reconocimientos</span>
+
+              <span class="card-eyebrow">
+                02 · Reconocimientos
+              </span>
 
               <h3>Trayectoria académica</h3>
 
@@ -176,14 +242,20 @@
               </p>
 
               <a class="text-link" href="02-trayectoria.html">
-                Explorar mi trayectoria →
+                Explorar mi trayectoria
+                <span aria-hidden="true">→</span>
               </a>
+
             </div>
           </article>
 
+          <!-- LIDERAZGO -->
           <article class="card">
             <div class="card-body">
-              <span class="card-eyebrow">03 · Participación</span>
+
+              <span class="card-eyebrow">
+                03 · Participación
+              </span>
 
               <h3>Liderazgo y representación</h3>
 
@@ -193,14 +265,20 @@
               </p>
 
               <a class="text-link" href="03-liderazgo.html">
-                Conocer mi liderazgo →
+                Conocer mi liderazgo
+                <span aria-hidden="true">→</span>
               </a>
+
             </div>
           </article>
 
+          <!-- PROYECTOS -->
           <article class="card">
             <div class="card-body">
-              <span class="card-eyebrow">04 · Innovación</span>
+
+              <span class="card-eyebrow">
+                04 · Innovación
+              </span>
 
               <h3>Proyectos e iniciativas</h3>
 
@@ -210,14 +288,20 @@
               </p>
 
               <a class="text-link" href="04-proyectos.html">
-                Explorar los proyectos →
+                Explorar los proyectos
+                <span aria-hidden="true">→</span>
               </a>
+
             </div>
           </article>
 
+          <!-- PUBLICACIONES -->
           <article class="card">
             <div class="card-body">
-              <span class="card-eyebrow">05 · Producción intelectual</span>
+
+              <span class="card-eyebrow">
+                05 · Producción intelectual
+              </span>
 
               <h3>Publicaciones</h3>
 
@@ -228,14 +312,20 @@
               </p>
 
               <a class="text-link" href="05-publicaciones.html">
-                Consultar publicaciones →
+                Consultar publicaciones
+                <span aria-hidden="true">→</span>
               </a>
+
             </div>
           </article>
 
+          <!-- SERVICIO -->
           <article class="card">
             <div class="card-body">
-              <span class="card-eyebrow">06 · Compromiso social</span>
+
+              <span class="card-eyebrow">
+                06 · Compromiso social
+              </span>
 
               <h3>Servicio y comunidad</h3>
 
@@ -245,8 +335,10 @@
               </p>
 
               <a class="text-link" href="06-servicio.html">
-                Conocer las actividades →
+                Conocer las actividades
+                <span aria-hidden="true">→</span>
               </a>
+
             </div>
           </article>
 
@@ -255,15 +347,27 @@
     </section>
 
     <!-- PUBLICACIONES Y DIVULGACIÓN -->
-    <section class="section section-highlight" id="divulgacion">
+    <section
+      class="section section-highlight"
+      id="divulgacion"
+      aria-labelledby="divulgacion-title"
+    >
       <div class="container content-grid">
 
         <div>
-          <span class="eyebrow">Divulgación del conocimiento</span>
-          <h2>Compartir lo aprendido también es contribuir</h2>
+
+          <span class="eyebrow">
+            Divulgación del conocimiento
+          </span>
+
+          <h2 id="divulgacion-title">
+            Compartir lo aprendido también es contribuir
+          </h2>
+
         </div>
 
         <div>
+
           <p>
             La elaboración de materiales educativos, la publicación
             de artículos y la participación en iniciativas de
@@ -277,28 +381,44 @@
             de intercambio académico entre estudiantes.
           </p>
 
-          <a class="text-link" href="04-proyectos.html">
-            Conocer mis proyectos →
-          </a>
+          <div class="inline-links">
 
-          <a class="text-link" href="05-publicaciones.html">
-            Consultar mis publicaciones →
-          </a>
+            <a class="text-link" href="04-proyectos.html">
+              Conocer mis proyectos
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a class="text-link" href="05-publicaciones.html">
+              Consultar mis publicaciones
+              <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
         </div>
 
       </div>
     </section>
 
     <!-- PROYECCIÓN -->
-    <section class="section" id="proyeccion">
+    <section
+      class="section"
+      id="proyeccion"
+      aria-labelledby="proyeccion-title"
+    >
       <div class="container">
 
         <div class="projection-panel">
 
           <div class="projection-content">
-            <span class="eyebrow">Lo que sigue</span>
 
-            <h2>Proyección y compromiso a futuro</h2>
+            <span class="eyebrow">
+              Lo que sigue
+            </span>
+
+            <h2 id="proyeccion-title">
+              Proyección y compromiso a futuro
+            </h2>
 
             <p>
               La continuidad de una trayectoria implica consolidar
@@ -314,9 +434,14 @@
               contribuyendo a la comunidad estudiantil.
             </p>
 
-            <a class="button button-primary" href="07-testimonios.html">
+            <a
+              class="button button-primary"
+              href="07-testimonios.html"
+            >
               Conocer testimonios
+              <span aria-hidden="true">→</span>
             </a>
+
           </div>
 
         </div>
@@ -328,9 +453,6 @@
 
   <!-- PIE DE PÁGINA COMPARTIDO -->
   <div id="footer-container"></div>
-
-  <!-- FUNCIONES DEL SITIO -->
-  <script src="script.js"></script>
 
 </body>
 </html>
