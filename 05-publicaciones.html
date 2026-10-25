@@ -7,7 +7,7 @@
 
   <title>Publicaciones y divulgación | Javier Palma Romero — PMJ Toluca 2026</title>
 
-  <meta name="description" content="Artículos de divulgación, infografías, guías de estudio, publicaciones independientes y proyectos de investigación de Javier Palma Romero.">
+  <meta name="description" content="Artículos de divulgación científica, infografías de Polinizando Conocimiento, producción académica, investigaciones y colaboraciones editoriales de Javier Palma Romero.">
   <meta name="theme-color" content="#762d40">
 
   <link rel="stylesheet" href="styles.css">
@@ -17,9 +17,9 @@
       --pub-vino: #762d40;
       --pub-vino-dark: #592030;
       --pub-paper: #f6f3ed;
-      --pub-white: #fff;
+      --pub-white: #ffffff;
       --pub-ink: #29242a;
-      --pub-muted: #746b70;
+      --pub-muted: #71696d;
       --pub-border: #e6dddc;
     }
 
@@ -34,39 +34,39 @@
     }
 
     .pub-hero {
-      padding: clamp(50px, 7vw, 100px) 0 48px;
+      padding: clamp(55px, 7vw, 105px) 0 50px;
       border-bottom: 1px solid var(--pub-border);
     }
 
     .pub-kicker {
       display: block;
+      margin-bottom: 15px;
       color: var(--pub-vino);
       font: 700 12px/1.5 Arial, sans-serif;
       letter-spacing: .14em;
       text-transform: uppercase;
-      margin-bottom: 15px;
     }
 
     .pub-hero h1 {
-      max-width: 900px;
-      font: 400 clamp(37px, 5.5vw, 66px)/1.12 Georgia, serif;
+      max-width: 920px;
+      margin: 0 0 23px;
+      font: 400 clamp(38px, 5.5vw, 68px)/1.12 Georgia, serif;
       letter-spacing: -.035em;
-      margin: 0 0 24px;
     }
 
     .pub-hero .pub-lead {
-      max-width: 820px;
+      max-width: 840px;
+      margin: 0;
       color: var(--pub-muted);
       font-size: clamp(16px, 1.8vw, 19px);
       line-height: 1.8;
-      margin: 0;
     }
 
     .pub-nav {
       display: flex;
       flex-wrap: wrap;
       gap: 9px;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
     .pub-nav a {
@@ -77,18 +77,17 @@
       color: var(--pub-vino);
       text-decoration: none;
       font: 700 12px/1.4 Arial, sans-serif;
-      transition: .2s ease;
+      transition: background .2s, color .2s;
     }
 
     .pub-nav a:hover {
-      color: white;
       background: var(--pub-vino);
-      border-color: var(--pub-vino);
+      color: white;
     }
 
     .pub-section {
       padding-top: 75px;
-      scroll-margin-top: 100px;
+      scroll-margin-top: 105px;
     }
 
     .pub-heading {
@@ -96,24 +95,23 @@
     }
 
     .pub-heading h2 {
-      font: 400 clamp(29px, 3.5vw, 43px)/1.2 Georgia, serif;
-      margin: 0 0 13px;
+      margin: 0 0 14px;
+      font: 400 clamp(30px, 3.6vw, 44px)/1.2 Georgia, serif;
       letter-spacing: -.02em;
     }
 
-    .pub-heading p,
-    .pub-intro {
+    .pub-heading p {
       max-width: 850px;
+      margin: 0;
       color: var(--pub-muted);
       line-height: 1.8;
-      margin: 0;
     }
 
     .pub-subheading {
-      font: 400 clamp(24px, 2.6vw, 31px)/1.3 Georgia, serif;
-      margin: 43px 0 22px;
+      margin: 46px 0 22px;
       padding-bottom: 15px;
       border-bottom: 1px solid var(--pub-border);
+      font: 400 clamp(23px, 2.6vw, 31px)/1.3 Georgia, serif;
     }
 
     .pub-grid {
@@ -134,35 +132,12 @@
       background: var(--pub-white);
       border: 1px solid var(--pub-border);
       border-radius: 12px;
-      box-shadow: 0 6px 25px rgba(45, 25, 30, .035);
+      box-shadow: 0 6px 25px rgba(45, 25, 30, .04);
     }
 
     .pub-card {
       display: flex;
       flex-direction: column;
-    }
-
-    .pub-cover-button {
-      display: block;
-      width: 100%;
-      padding: 0;
-      border: 0;
-      background: #eee8e5;
-      cursor: zoom-in;
-      overflow: hidden;
-    }
-
-    .pub-cover {
-      display: block;
-      width: 100%;
-      height: 215px;
-      object-fit: cover;
-      object-position: top center;
-      transition: transform .3s ease;
-    }
-
-    .pub-cover-button:hover .pub-cover {
-      transform: scale(1.035);
     }
 
     .pub-body {
@@ -174,45 +149,69 @@
     }
 
     .pub-label {
+      display: inline-block;
+      margin-bottom: 11px;
       color: var(--pub-vino);
       font: 700 11px/1.5 Arial, sans-serif;
       letter-spacing: .1em;
       text-transform: uppercase;
-      margin-bottom: 11px;
     }
 
     .pub-card h3 {
+      margin: 0 0 13px;
       font: 400 23px/1.35 Georgia, serif;
-      margin: 0 0 12px;
       overflow-wrap: anywhere;
     }
 
     .pub-meta {
+      margin: 0 0 13px;
       color: var(--pub-vino);
       font-size: 13px;
       font-weight: 700;
-      margin: 0 0 13px;
     }
 
     .pub-description {
+      margin: 0 0 20px;
       color: var(--pub-muted);
       font-size: 14px;
       line-height: 1.75;
-      margin: 0 0 19px;
+    }
+
+    .pub-cover-button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      background: #eee8e5;
+      cursor: zoom-in;
+    }
+
+    .pub-cover {
+      display: block;
+      width: 100%;
+      height: 225px;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform .3s ease;
+    }
+
+    .pub-cover-button:hover .pub-cover {
+      transform: scale(1.035);
     }
 
     .pub-action {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 7px;
       min-height: 43px;
-      padding: 10px 16px;
       margin-top: auto;
-      background: var(--pub-vino);
+      padding: 10px 16px;
       border: 1px solid var(--pub-vino);
       border-radius: 6px;
-      color: #fff;
+      background: var(--pub-vino);
+      color: white;
       text-decoration: none;
       font: 700 13px/1.4 Arial, sans-serif;
       cursor: pointer;
@@ -232,46 +231,48 @@
       background: #f8f0f2;
     }
 
+    .pub-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: auto;
+    }
+
     .pub-feature {
-      padding: clamp(22px, 3vw, 34px);
+      padding: clamp(22px, 3vw, 35px);
       margin-bottom: 22px;
     }
 
     .pub-feature h3 {
-      font: 400 28px/1.3 Georgia, serif;
-      margin: 0 0 16px;
-    }
-
-    .pub-feature h4 {
-      font: 400 22px/1.3 Georgia, serif;
-      margin: 25px 0 14px;
+      margin: 0 0 17px;
+      font: 400 29px/1.3 Georgia, serif;
     }
 
     .pub-feature p {
+      margin: 0 0 17px;
       line-height: 1.8;
-      margin: 0 0 16px;
     }
 
     .pub-stats {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      margin: 24px 0;
+      margin: 25px 0;
     }
 
     .pub-stat {
       flex: 1;
       min-width: 180px;
-      padding: 21px;
-      background: var(--pub-paper);
+      padding: 22px;
       border-radius: 8px;
+      background: var(--pub-paper);
     }
 
     .pub-stat strong {
       display: block;
-      font: 400 36px Georgia, serif;
-      color: var(--pub-vino);
       margin-bottom: 8px;
+      color: var(--pub-vino);
+      font: 400 37px Georgia, serif;
     }
 
     .pub-stat span {
@@ -279,89 +280,169 @@
       font-size: 13px;
     }
 
-    .pub-gallery {
+    /* INFOGRAFÍAS */
+
+    .pub-infographic-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 15px;
-      margin: 22px 0;
+      gap: 20px;
     }
 
-    .pub-gallery figure {
+    .pub-infographic-card {
       min-width: 0;
-      margin: 0;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--pub-border);
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(45, 25, 30, .04);
     }
 
-    .pub-gallery button {
+    .pub-infographic-button {
+      display: block;
       width: 100%;
       padding: 0;
-      border: 1px solid var(--pub-border);
-      border-radius: 8px;
-      background: var(--pub-paper);
+      border: 0;
+      background: #f5f0ed;
+      cursor: zoom-in;
       overflow: hidden;
+    }
+
+    .pub-infographic-image {
+      display: block;
+      width: 100%;
+      height: 340px;
+      object-fit: contain;
+      transition: transform .25s ease;
+    }
+
+    .pub-infographic-button:hover .pub-infographic-image {
+      transform: scale(1.025);
+    }
+
+    .pub-infographic-body {
+      padding: 20px;
+    }
+
+    .pub-infographic-body h3 {
+      margin: 0 0 10px;
+      font: 400 21px/1.35 Georgia, serif;
+    }
+
+    .pub-infographic-body p {
+      margin: 0;
+      color: var(--pub-muted);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .pub-infographic-body .pub-action {
+      margin-top: 16px;
+    }
+
+    /* VISORES PDF EN LAS TARJETAS */
+
+    .pub-pdf-preview {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      background: #f4f1ef;
+      border-bottom: 1px solid var(--pub-border);
+    }
+
+    .pub-pdf-preview iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: white;
+      pointer-events: none;
+    }
+
+    .pub-pdf-overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
       cursor: zoom-in;
     }
 
-    .pub-gallery img {
-      display: block;
-      width: 100%;
-      height: 175px;
-      object-fit: contain;
+    .pub-pdf-indicator {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      padding: 9px 12px;
+      border-radius: 5px;
+      background: rgba(60, 30, 42, .93);
+      color: white;
+      font: 700 12px Arial, sans-serif;
+      pointer-events: none;
     }
 
-    .pub-gallery figcaption {
-      font-size: 13px;
-      line-height: 1.5;
+    .pub-pdf-note {
+      margin-top: 14px;
+      font-size: 12px;
+      line-height: 1.6;
       color: var(--pub-muted);
-      margin-top: 8px;
     }
 
-    .pub-placeholder {
-      display: flex;
-      flex-direction: column;
+    /* TALLER */
+
+    .pub-workshop {
+      display: grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap: 30px;
       align-items: center;
-      justify-content: center;
-      min-height: 215px;
-      padding: 24px;
-      gap: 12px;
-      color: var(--pub-muted);
+    }
+
+    .pub-workshop-mark {
+      display: grid;
+      place-items: center;
+      min-height: 220px;
+      padding: 25px;
+      border: 1px solid #e4d6d9;
+      border-radius: 10px;
       background:
-        linear-gradient(145deg, #f8f4f1, #efe7e5);
-      border-bottom: 1px solid var(--pub-border);
+        radial-gradient(circle at 20% 20%, #fff 0, transparent 40%),
+        linear-gradient(135deg, #f8f1f2, #e9dfe1);
+      color: var(--pub-vino);
       text-align: center;
     }
 
-    .pub-placeholder-icon {
-      display: grid;
-      place-items: center;
-      width: 55px;
-      height: 65px;
-      border: 2px solid #d8c5ca;
-      border-radius: 5px;
-      font-size: 24px;
-      color: var(--pub-vino);
-      background: white;
+    .pub-workshop-mark strong {
+      display: block;
+      font: 400 clamp(36px, 5vw, 60px) Georgia, serif;
+      letter-spacing: -.04em;
     }
 
-    .pub-placeholder span:last-child {
-      font-size: 13px;
-      line-height: 1.5;
+    .pub-workshop-mark span {
+      display: block;
+      margin-top: 12px;
+      font: 700 12px Arial, sans-serif;
+      letter-spacing: .12em;
+      text-transform: uppercase;
     }
 
-    .pub-pending {
+    /* MARCADORES */
+
+    .pub-status {
       display: inline-block;
-      color: var(--pub-muted);
-      font-size: 12px;
+      padding: 6px 11px;
+      margin-bottom: 14px;
       border: 1px solid var(--pub-border);
       border-radius: 999px;
-      padding: 6px 11px;
-      margin-top: auto;
+      color: var(--pub-muted);
+      font: 700 12px Arial, sans-serif;
     }
 
     .pub-note {
-      font-size: 13px;
       color: var(--pub-muted);
-      line-height: 1.7;
+      font-size: 13px;
+      line-height: 1.75;
     }
+
+    /* VISOR AMPLIADO */
 
     .pub-modal {
       position: fixed;
@@ -369,8 +450,8 @@
       z-index: 10000;
       display: none;
       flex-direction: column;
-      padding: clamp(8px, 2vw, 20px);
-      background: rgba(19, 12, 16, .96);
+      padding: clamp(7px, 1.8vw, 20px);
+      background: rgba(19, 12, 16, .97);
     }
 
     .pub-modal.open {
@@ -383,21 +464,25 @@
       align-items: center;
       gap: 10px;
       padding: 12px;
-      color: #fff;
       background: #2d1d24;
+      color: white;
       border-radius: 8px 8px 0 0;
     }
 
     .pub-modal-title {
       flex: 1;
-      min-width: 160px;
+      min-width: 170px;
       font: 700 14px/1.5 Arial, sans-serif;
     }
 
     .pub-modal-close,
     .pub-modal-external {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
       padding: 10px 15px;
-      border: 1px solid rgba(255,255,255,.55);
+      border: 1px solid rgba(255,255,255,.6);
       border-radius: 5px;
       background: transparent;
       color: white;
@@ -424,6 +509,7 @@
     }
 
     .pub-modal-content img {
+      display: block;
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
@@ -440,17 +526,26 @@
       overflow: hidden;
     }
 
-    @media (max-width: 1000px) {
+    .pub-cover-button:focus-visible,
+    .pub-infographic-button:focus-visible,
+    .pub-pdf-overlay:focus-visible,
+    .pub-action:focus-visible,
+    .pub-modal-close:focus-visible {
+      outline: 3px solid #b76b81;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 1050px) {
       .pub-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
-      .pub-gallery {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+      .pub-infographic-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 700px) {
       .publicaciones .pub-container {
         width: calc(100% - 28px);
       }
@@ -460,24 +555,42 @@
       }
 
       .pub-grid,
-      .pub-grid.two {
+      .pub-grid.two,
+      .pub-workshop {
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .pub-gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .pub-infographic-grid {
+        gap: 12px;
       }
 
-      .pub-gallery img {
-        height: 150px;
+      .pub-infographic-image {
+        height: 250px;
+      }
+
+      .pub-infographic-body {
+        padding: 15px;
+      }
+
+      .pub-infographic-body h3 {
+        font-size: 17px;
+      }
+
+      .pub-infographic-body .pub-action {
+        width: 100%;
+        font-size: 12px;
+      }
+
+      .pub-body {
+        padding: 22px;
       }
 
       .pub-cover {
         height: 230px;
       }
 
-      .pub-body {
-        padding: 22px;
+      .pub-pdf-preview {
+        height: 285px;
       }
 
       .pub-modal-title {
@@ -487,12 +600,22 @@
       .pub-modal-close,
       .pub-modal-external {
         flex: 1;
-        text-align: center;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .pub-infographic-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .pub-infographic-image {
+        height: 360px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .pub-cover {
+      .pub-cover,
+      .pub-infographic-image {
         transition: none;
       }
     }
@@ -511,7 +634,9 @@
     <section class="pub-hero">
       <div class="pub-container">
 
-        <span class="pub-kicker">05 / Publicaciones y divulgación</span>
+        <span class="pub-kicker">
+          05 / Publicaciones y divulgación
+        </span>
 
         <h1>Comunicar el conocimiento</h1>
 
@@ -519,36 +644,40 @@
           La divulgación del conocimiento constituye una parte
           importante de mi trayectoria. A través de infografías,
           artículos, talleres y proyectos de investigación, he
-          buscado acercar temas científicos, sociales,
-          tecnológicos y universitarios a distintos públicos.
+          buscado acercar temas científicos, sociales, tecnológicos
+          y universitarios a distintos públicos.
         </p>
 
-        <nav class="pub-nav" aria-label="Apartados de publicaciones">
+        <nav class="pub-nav" aria-label="Secciones de publicaciones">
           <a href="#polinizando">Polinizando Conocimiento</a>
           <a href="#conecte">CONECTE UAEMéx</a>
-          <a href="#infografias">Infografías</a>
-          <a href="#guias">Guías de estudio</a>
-          <a href="#independientes">Investigación</a>
+          <a href="#independientes">Producción académica</a>
           <a href="#proceso-editorial">Proceso editorial</a>
         </nav>
 
       </div>
     </section>
 
-    <!-- POLINIZANDO CONOCIMIENTO -->
+    <!-- SECCIÓN 1: POLINIZANDO CONOCIMIENTO -->
 
     <section class="pub-section pub-container" id="polinizando">
 
       <div class="pub-heading">
-        <span class="pub-kicker">01 / Divulgación visual</span>
+        <span class="pub-kicker">01 / Divulgación científica</span>
         <h2>Polinizando Conocimiento</h2>
+
+        <p>
+          Proyecto de divulgación que busca acercar el conocimiento
+          científico y académico a través de recursos visuales,
+          contenidos educativos y actividades participativas.
+        </p>
       </div>
 
       <article class="pub-feature">
 
         <span class="pub-label">2025–presente</span>
 
-        <h3>Infografías y actividades de divulgación</h3>
+        <h3>Infografías educativas</h3>
 
         <p>
           Como parte del proyecto “Polinizando Conocimiento”,
@@ -565,76 +694,95 @@
           </div>
 
           <div class="pub-stat">
+            <strong>8</strong>
+            <span>Infografías seleccionadas para esta exposición</span>
+          </div>
+
+          <div class="pub-stat">
             <strong>4</strong>
             <span>Áreas temáticas principales</span>
           </div>
         </div>
 
         <p class="pub-note">
-          Selección de materiales elaborados para el proyecto.
-          Pulsa una imagen para ampliarla.
-        </p>
-
-        <div class="pub-gallery" id="polinizando-gallery"></div>
-
-        <p class="pub-note">
-          Las imágenes de esta selección están preparadas para
-          incorporarse cuando se disponga de sus archivos.
-          La colección de ocho infografías adicionales aparece
-          más adelante.
+          A continuación se presenta una selección representativa
+          de ocho infografías. Cada imagen puede ampliarse para
+          consultar su contenido completo.
         </p>
 
       </article>
 
-      <article class="pub-feature">
+      <h3 class="pub-subheading">
+        Galería de infografías
+      </h3>
 
-        <h3>Taller de divulgación</h3>
+      <div
+        class="pub-infographic-grid"
+        id="infografias-grid"
+      ></div>
 
-        <p>
-          Además de la elaboración de materiales visuales,
-          participé en actividades de divulgación mediante
-          la impartición de un taller. En este apartado se
-          puede documentar su contenido, el público al que
-          estuvo dirigido y la actividad realizada.
-        </p>
+      <!-- TALLER MATEMÁTICAS PARA PENSAR -->
 
-        <p><strong>Nombre del taller:</strong> pendiente de incorporar.</p>
-
-        <p>
-          <strong>Fecha e institución:</strong>
-          pendientes de incorporar.
-        </p>
-
-        <h4>Evidencias del taller</h4>
-
-        <div class="pub-gallery" id="taller-gallery"></div>
-
-      </article>
+      <h3 class="pub-subheading">
+        Actividades de divulgación
+      </h3>
 
       <article class="pub-feature">
 
-        <h3>Participación en concurso de fotografía</h3>
+        <div class="pub-workshop">
 
-        <p>
-          Este espacio está destinado a documentar la
-          participación vinculada con el concurso de
-          fotografía, mostrando la obra presentada y,
-          cuando corresponda, la convocatoria o evidencia
-          de participación.
-        </p>
+          <div>
+            <span class="pub-label">
+              Taller de divulgación matemática
+            </span>
 
-        <div class="pub-gallery" id="fotografia-gallery"></div>
+            <h3>Matemáticas para pensar</h3>
+
+            <p>
+              “Matemáticas para pensar” es un taller conformado
+              por un conjunto de retos matemáticos que involucran
+              lógica, razonamiento, pensamiento espacial y
+              resolución de problemas.
+            </p>
+
+            <p>
+              Está dirigido a estudiantes de nivel básico
+              y propone actividades que permiten explorar
+              las matemáticas de una manera participativa,
+              dinámica y accesible.
+            </p>
+
+            <p>
+              A través de los desafíos se promueven el
+              compañerismo, el pensamiento abstracto,
+              la creatividad y la colaboración entre
+              participantes. Asimismo, se reconoce
+              y premia a quienes obtienen los mejores
+              resultados en los retos.
+            </p>
+          </div>
+
+          <div class="pub-workshop-mark" aria-hidden="true">
+            <div>
+              <strong>∑ π ∞</strong>
+              <span>Lógica · Espacio · Retos</span>
+            </div>
+          </div>
+
+        </div>
 
       </article>
 
     </section>
 
-    <!-- ARTÍCULOS CONECTE -->
+    <!-- SECCIÓN 2: CONECTE UAEMÉX -->
 
     <section class="pub-section pub-container" id="conecte">
 
       <div class="pub-heading">
-        <span class="pub-kicker">02 / Artículos publicados</span>
+        <span class="pub-kicker">
+          02 / Artículos publicados
+        </span>
 
         <h2>Artículos en CONECTE UAEMéx</h2>
 
@@ -651,57 +799,21 @@
 
     </section>
 
-    <!-- OCHO INFOGRAFÍAS -->
+    <!-- SECCIÓN 3: PRODUCCIÓN ACADÉMICA -->
 
-    <section class="pub-section pub-container" id="infografias">
-
-      <div class="pub-heading">
-        <span class="pub-kicker">03 / Colección visual</span>
-
-        <h2>Infografías de divulgación</h2>
-
-        <p>
-          Espacio destinado a una selección de ocho
-          infografías educativas. Cada publicación podrá
-          presentar su imagen completa, título, tema
-          y descripción.
-        </p>
-      </div>
-
-      <div class="pub-grid" id="infografias-grid"></div>
-
-    </section>
-
-    <!-- SEIS GUÍAS -->
-
-    <section class="pub-section pub-container" id="guias">
+    <section
+      class="pub-section pub-container"
+      id="independientes"
+    >
 
       <div class="pub-heading">
-        <span class="pub-kicker">04 / Recursos educativos</span>
+        <span class="pub-kicker">
+          03 / Producción académica
+        </span>
 
-        <h2>Guías de estudio</h2>
-
-        <p>
-          Colección de seis materiales académicos
-          destinados a facilitar el estudio, la consulta
-          de contenidos y la preparación de evaluaciones.
-          Cada guía contará con una portada y un enlace
-          para consultar su documento completo.
-        </p>
-      </div>
-
-      <div class="pub-grid" id="guias-grid"></div>
-
-    </section>
-
-    <!-- PUBLICACIONES INDEPENDIENTES -->
-
-    <section class="pub-section pub-container" id="independientes">
-
-      <div class="pub-heading">
-        <span class="pub-kicker">05 / Producción escrita</span>
-
-        <h2>Publicaciones independientes y trabajos de investigación</h2>
+        <h2>
+          Publicaciones independientes y trabajos de investigación
+        </h2>
 
         <p>
           Además de los artículos publicados en CONECTE UAEMéx,
@@ -711,90 +823,25 @@
         </p>
       </div>
 
-      <div class="pub-grid">
+      <div class="pub-grid" id="independientes-grid"></div>
 
-        <article class="pub-card">
-          <div class="pub-body">
-            <span class="pub-label">Artículo</span>
-
-            <h3>2026, año de Elena Cárdenas Guerrero</h3>
-
-            <p class="pub-meta">Enero de 2026</p>
-
-            <p class="pub-description">
-              Texto dedicado a Elena Cárdenas Guerrero.
-            </p>
-
-            <p class="pub-note">
-              Pendiente de incorporar la descripción definitiva
-              y el enlace a la versión publicada, cuando corresponda.
-            </p>
-          </div>
-        </article>
-
-        <article class="pub-card">
-          <div class="pub-body">
-            <span class="pub-label">Artículo</span>
-
-            <h3>
-              Descripción espacial del Plantel “Cuauhtémoc”
-              de la Escuela Preparatoria
-            </h3>
-
-            <p class="pub-meta">Febrero de 2026</p>
-
-            <p class="pub-description">
-              Trabajo relacionado con la descripción espacial
-              del Plantel “Cuauhtémoc” de la Escuela
-              Preparatoria de la UAEMéx.
-            </p>
-
-            <p class="pub-note">
-              Pendiente de incorporar la revista, plataforma
-              o medio de publicación y el enlace correspondiente.
-            </p>
-          </div>
-        </article>
-
-        <article class="pub-card">
-          <div class="pub-body">
-            <span class="pub-label">Investigación</span>
-
-            <h3>
-              Educación Sexual en el alumnado del Plantel
-              “Cuauhtémoc” de la Escuela Preparatoria de la
-              Universidad Autónoma del Estado de México
-              durante el periodo 2026A
-            </h3>
-
-            <p class="pub-meta">Proyecto de investigación</p>
-
-            <p class="pub-description">
-              Proyecto de investigación desarrollado en
-              coautoría, enfocado en la educación sexual
-              del alumnado del Plantel “Cuauhtémoc”
-              durante el periodo 2026A.
-            </p>
-
-            <p class="pub-note">
-              Pendiente de incorporar el resumen del trabajo,
-              la participación como coautor y el documento
-              o enlace público, si está disponible.
-            </p>
-          </div>
-        </article>
-
-      </div>
     </section>
 
-    <!-- PROCESO EDITORIAL -->
+    <!-- SECCIÓN 4: PROCESO EDITORIAL -->
 
-    <section class="pub-section pub-container" id="proceso-editorial">
+    <section
+      class="pub-section pub-container"
+      id="proceso-editorial"
+    >
 
       <div class="pub-heading">
-        <span class="pub-kicker">06 / Proyección editorial</span>
+        <span class="pub-kicker">
+          04 / Proyección editorial
+        </span>
 
-        <h2>Colaboraciones y trabajos en proceso editorial</h2>
+        <h2>
+          Colaboraciones y trabajos en proceso editorial
+        </h2>
 
         <p>
           Esta sección distingue los trabajos que todavía
@@ -805,66 +852,8 @@
         </p>
       </div>
 
-      <div class="pub-grid">
+      <div class="pub-grid" id="editoriales-grid"></div>
 
-        <article class="pub-card">
-          <div class="pub-body">
-            <span class="pub-label">En proceso editorial</span>
-
-            <h3>Trabajo para la revista Pulsar Ciencia</h3>
-
-            <p class="pub-description">
-              Artículo en proceso editorial para una revista
-              de divulgación científica.
-            </p>
-
-            <p class="pub-note">
-              Pendiente de incorporar el título definitivo
-              y actualizar el estado cuando exista una
-              resolución editorial.
-            </p>
-          </div>
-        </article>
-
-        <article class="pub-card">
-          <div class="pub-body">
-            <span class="pub-label">En revisión editorial</span>
-
-            <h3>Colaboración con Identidad Universitaria</h3>
-
-            <p class="pub-description">
-              Trabajo sometido a revisión editorial en el
-              medio universitario Identidad Universitaria
-              de la UAEMéx.
-            </p>
-
-            <p class="pub-note">
-              Pendiente de incorporar el título y el estado
-              exactos del manuscrito.
-            </p>
-          </div>
-        </article>
-
-        <article class="pub-card">
-          <div class="pub-body">
-            <span class="pub-label">En revisión editorial</span>
-
-            <h3>Colaboración con Pardalis</h3>
-
-            <p class="pub-description">
-              Trabajo sometido a revisión editorial
-              para la publicación Pardalis.
-            </p>
-
-            <p class="pub-note">
-              Pendiente de incorporar el título definitivo
-              y actualizar el estado cuando se comunique
-              una decisión editorial.
-            </p>
-          </div>
-        </article>
-
-      </div>
     </section>
 
   </main>
@@ -872,30 +861,35 @@
   <!-- PIE DE PÁGINA COMPARTIDO -->
   <div id="footer-container"></div>
 
-  <!-- VISOR AMPLIADO -->
+  <!-- VISOR DE IMÁGENES Y PDF -->
 
   <div
     class="pub-modal"
     id="pub-modal"
     role="dialog"
     aria-modal="true"
-    aria-label="Vista ampliada de la publicación"
+    aria-label="Vista ampliada de publicación"
     aria-hidden="true"
   >
+
     <div class="pub-modal-toolbar">
-      <span class="pub-modal-title" id="pub-modal-title">
+
+      <span
+        class="pub-modal-title"
+        id="pub-modal-title"
+      >
         Publicación
       </span>
 
       <a
         class="pub-modal-external"
         id="pub-modal-external"
+        href="#"
         target="_blank"
         rel="noopener noreferrer"
-        href="#"
         hidden
       >
-        Abrir original
+        Abrir documento original
       </a>
 
       <button
@@ -905,30 +899,139 @@
       >
         Cerrar ×
       </button>
+
     </div>
 
-    <div class="pub-modal-content" id="pub-modal-content"></div>
+    <div
+      class="pub-modal-content"
+      id="pub-modal-content"
+    ></div>
+
   </div>
 
+  <!-- SCRIPT COMPARTIDO DEL SITIO -->
   <script src="script.js"></script>
 
   <script>
     "use strict";
 
     /*
-      PUBLICACIONES CONECTE UAEMÉX
+      ======================================
+      DOCUMENTOS PDF DE GOOGLE DRIVE
+      ======================================
+    */
 
-      Las imágenes utilizan los nombres exactos
-      de los archivos compartidos en GitHub.
+    const documentos = {
+      elena:
+        "1Cu-dUN2_gogNeDBWa2w24ZHN9YYWyuir",
 
-      IMPORTANTE:
-      Los espacios antes de ".jpg" forman parte
-      de algunos nombres originales.
+      pardalis:
+        "1dkBZcBQndE-fZBREeFDLVNgFVAsZR4FW",
+
+      pulsar:
+        "1pilKOHMCLCONh85yWCJojhngmBHxEg-F",
+
+      identidad:
+        "1K-00ABxOvnA4p83lQyb8CIctcKYHlqrM",
+
+      descripcion:
+        "12xWXRGA1UwhMoRfzwFQdveKY6eX2DLMb",
+
+      investigacion:
+        "1LH04LByM6NPOZdBAZ-VcxSYWVIvjn4Iv"
+    };
+
+    function drivePreview(id) {
+      return "https://drive.google.com/file/d/" +
+        encodeURIComponent(id) + "/preview";
+    }
+
+    function driveOriginal(id) {
+      return "https://drive.google.com/file/d/" +
+        encodeURIComponent(id) + "/view";
+    }
+
+    /*
+      ======================================
+      OCHO INFOGRAFÍAS REALES
+      ======================================
+
+      Ubicación:
+      assets/
+
+      Los nombres corresponden exactamente
+      a los archivos proporcionados.
+    */
+
+    const infografias = [
+      {
+        titulo: "El cerebro al procrastinar",
+        archivo:
+          "PC_Infografía_Cerebro al procrastinar.jpg",
+        descripcion:
+          "Infografía de divulgación sobre el cerebro y la procrastinación."
+      },
+      {
+        titulo: "Biografía de Euler",
+        archivo:
+          "PC_Infografía_Biografia de Euler.jpg",
+        descripcion:
+          "Infografía sobre la vida y aportaciones del matemático Leonhard Euler."
+      },
+      {
+        titulo: "El origen de la tabla periódica",
+        archivo:
+          "PC_Infografía_El origen de la tabla periódica.jpg",
+        descripcion:
+          "Material de divulgación sobre la historia y desarrollo de la tabla periódica."
+      },
+      {
+        titulo: "El sueño",
+        archivo:
+          "PC_Infografía_El sueño.jpg",
+        descripcion:
+          "Infografía educativa dedicada al sueño."
+      },
+      {
+        titulo: "La microbiota",
+        archivo:
+          "PC_Infografía_La microbiota.jpg",
+        descripcion:
+          "Material de divulgación sobre la microbiota."
+      },
+      {
+        titulo: "La sinestesia del arte",
+        archivo:
+          "PC_Infografía_La sinestesia del arte.jpg",
+        descripcion:
+          "Infografía sobre la relación entre la percepción sensorial y el arte."
+      },
+      {
+        titulo: "¿Por qué el cielo es azul?",
+        archivo:
+          "PC_Infografía_Por qué el cielo es azul.jpg",
+        descripcion:
+          "Explicación divulgativa de un fenómeno óptico cotidiano."
+      },
+      {
+        titulo: "La secuencia de Fibonacci",
+        archivo:
+          "PC_Infografía_Secuencia de Fibonacci.jpg",
+        descripcion:
+          "Infografía sobre una conocida sucesión matemática."
+      }
+    ];
+
+    /*
+      ======================================
+      TRECE ARTÍCULOS CONECTE UAEMÉX
+      ======================================
     */
 
     const articulos = [
       {
-        titulo: "La dopamina detrás de las notificaciones",
+        titulo:
+          "La dopamina detrás de las notificaciones",
         fecha: "Febrero de 2026",
         edicion: "Edición 30",
         descripcion:
@@ -1084,95 +1187,93 @@
     ];
 
     /*
-      POLINIZANDO CONOCIMIENTO
-
-      Se mantienen las cuatro evidencias originales.
-      Cuando existan en assets/evidencias, aparecerán.
+      ======================================
+      PUBLICACIONES INDEPENDIENTES
+      ======================================
     */
 
-    const polinizando = [
+    const independientes = [
       {
-        titulo: "Neurociencia",
-        imagen: "assets/evidencias/infografia-neurociencia.jpg"
+        tipo: "Artículo",
+        titulo:
+          "2026, año de Elena Cárdenas Guerrero",
+        fecha: "Enero de 2026",
+        descripcion:
+          "Texto dedicado a Elena Cárdenas Guerrero.",
+        documento: documentos.elena
       },
       {
-        titulo: "Historia",
-        imagen: "assets/evidencias/infografia-historia.jpg"
+        tipo: "Artículo",
+        titulo:
+          "Descripción espacial del Plantel “Cuauhtémoc” de la Escuela Preparatoria",
+        fecha: "Febrero de 2026",
+        descripcion:
+          "Trabajo relacionado con la descripción espacial del Plantel “Cuauhtémoc” de la Escuela Preparatoria de la UAEMéx.",
+        documento: documentos.descripcion
       },
       {
-        titulo: "Química",
-        imagen: "assets/evidencias/infografia-quimica.jpg"
-      },
-      {
-        titulo: "Matemáticas",
-        imagen: "assets/evidencias/infografia-matematicas.jpg"
-      }
-    ];
-
-    const taller = [
-      {
-        titulo: "Impartición del taller",
-        imagen: "assets/evidencias/taller-divulgacion.jpg"
-      },
-      {
-        titulo: "Materiales de trabajo",
-        imagen: "assets/evidencias/taller-materiales.jpg"
-      }
-    ];
-
-    const fotografia = [
-      {
-        titulo: "Obra fotográfica",
-        imagen: "assets/evidencias/concurso-fotografia-obra.jpg"
-      },
-      {
-        titulo: "Evidencia de participación",
-        imagen: "assets/evidencias/concurso-fotografia-participacion.jpg"
+        tipo: "Investigación",
+        titulo:
+          "Educación Sexual en el alumnado del Plantel “Cuauhtémoc” de la Escuela Preparatoria de la Universidad Autónoma del Estado de México durante el periodo 2026A",
+        fecha: "Proyecto de investigación",
+        descripcion:
+          "Proyecto de investigación desarrollado en coautoría, enfocado en la educación sexual del alumnado del Plantel “Cuauhtémoc” durante el periodo 2026A.",
+        documento: documentos.investigacion
       }
     ];
 
     /*
-      OCHO INFOGRAFÍAS
+      ======================================
+      COLABORACIONES EDITORIALES
+      ======================================
 
-      Puedes incorporar más adelante:
-      titulo, descripcion, imagen y enlace.
-
-      La imagen puede ser una ruta de GitHub.
-      El enlace puede ser un PDF público de Drive.
+      Se mantienen como trabajos en proceso
+      editorial, sin afirmar que ya fueron
+      aceptados o publicados.
     */
 
-    const infografias = [
-      { titulo: "Infografía 01" },
-      { titulo: "Infografía 02" },
-      { titulo: "Infografía 03" },
-      { titulo: "Infografía 04" },
-      { titulo: "Infografía 05" },
-      { titulo: "Infografía 06" },
-      { titulo: "Infografía 07" },
-      { titulo: "Infografía 08" }
+    const editoriales = [
+      {
+        tipo: "En proceso editorial",
+        titulo:
+          "El pH en la vida cotidiana, más allá de ácidos y bases",
+        medio: "Pulsar Ciencia",
+        descripcion:
+          "Artículo de divulgación científica preparado para la revista Pulsar Ciencia.",
+        documento: documentos.pulsar
+      },
+      {
+        tipo: "En revisión editorial",
+        titulo:
+          "Un breve acercamiento a la identidad universitaria del Plantel “Cuauhtémoc”",
+        medio: "Identidad Universitaria · UAEMéx",
+        descripcion:
+          "Trabajo sobre la identidad universitaria del Plantel “Cuauhtémoc”, presentado para revisión editorial en el medio universitario Identidad Universitaria.",
+        documento: documentos.identidad
+      },
+      {
+        tipo: "En revisión editorial",
+        titulo:
+          "Genética de una científica: Rosalind Franklin",
+        medio: "Pardalis",
+        descripcion:
+          "Artículo dedicado a Rosalind Franklin, presentado como colaboración para la publicación Pardalis.",
+        documento: documentos.pardalis
+      }
     ];
 
     /*
-      SEIS GUÍAS DE ESTUDIO
+      ======================================
+      FUNCIONES AUXILIARES
+      ======================================
     */
 
-    const guias = [
-      { titulo: "Guía de estudio 01" },
-      { titulo: "Guía de estudio 02" },
-      { titulo: "Guía de estudio 03" },
-      { titulo: "Guía de estudio 04" },
-      { titulo: "Guía de estudio 05" },
-      { titulo: "Guía de estudio 06" }
-    ];
-
-    /*
-      FUNCIONES GENERALES
-    */
-
-    function elemento(tag, clase, texto) {
+    function crearElemento(tag, clase, texto) {
       const nodo = document.createElement(tag);
 
-      if (clase) nodo.className = clase;
+      if (clase) {
+        nodo.className = clase;
+      }
 
       if (texto !== undefined) {
         nodo.textContent = texto;
@@ -1181,92 +1282,117 @@
       return nodo;
     }
 
-    function rutaAsset(nombre) {
-      return "assets/" + nombre
-        .split("/")
-        .map(encodeURIComponent)
-        .join("/");
-    }
-
-    function urlDriveVista(url) {
-      const coincidencia = url.match(
-        /drive\.google\.com\/file\/d\/([^/]+)/
-      );
-
-      if (!coincidencia) return url;
-
-      return "https://drive.google.com/file/d/" +
-        coincidencia[1] + "/preview";
+    function rutaImagen(nombre) {
+      return "assets/" + encodeURIComponent(nombre);
     }
 
     /*
-      VISOR
+      ======================================
+      VISOR AMPLIADO
+      ======================================
     */
 
-    const modal = document.getElementById("pub-modal");
-    const modalTitulo = document.getElementById("pub-modal-title");
-    const modalContenido = document.getElementById("pub-modal-content");
-    const modalCerrar = document.getElementById("pub-modal-close");
-    const modalExterno = document.getElementById("pub-modal-external");
+    const modal =
+      document.getElementById("pub-modal");
+
+    const modalTitulo =
+      document.getElementById("pub-modal-title");
+
+    const modalContenido =
+      document.getElementById("pub-modal-content");
+
+    const modalCerrar =
+      document.getElementById("pub-modal-close");
+
+    const modalExterno =
+      document.getElementById("pub-modal-external");
 
     let focoAnterior = null;
 
-    function abrirModal(titulo, tipo, ruta, externo = "") {
+    function abrirImagen(titulo, ruta) {
       focoAnterior = document.activeElement;
 
       modalTitulo.textContent = titulo;
       modalContenido.replaceChildren();
 
-      if (tipo === "imagen") {
-        const imagen = document.createElement("img");
-        imagen.src = ruta;
-        imagen.alt = titulo;
-        modalContenido.appendChild(imagen);
-      }
+      const imagen = document.createElement("img");
 
-      if (tipo === "pdf") {
-        const marco = document.createElement("iframe");
-        marco.src = urlDriveVista(ruta);
-        marco.title = titulo;
-        modalContenido.appendChild(marco);
-      }
+      imagen.src = ruta;
+      imagen.alt = titulo;
 
-      modalExterno.hidden = !externo;
+      modalContenido.appendChild(imagen);
 
-      if (externo) {
-        modalExterno.href = externo;
-      }
+      modalExterno.hidden = true;
+      modalExterno.removeAttribute("href");
 
+      mostrarModal();
+    }
+
+    function abrirPDF(titulo, id) {
+      focoAnterior = document.activeElement;
+
+      modalTitulo.textContent = titulo;
+      modalContenido.replaceChildren();
+
+      const marco = document.createElement("iframe");
+
+      marco.src = drivePreview(id);
+      marco.title = "Documento completo: " + titulo;
+
+      modalContenido.appendChild(marco);
+
+      modalExterno.href = driveOriginal(id);
+      modalExterno.hidden = false;
+
+      mostrarModal();
+    }
+
+    function mostrarModal() {
       modal.classList.add("open");
       modal.setAttribute("aria-hidden", "false");
+
       document.body.classList.add("pub-modal-open");
+
       modalCerrar.focus();
     }
 
     function cerrarModal() {
-      if (!modal.classList.contains("open")) return;
+      if (!modal.classList.contains("open")) {
+        return;
+      }
 
       modal.classList.remove("open");
       modal.setAttribute("aria-hidden", "true");
+
       document.body.classList.remove("pub-modal-open");
+
       modalContenido.replaceChildren();
 
-      if (focoAnterior && focoAnterior.focus) {
+      if (focoAnterior &&
+          typeof focoAnterior.focus === "function") {
         focoAnterior.focus();
       }
     }
 
-    modalCerrar.addEventListener("click", cerrarModal);
+    modalCerrar.addEventListener(
+      "click",
+      cerrarModal
+    );
 
     modal.addEventListener("click", function(evento) {
-      if (evento.target === modal) cerrarModal();
+      if (evento.target === modal) {
+        cerrarModal();
+      }
     });
 
     document.addEventListener("keydown", function(evento) {
-      if (!modal.classList.contains("open")) return;
+      if (!modal.classList.contains("open")) {
+        return;
+      }
 
       if (evento.key === "Escape") {
         cerrarModal();
+        return;
       }
 
       if (evento.key === "Tab") {
@@ -1290,65 +1416,145 @@
     });
 
     /*
-      CREAR TARJETA DE ARTÍCULO
+      ======================================
+      INFOGRAFÍAS
+      ======================================
+    */
+
+    function crearInfografia(item, indice) {
+      const tarjeta = crearElemento(
+        "article",
+        "pub-infographic-card"
+      );
+
+      const boton = crearElemento(
+        "button",
+        "pub-infographic-button"
+      );
+
+      boton.type = "button";
+
+      boton.setAttribute(
+        "aria-label",
+        "Ampliar infografía: " + item.titulo
+      );
+
+      const imagen = document.createElement("img");
+
+      imagen.className = "pub-infographic-image";
+      imagen.src = rutaImagen(item.archivo);
+      imagen.alt = "Infografía: " + item.titulo;
+      imagen.loading = "lazy";
+
+      boton.appendChild(imagen);
+
+      boton.addEventListener("click", function() {
+        abrirImagen(item.titulo, imagen.src);
+      });
+
+      tarjeta.appendChild(boton);
+
+      const cuerpo = crearElemento(
+        "div",
+        "pub-infographic-body"
+      );
+
+      cuerpo.appendChild(
+        crearElemento(
+          "span",
+          "pub-label",
+          "Infografía " +
+          String(indice + 1).padStart(2, "0")
+        )
+      );
+
+      cuerpo.appendChild(
+        crearElemento("h3", "", item.titulo)
+      );
+
+      cuerpo.appendChild(
+        crearElemento(
+          "p",
+          "",
+          item.descripcion
+        )
+      );
+
+      const ampliar = crearElemento(
+        "button",
+        "pub-action outline",
+        "Ampliar infografía"
+      );
+
+      ampliar.type = "button";
+
+      ampliar.addEventListener("click", function() {
+        abrirImagen(item.titulo, imagen.src);
+      });
+
+      cuerpo.appendChild(ampliar);
+
+      tarjeta.appendChild(cuerpo);
+
+      return tarjeta;
+    }
+
+    /*
+      ======================================
+      ARTÍCULOS CONECTE
+      ======================================
     */
 
     function crearArticulo(item, indice) {
-      const tarjeta = elemento("article", "pub-card");
+      const tarjeta = crearElemento(
+        "article",
+        "pub-card"
+      );
 
-      const botonImagen = elemento(
+      const botonImagen = crearElemento(
         "button",
         "pub-cover-button"
       );
 
       botonImagen.type = "button";
+
       botonImagen.setAttribute(
         "aria-label",
-        "Ampliar imagen de " + item.titulo
+        "Ampliar portada de " + item.titulo
       );
 
       const imagen = document.createElement("img");
 
       imagen.className = "pub-cover";
-      imagen.src = rutaAsset(item.imagen);
+      imagen.src = rutaImagen(item.imagen);
       imagen.alt = "Portada de " + item.titulo;
       imagen.loading = "lazy";
-
-      imagen.addEventListener("error", function() {
-        botonImagen.replaceWith(
-          crearPlaceholder("Imagen no disponible")
-        );
-      });
 
       botonImagen.appendChild(imagen);
 
       botonImagen.addEventListener("click", function() {
-        abrirModal(
-          item.titulo,
-          "imagen",
-          imagen.src,
-          item.enlace
-        );
+        abrirImagen(item.titulo, imagen.src);
       });
 
       tarjeta.appendChild(botonImagen);
 
-      const cuerpo = elemento("div", "pub-body");
+      const cuerpo = crearElemento("div", "pub-body");
 
       cuerpo.appendChild(
-        elemento(
+        crearElemento(
           "span",
           "pub-label",
-          "Artículo " + String(indice + 1).padStart(2, "0")
+          "Artículo " +
+          String(indice + 1).padStart(2, "0")
         )
       );
 
       cuerpo.appendChild(
-        elemento("h3", "", item.titulo)
+        crearElemento("h3", "", item.titulo)
       );
 
       cuerpo.appendChild(
-        elemento(
+        crearElemento(
           "p",
           "pub-meta",
           item.fecha + " · " + item.edicion
@@ -1356,14 +1562,14 @@
       );
 
       cuerpo.appendChild(
-        elemento(
+        crearElemento(
           "p",
           "pub-description",
           item.descripcion
         )
       );
 
-      const enlace = elemento(
+      const enlace = crearElemento(
         "a",
         "pub-action",
         "Leer artículo original ↗"
@@ -1374,248 +1580,220 @@
       enlace.rel = "noopener noreferrer";
 
       cuerpo.appendChild(enlace);
+
       tarjeta.appendChild(cuerpo);
 
       return tarjeta;
     }
 
     /*
-      ESPACIOS RESERVADOS
+      ======================================
+      DOCUMENTOS PDF CON VISTA PREVIA
+      ======================================
     */
 
-    function crearPlaceholder(mensaje) {
-      const contenedor = elemento(
+    function crearDocumento(item) {
+      const tarjeta = crearElemento(
+        "article",
+        "pub-card"
+      );
+
+      /*
+        Visor pequeño del documento.
+        El botón transparente permite ampliar
+        el PDF al pulsar la tarjeta.
+      */
+
+      const vista = crearElemento(
         "div",
-        "pub-placeholder"
+        "pub-pdf-preview"
       );
 
-      contenedor.appendChild(
-        elemento(
-          "span",
-          "pub-placeholder-icon",
-          "▤"
-        )
+      const marco = document.createElement("iframe");
+
+      marco.src = drivePreview(item.documento);
+      marco.title = "Vista previa: " + item.titulo;
+      marco.loading = "lazy";
+
+      vista.appendChild(marco);
+
+      const cubierta = crearElemento(
+        "button",
+        "pub-pdf-overlay"
       );
 
-      contenedor.appendChild(
-        elemento("span", "", mensaje)
+      cubierta.type = "button";
+
+      cubierta.setAttribute(
+        "aria-label",
+        "Leer documento completo: " + item.titulo
       );
 
-      return contenedor;
-    }
-
-    /*
-      INFOGRAFÍAS Y GUÍAS
-    */
-
-    function crearPublicacion(item, tipo, indice) {
-      const tarjeta = elemento("article", "pub-card");
-
-      if (item.imagen) {
-        const boton = elemento(
-          "button",
-          "pub-cover-button"
-        );
-
-        boton.type = "button";
-
-        const imagen = document.createElement("img");
-        imagen.className = "pub-cover";
-        imagen.src = item.imagen;
-        imagen.alt = item.titulo;
-        imagen.loading = "lazy";
-
-        imagen.addEventListener("error", function() {
-          boton.replaceWith(
-            crearPlaceholder("Portada no disponible")
-          );
-        });
-
-        boton.appendChild(imagen);
-
-        boton.addEventListener("click", function() {
-          if (item.enlace) {
-            abrirModal(
-              item.titulo,
-              "pdf",
-              item.enlace,
-              item.enlace
-            );
-          } else {
-            abrirModal(
-              item.titulo,
-              "imagen",
-              imagen.src
-            );
-          }
-        });
-
-        tarjeta.appendChild(boton);
-      } else {
-        tarjeta.appendChild(
-          crearPlaceholder("Portada por incorporar")
-        );
-      }
-
-      const cuerpo = elemento("div", "pub-body");
-
-      cuerpo.appendChild(
-        elemento(
-          "span",
-          "pub-label",
-          tipo + " " + String(indice + 1).padStart(2, "0")
-        )
-      );
-
-      cuerpo.appendChild(
-        elemento("h3", "", item.titulo)
-      );
-
-      cuerpo.appendChild(
-        elemento(
-          "p",
-          "pub-description",
-          item.descripcion ||
-          "Espacio reservado para incorporar el material académico."
-        )
-      );
-
-      if (item.enlace) {
-        const boton = elemento(
-          "button",
-          "pub-action",
-          "Consultar publicación"
-        );
-
-        boton.type = "button";
-
-        boton.addEventListener("click", function() {
-          abrirModal(
-            item.titulo,
-            "pdf",
-            item.enlace,
-            item.enlace
-          );
-        });
-
-        cuerpo.appendChild(boton);
-      } else {
-        cuerpo.appendChild(
-          elemento(
-            "span",
-            "pub-pending",
-            "Material pendiente de incorporar"
-          )
-        );
-      }
-
-      tarjeta.appendChild(cuerpo);
-
-      return tarjeta;
-    }
-
-    /*
-      GALERÍAS FOTOGRÁFICAS
-    */
-
-    function crearGaleria(id, materiales) {
-      const destino = document.getElementById(id);
-      const fragmento = document.createDocumentFragment();
-
-      materiales.forEach(function(item) {
-        const figura = document.createElement("figure");
-
-        const boton = document.createElement("button");
-        boton.type = "button";
-        boton.setAttribute(
-          "aria-label",
-          "Ampliar " + item.titulo
-        );
-
-        const imagen = document.createElement("img");
-        imagen.src = item.imagen;
-        imagen.alt = item.titulo;
-        imagen.loading = "lazy";
-
-        imagen.addEventListener("error", function() {
-          boton.replaceWith(
-            crearPlaceholder("Imagen pendiente")
-          );
-        });
-
-        boton.appendChild(imagen);
-
-        boton.addEventListener("click", function() {
-          abrirModal(
-            item.titulo,
-            "imagen",
-            item.imagen
-          );
-        });
-
-        figura.appendChild(boton);
-
-        figura.appendChild(
-          elemento(
-            "figcaption",
-            "",
-            item.titulo
-          )
-        );
-
-        fragmento.appendChild(figura);
+      cubierta.addEventListener("click", function() {
+        abrirPDF(item.titulo, item.documento);
       });
 
-      destino.appendChild(fragmento);
+      vista.appendChild(cubierta);
+
+      vista.appendChild(
+        crearElemento(
+          "span",
+          "pub-pdf-indicator",
+          "Ampliar PDF"
+        )
+      );
+
+      tarjeta.appendChild(vista);
+
+      /*
+        Información editorial.
+      */
+
+      const cuerpo = crearElemento(
+        "div",
+        "pub-body"
+      );
+
+      cuerpo.appendChild(
+        crearElemento(
+          "span",
+          "pub-label",
+          item.tipo
+        )
+      );
+
+      cuerpo.appendChild(
+        crearElemento(
+          "h3",
+          "",
+          item.titulo
+        )
+      );
+
+      if (item.fecha) {
+        cuerpo.appendChild(
+          crearElemento(
+            "p",
+            "pub-meta",
+            item.fecha
+          )
+        );
+      }
+
+      if (item.medio) {
+        cuerpo.appendChild(
+          crearElemento(
+            "p",
+            "pub-meta",
+            item.medio
+          )
+        );
+      }
+
+      cuerpo.appendChild(
+        crearElemento(
+          "p",
+          "pub-description",
+          item.descripcion
+        )
+      );
+
+      const acciones = crearElemento(
+        "div",
+        "pub-actions"
+      );
+
+      const verPDF = crearElemento(
+        "button",
+        "pub-action",
+        "Leer PDF completo"
+      );
+
+      verPDF.type = "button";
+
+      verPDF.addEventListener("click", function() {
+        abrirPDF(item.titulo, item.documento);
+      });
+
+      acciones.appendChild(verPDF);
+
+      const abrirDrive = crearElemento(
+        "a",
+        "pub-action outline",
+        "Abrir en Drive ↗"
+      );
+
+      abrirDrive.href = driveOriginal(item.documento);
+      abrirDrive.target = "_blank";
+      abrirDrive.rel = "noopener noreferrer";
+
+      acciones.appendChild(abrirDrive);
+
+      cuerpo.appendChild(acciones);
+
+      cuerpo.appendChild(
+        crearElemento(
+          "p",
+          "pub-pdf-note",
+          "Documento disponible para consulta mediante Google Drive."
+        )
+      );
+
+      tarjeta.appendChild(cuerpo);
+
+      return tarjeta;
     }
 
     /*
-      RENDERIZAR CONTENIDOS
+      ======================================
+      MOSTRAR CONTENIDOS
+      ======================================
     */
 
-    const articulosGrid =
-      document.getElementById("articulos-grid");
+    function renderizar(id, datos, funcion) {
+      const contenedor = document.getElementById(id);
 
-    articulos.forEach(function(item, indice) {
-      articulosGrid.appendChild(
-        crearArticulo(item, indice)
-      );
-    });
+      if (!contenedor) {
+        return;
+      }
 
-    const infografiasGrid =
-      document.getElementById("infografias-grid");
+      const fragmento =
+        document.createDocumentFragment();
 
-    infografias.forEach(function(item, indice) {
-      infografiasGrid.appendChild(
-        crearPublicacion(item, "Infografía", indice)
-      );
-    });
+      datos.forEach(function(item, indice) {
+        fragmento.appendChild(
+          funcion(item, indice)
+        );
+      });
 
-    const guiasGrid =
-      document.getElementById("guias-grid");
+      contenedor.appendChild(fragmento);
+    }
 
-    guias.forEach(function(item, indice) {
-      guiasGrid.appendChild(
-        crearPublicacion(item, "Guía de estudio", indice)
-      );
-    });
-
-    crearGaleria(
-      "polinizando-gallery",
-      polinizando
+    renderizar(
+      "infografias-grid",
+      infografias,
+      crearInfografia
     );
 
-    crearGaleria(
-      "taller-gallery",
-      taller
+    renderizar(
+      "articulos-grid",
+      articulos,
+      crearArticulo
     );
 
-    crearGaleria(
-      "fotografia-gallery",
-      fotografia
+    renderizar(
+      "independientes-grid",
+      independientes,
+      crearDocumento
     );
+
+    renderizar(
+      "editoriales-grid",
+      editoriales,
+      crearDocumento
+    );
+
   </script>
 
 </body>
 </html>
- 
