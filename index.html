@@ -78,14 +78,25 @@
           </div>
         </div>
 
-        <div
-          class="hero-visual"
-          aria-label="Identidad de Javier Palma Romero"
-        >
-          <div class="hero-photo-placeholder">
+        <!-- FOTOGRAFÍA DEL ASPIRANTE -->
+        <div class="hero-visual">
 
+          <div class="hero-photo-frame">
+            <img
+              src="assets/foto-perfil.jpg"
+              alt="Fotografía de Javier Palma Romero"
+              class="hero-photo"
+              loading="eager"
+              fetchpriority="high"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+            >
 
+            <div class="hero-photo-placeholder" style="display:none">
+              <span>JPR</span>
+              <small>Fotografía del aspirante</small>
+            </div>
           </div>
+
         </div>
 
       </div>
@@ -99,11 +110,8 @@
       <div class="container">
 
         <div class="section-heading">
-
           <div>
-            <span class="eyebrow">
-              Resultados y alcance
-            </span>
+            <span class="eyebrow">Resultados y alcance</span>
 
             <h2 id="stats-title">
               Una trayectoria en cifras
@@ -114,7 +122,6 @@
             Algunas cifras representativas de las actividades
             académicas, educativas y editoriales realizadas.
           </p>
-
         </div>
 
         <div class="stats-grid">
@@ -337,60 +344,6 @@
       </div>
     </section>
 
-    <!-- PUBLICACIONES Y DIVULGACIÓN -->
-    <section
-      class="section section-highlight"
-      id="divulgacion"
-      aria-labelledby="divulgacion-title"
-    >
-      <div class="container content-grid">
-
-        <div>
-
-          <span class="eyebrow">
-            Divulgación del conocimiento
-          </span>
-
-          <h2 id="divulgacion-title">
-            Compartir lo aprendido también es contribuir
-          </h2>
-
-        </div>
-
-        <div>
-
-          <p>
-            La elaboración de materiales educativos, la publicación
-            de artículos y la participación en iniciativas de
-            divulgación representan distintas formas de acercar
-            el conocimiento a otras personas.
-          </p>
-
-          <p>
-            Estas actividades buscan facilitar el aprendizaje,
-            despertar la curiosidad y generar oportunidades
-            de intercambio académico entre estudiantes.
-          </p>
-
-          <div class="inline-links">
-
-            <a class="text-link" href="04-proyectos.html">
-              Conocer mis proyectos
-              <span aria-hidden="true">→</span>
-            </a>
-
-            <a class="text-link" href="05-publicaciones.html">
-              Consultar mis publicaciones
-              <span aria-hidden="true">→</span>
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
     <!-- PROYECCIÓN -->
     <section
       class="section"
@@ -434,9 +387,7 @@
             </a>
 
           </div>
-
         </div>
-
       </div>
     </section>
 
