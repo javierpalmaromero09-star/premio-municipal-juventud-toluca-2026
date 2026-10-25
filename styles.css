@@ -1298,3 +1298,82 @@ select:focus-visible {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* ==========================================
+   PERFIL — AJUSTES DE PRESENTACIÓN
+   ========================================== */
+
+#semblanza .content-grid,
+#proyeccion .content-grid {
+  align-items: start;
+}
+
+#semblanza .content-grid > div:last-child p {
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+#semblanza strong,
+#proyeccion strong {
+  color: var(--burgundy-dark);
+  font-weight: 700;
+}
+
+#proyeccion .mini-panel {
+  margin: 24px 0;
+  padding: clamp(22px, 3vw, 32px);
+  border-top: 3px solid var(--burgundy);
+  box-shadow: var(--shadow-soft);
+}
+
+#proyeccion .mini-panel h3 {
+  margin: 12px 0 18px;
+  color: var(--burgundy-dark);
+  font-size: 1.5rem;
+}
+
+#proyeccion .list-clean {
+  padding-left: 21px;
+}
+
+#proyeccion .list-clean li {
+  margin-bottom: 16px;
+  line-height: 1.85;
+}
+
+#proyeccion .list-clean li:last-child {
+  margin-bottom: 0;
+}
+
+#proyeccion .callout {
+  margin: 30px 0;
+  padding: clamp(23px, 3vw, 34px);
+}
+
+#proyeccion .callout h3 {
+  margin-top: 10px;
+}
+
+#curriculum .projection-panel {
+  max-width: 900px;
+}
+
+#curriculum .projection-panel p {
+  max-width: 720px;
+}
+
+@media (max-width: 700px) {
+  #semblanza .content-grid > div:last-child p {
+    line-height: 1.8;
+  }
+
+  #proyeccion .mini-panel {
+    margin: 18px 0;
+  }
+
+  #proyeccion .list-clean li {
+    line-height: 1.75;
+  }
+}
+
