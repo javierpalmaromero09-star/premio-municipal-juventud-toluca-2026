@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description"
-    content="Trayectoria académica, formación, reconocimientos, cursos y certificaciones de Javier Palma Romero.">
+  <meta
+    name="description"
+    content="Trayectoria académica, formación, reconocimientos, cursos y certificaciones de Javier Palma Romero."
+  >
 
   <meta name="theme-color" content="#762d40">
 
-  <title>Trayectoria académica | Javier Palma Romero — PMJ Toluca 2026</title>
+  <title>
+    Trayectoria académica | Javier Palma Romero — PMJ Toluca 2026
+  </title>
 
   <link rel="stylesheet" href="styles.css">
 
@@ -30,10 +34,18 @@
       padding-bottom: 80px;
     }
 
+    .trayectoria *,
+    .trayectoria *::before,
+    .trayectoria *::after {
+      box-sizing: border-box;
+    }
+
     .trayectoria .contenedor {
       width: min(1180px, calc(100% - 40px));
       margin-inline: auto;
     }
+
+    /* PORTADA */
 
     .trayectoria-portada {
       padding: clamp(48px, 7vw, 100px) 0 52px;
@@ -42,27 +54,29 @@
 
     .trayectoria-etiqueta {
       display: inline-block;
+      margin-bottom: 18px;
       color: var(--tray-vino);
       font: 700 12px/1.5 Arial, sans-serif;
       letter-spacing: .14em;
       text-transform: uppercase;
-      margin-bottom: 18px;
     }
 
     .trayectoria-portada h1 {
       max-width: 900px;
+      margin: 0 0 22px;
       font: 400 clamp(35px, 5vw, 65px)/1.12 Georgia, serif;
       letter-spacing: -.035em;
-      margin: 0 0 22px;
     }
 
     .trayectoria-portada p {
       max-width: 790px;
+      margin: 0;
       color: var(--tray-muted);
       font-size: clamp(16px, 1.8vw, 19px);
       line-height: 1.8;
-      margin: 0;
     }
+
+    /* SECCIONES */
 
     .trayectoria-seccion {
       padding-top: 72px;
@@ -75,23 +89,25 @@
 
     .seccion-numero {
       display: block;
+      margin-bottom: 12px;
       color: var(--tray-vino);
       font: 700 12px Arial, sans-serif;
       letter-spacing: .15em;
-      margin-bottom: 12px;
     }
 
     .seccion-encabezado h2 {
-      font: 400 clamp(29px, 3.4vw, 43px)/1.2 Georgia, serif;
       margin: 0 0 13px;
+      font: 400 clamp(29px, 3.4vw, 43px)/1.2 Georgia, serif;
     }
 
     .seccion-encabezado p {
       max-width: 790px;
+      margin: 0;
       color: var(--tray-muted);
       line-height: 1.75;
-      margin: 0;
     }
+
+    /* FORMACIÓN */
 
     .formacion-grid {
       display: grid;
@@ -115,37 +131,39 @@
     .formacion-card .periodo,
     .trayectoria-card .fecha {
       display: inline-block;
+      margin-bottom: 13px;
       color: var(--tray-vino);
       font: 700 12px/1.5 Arial, sans-serif;
       letter-spacing: .035em;
-      margin-bottom: 13px;
     }
 
     .formacion-card h3 {
-      font: 400 24px/1.3 Georgia, serif;
       margin: 0 0 9px;
+      font: 400 24px/1.3 Georgia, serif;
     }
 
     .formacion-card .institucion {
-      font-weight: 700;
       margin: 0 0 12px;
+      font-weight: 700;
     }
 
     .formacion-card p:last-child {
+      margin-bottom: 0;
       color: var(--tray-muted);
       line-height: 1.7;
-      margin-bottom: 0;
     }
+
+    /* CATEGORÍAS Y TARJETAS */
 
     .trayectoria-categoria {
       margin-top: 40px;
     }
 
     .trayectoria-categoria h3 {
-      font: 400 clamp(23px, 2.5vw, 30px)/1.3 Georgia, serif;
       margin: 0 0 21px;
       padding-bottom: 15px;
       border-bottom: 1px solid var(--tray-linea);
+      font: 400 clamp(23px, 2.5vw, 30px)/1.3 Georgia, serif;
     }
 
     .tarjetas-grid {
@@ -162,27 +180,29 @@
     }
 
     .trayectoria-card-contenido {
-      padding: 25px;
       flex: 1;
+      padding: 25px;
     }
 
     .trayectoria-card h4 {
-      font: 400 23px/1.35 Georgia, serif;
       margin: 0 0 14px;
+      font: 400 23px/1.35 Georgia, serif;
       overflow-wrap: anywhere;
     }
 
     .trayectoria-card p {
+      margin: 0;
       color: var(--tray-muted);
       line-height: 1.7;
-      margin: 0;
     }
 
     .trayectoria-card .institucion {
+      margin-bottom: 12px;
       color: var(--tray-texto);
       font-weight: 700;
-      margin-bottom: 12px;
     }
+
+    /* EVIDENCIAS */
 
     .evidencia {
       padding: 0 25px 25px;
@@ -190,21 +210,21 @@
 
     .evidencia-etiqueta {
       display: block;
-      font: 700 11px Arial, sans-serif;
+      margin-bottom: 11px;
       color: var(--tray-vino);
+      font: 700 11px Arial, sans-serif;
       letter-spacing: .12em;
       text-transform: uppercase;
-      margin-bottom: 11px;
     }
 
     .evidencia-imagen {
       display: block;
       width: 100%;
       padding: 0;
+      overflow: hidden;
       background: #f7f4f1;
       border: 1px solid var(--tray-linea);
       border-radius: 8px;
-      overflow: hidden;
       cursor: zoom-in;
     }
 
@@ -220,13 +240,15 @@
       transform: scale(1.025);
     }
 
+    /* VISTA PREVIA DE GOOGLE DRIVE */
+
     .drive-vista {
       position: relative;
       height: 300px;
+      overflow: hidden;
       background: #f7f4f1;
       border: 1px solid var(--tray-linea);
       border-radius: 8px;
-      overflow: hidden;
     }
 
     .drive-vista iframe {
@@ -246,23 +268,16 @@
       cursor: zoom-in;
     }
 
-    .drive-vista-cubierta:focus-visible,
-    .evidencia-imagen:focus-visible,
-    .boton-documento:focus-visible {
-      outline: 3px solid var(--tray-vino);
-      outline-offset: 3px;
-    }
-
     .drive-vista-indicador {
       position: absolute;
       right: 12px;
       bottom: 12px;
-      pointer-events: none;
       padding: 9px 12px;
-      color: #fff;
+      color: white;
       background: rgba(55, 30, 40, .92);
       border-radius: 5px;
       font: 700 12px Arial, sans-serif;
+      pointer-events: none;
     }
 
     .evidencia-acciones {
@@ -274,8 +289,8 @@
 
     .boton-documento {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       min-height: 43px;
       padding: 10px 15px;
       color: white;
@@ -301,6 +316,15 @@
       background: #f8eff1;
     }
 
+    .boton-documento:focus-visible,
+    .evidencia-imagen:focus-visible,
+    .drive-vista-cubierta:focus-visible {
+      outline: 3px solid var(--tray-vino);
+      outline-offset: 3px;
+    }
+
+    /* EVIDENCIAS PENDIENTES */
+
     .evidencia-pendiente {
       display: flex;
       align-items: center;
@@ -315,6 +339,8 @@
       font-size: 14px;
       line-height: 1.65;
     }
+
+    /* VISORES AMPLIADOS */
 
     .visor-documento,
     .visor-imagen {
@@ -341,7 +367,7 @@
       flex-wrap: wrap;
       gap: 10px;
       padding: 12px;
-      color: #fff;
+      color: white;
       background: #2b1a22;
       border-radius: 8px 8px 0 0;
     }
@@ -355,11 +381,11 @@
     .visor-enlace,
     .visor-cerrar {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       min-height: 41px;
       padding: 9px 13px;
-      color: #fff;
+      color: white;
       background: transparent;
       border: 1px solid rgba(255,255,255,.65);
       border-radius: 5px;
@@ -370,8 +396,8 @@
 
     .visor-enlace:hover,
     .visor-cerrar:hover {
-      background: rgba(255,255,255,.12);
       color: white;
+      background: rgba(255,255,255,.12);
     }
 
     .visor-marco {
@@ -379,7 +405,7 @@
       width: 100%;
       flex: 1;
       min-height: 0;
-      background: #fff;
+      background: white;
       border: 0;
       border-radius: 0 0 8px 8px;
     }
@@ -406,6 +432,8 @@
     body.visor-abierto {
       overflow: hidden;
     }
+
+    /* RESPONSIVIDAD */
 
     @media (max-width: 760px) {
       .trayectoria .contenedor {
@@ -434,10 +462,6 @@
         height: 270px;
       }
 
-      .visor-barra {
-        gap: 7px;
-      }
-
       .visor-titulo {
         flex-basis: 100%;
       }
@@ -458,37 +482,53 @@
 
 <body>
 
-  <!-- Encabezado compartido -->
+  <!-- ENCABEZADO COMPARTIDO -->
   <div id="header-container"></div>
 
   <main class="trayectoria">
 
+    <!-- PORTADA -->
+
     <section class="trayectoria-portada">
       <div class="contenedor">
-        <span class="trayectoria-etiqueta">02 / Trayectoria</span>
 
-        <h1>Formación, reconocimientos y aprendizaje</h1>
+        <span class="trayectoria-etiqueta">
+          02 / Trayectoria
+        </span>
+
+        <h1>
+          Formación, reconocimientos y aprendizaje
+        </h1>
 
         <p>
-          Un recorrido por la formación académica, los logros
-          obtenidos en distintos espacios educativos y las
-          experiencias de capacitación que han contribuido
-          al desarrollo de conocimientos, habilidades y
-          competencias.
+          Un recorrido por la formación académica,
+          los logros obtenidos en distintos espacios
+          educativos y las experiencias de capacitación
+          que han contribuido al desarrollo de
+          conocimientos, habilidades y competencias.
         </p>
+
       </div>
     </section>
 
     <!-- FORMACIÓN ACADÉMICA -->
 
-    <section class="trayectoria-seccion contenedor" id="formacion">
+    <section
+      class="trayectoria-seccion contenedor"
+      id="formacion"
+    >
 
       <div class="seccion-encabezado">
-        <span class="seccion-numero">01 / FORMACIÓN</span>
+        <span class="seccion-numero">
+          01 / FORMACIÓN
+        </span>
+
         <h2>Formación académica</h2>
+
         <p>
-          Instituciones educativas en las que se ha desarrollado
-          la formación básica, media superior y técnica.
+          Instituciones educativas en las que
+          se ha desarrollado la formación básica,
+          media superior y técnica.
         </p>
       </div>
 
@@ -496,120 +536,205 @@
 
         <article class="formacion-card">
           <span class="periodo">2015–2021</span>
+
           <h3>Educación primaria</h3>
-          <p class="institucion">Escuela Primaria Daniel Delgadillo</p>
+
+          <p class="institucion">
+            Escuela Primaria Daniel Delgadillo
+          </p>
+
           <p>CCT: 15DPR0320J.</p>
         </article>
 
         <article class="formacion-card">
           <span class="periodo">2021–2024</span>
+
           <h3>Educación secundaria</h3>
+
           <p class="institucion">
             Escuela Secundaria Oficial Núm. 0324
             «Lic. Alberto García Pliego»
           </p>
+
           <p>CCT: 15EES0487I.</p>
         </article>
 
         <article class="formacion-card">
           <span class="periodo">2024–Actualidad</span>
+
           <h3>Educación media superior</h3>
+
           <p class="institucion">
-            Plantel «Cuauhtémoc» de la Escuela Preparatoria,
-            Universidad Autónoma del Estado de México
+            Plantel «Cuauhtémoc» de la Escuela
+            Preparatoria, Universidad Autónoma
+            del Estado de México
           </p>
+
           <p>CCT: 15UBH0008Y.</p>
         </article>
 
         <article class="formacion-card">
           <span class="periodo">2022–2024</span>
+
           <h3>Formación técnica</h3>
-          <p class="institucion">INCA, Plantel Toluca</p>
+
+          <p class="institucion">
+            INCA, Plantel Toluca
+          </p>
+
           <p>Técnico en Informática.</p>
         </article>
 
       </div>
+
     </section>
 
     <!-- RECONOCIMIENTOS -->
 
-    <section class="trayectoria-seccion contenedor" id="reconocimientos">
+    <section
+      class="trayectoria-seccion contenedor"
+      id="reconocimientos"
+    >
 
       <div class="seccion-encabezado">
-        <span class="seccion-numero">02 / DISTINCIONES</span>
-        <h2>Reconocimientos y distinciones académicas</h2>
+        <span class="seccion-numero">
+          02 / DISTINCIONES
+        </span>
+
+        <h2>
+          Reconocimientos y distinciones académicas
+        </h2>
+
         <p>
-          Participaciones, premios y reconocimientos obtenidos
-          en actividades académicas, científicas y culturales.
+          Participaciones, premios y reconocimientos
+          obtenidos en actividades académicas,
+          científicas y culturales.
         </p>
       </div>
 
       <div class="trayectoria-categoria">
         <h3>Excelencia académica y científica</h3>
-        <div class="tarjetas-grid" id="reconocimientos-excelencia"></div>
+
+        <div
+          class="tarjetas-grid"
+          id="reconocimientos-excelencia"
+        ></div>
       </div>
 
       <div class="trayectoria-categoria">
         <h3>Reconocimientos interpreparatorianos</h3>
-        <div class="tarjetas-grid" id="reconocimientos-interpreparatorianos"></div>
+
+        <div
+          class="tarjetas-grid"
+          id="reconocimientos-interpreparatorianos"
+        ></div>
       </div>
 
       <div class="trayectoria-categoria">
-        <h3>Reconocimientos internos del Plantel «Cuauhtémoc»</h3>
-        <div class="tarjetas-grid" id="reconocimientos-internos"></div>
+        <h3>
+          Reconocimientos internos del Plantel «Cuauhtémoc»
+        </h3>
+
+        <div
+          class="tarjetas-grid"
+          id="reconocimientos-internos"
+        ></div>
       </div>
 
       <div class="trayectoria-categoria">
         <h3>Otros reconocimientos</h3>
-        <div class="tarjetas-grid" id="reconocimientos-otros"></div>
+
+        <div
+          class="tarjetas-grid"
+          id="reconocimientos-otros"
+        ></div>
       </div>
 
     </section>
 
-    <!-- CURSOS -->
+    <!-- CURSOS Y CERTIFICACIONES -->
 
-    <section class="trayectoria-seccion contenedor" id="capacitacion">
+    <section
+      class="trayectoria-seccion contenedor"
+      id="capacitacion"
+    >
 
       <div class="seccion-encabezado">
-        <span class="seccion-numero">03 / FORMACIÓN COMPLEMENTARIA</span>
-        <h2>Cursos, talleres y certificaciones</h2>
+        <span class="seccion-numero">
+          03 / FORMACIÓN COMPLEMENTARIA
+        </span>
+
+        <h2>
+          Cursos, talleres y certificaciones
+        </h2>
+
         <p>
-          Actividades de actualización y capacitación en
-          tecnología, comunicación, liderazgo, estadística
-          y competencias profesionales.
+          Actividades de actualización y capacitación
+          en tecnología, comunicación, liderazgo,
+          estadística y competencias profesionales.
         </p>
       </div>
 
       <div class="trayectoria-categoria">
         <h3>Diplomado y certificación</h3>
-        <div class="tarjetas-grid" id="cursos-certificaciones"></div>
+
+        <div
+          class="tarjetas-grid"
+          id="cursos-certificaciones"
+        ></div>
       </div>
 
       <div class="trayectoria-categoria">
-        <h3>Tecnología, análisis de datos e inteligencia artificial</h3>
-        <div class="tarjetas-grid" id="cursos-tecnologia"></div>
+        <h3>
+          Tecnología, análisis de datos
+          e inteligencia artificial
+        </h3>
+
+        <div
+          class="tarjetas-grid"
+          id="cursos-tecnologia"
+        ></div>
       </div>
 
       <div class="trayectoria-categoria">
-        <h3>Comunicación, escritura y expresión oral</h3>
-        <div class="tarjetas-grid" id="cursos-comunicacion"></div>
+        <h3>
+          Comunicación, escritura y expresión oral
+        </h3>
+
+        <div
+          class="tarjetas-grid"
+          id="cursos-comunicacion"
+        ></div>
       </div>
 
       <div class="trayectoria-categoria">
-        <h3>Liderazgo, ciudadanía y servicio</h3>
-        <div class="tarjetas-grid" id="cursos-liderazgo"></div>
+        <h3>
+          Liderazgo, ciudadanía y servicio
+        </h3>
+
+        <div
+          class="tarjetas-grid"
+          id="cursos-liderazgo"
+        ></div>
       </div>
 
       <div class="trayectoria-categoria">
-        <h3>Estadística, análisis y divulgación del conocimiento</h3>
-        <div class="tarjetas-grid" id="cursos-estadistica"></div>
+        <h3>
+          Estadística, análisis y divulgación
+          del conocimiento
+        </h3>
+
+        <div
+          class="tarjetas-grid"
+          id="cursos-estadistica"
+        ></div>
       </div>
 
     </section>
 
   </main>
 
-  <!-- Pie de página compartido -->
+  <!-- PIE DE PÁGINA COMPARTIDO -->
   <div id="footer-container"></div>
 
   <!-- VISOR DE PDF -->
@@ -622,8 +747,13 @@
     aria-label="Documento de evidencia"
     aria-hidden="true"
   >
+
     <div class="visor-barra">
-      <span class="visor-titulo" id="visor-documento-titulo">
+
+      <span
+        class="visor-titulo"
+        id="visor-documento-titulo"
+      >
         Documento de evidencia
       </span>
 
@@ -644,14 +774,15 @@
       >
         Cerrar ×
       </button>
+
     </div>
 
     <iframe
       class="visor-marco"
       id="visor-documento-marco"
       title="Documento PDF completo"
-      referrerpolicy="no-referrer"
     ></iframe>
+
   </div>
 
   <!-- VISOR DE IMÁGENES -->
@@ -664,6 +795,7 @@
     aria-label="Imagen de evidencia ampliada"
     aria-hidden="true"
   >
+
     <button
       class="visor-cerrar"
       id="visor-imagen-cerrar"
@@ -672,24 +804,23 @@
       Cerrar ×
     </button>
 
-    <img id="visor-imagen-contenido" alt="Evidencia ampliada">
+    <img
+      id="visor-imagen-contenido"
+      alt="Evidencia ampliada"
+    >
+
   </div>
 
-  <!-- Script general del sitio -->
+  <!-- SCRIPT GENERAL -->
   <script src="script.js"></script>
 
   <script>
     "use strict";
 
     /*
+      ========================================
       DOCUMENTOS DE GOOGLE DRIVE
-
-      Cada identificador corresponde a un PDF
-      compartido por el propietario del portafolio.
-
-      No se necesitan fotografías adicionales:
-      Google Drive muestra la vista previa mediante
-      su visor integrado.
+      ========================================
     */
 
     const documentosDrive = {
@@ -730,199 +861,290 @@
         "1rz3KL2uzycvLik9H7yU13lDesNjLUuta",
 
       virtud:
-        "1zjSUP6rPQARvhmin0pXCy0xnqT70Yrl5"
+        "1zjSUP6rPQARvhmin0pXCy0xnqT70Yrl5",
+
+      diplomadoWeb:
+        "1YrASAOTYwVFSnn6vLIbax649Hy-fYf48",
+
+      liderazgo:
+        "1wrmxeDOoN-hmIX-UWqJiNjHAGyb79Xpt",
+
+      estimulo:
+        "1zqNeDLl8QJeGZY9q1ZJr_Ngcx9UeFujS"
     };
 
     /*
+      ========================================
       RECONOCIMIENTOS
+      ========================================
 
-      Se mantienen las cuatro categorías.
-      Las fotografías de reconocimientos que ya
-      estén en assets/evidencias se mostrarán
-      automáticamente cuando coincidan los nombres.
+      Las fotografías se buscan en:
+
+      assets/evidencias/
+
+      Se conservan los nombres exactos
+      de los archivos proporcionados.
+
+      Los documentos de Google Drive
+      se muestran mediante vista previa.
+
+      Los reconocimientos sin evidencia
+      pueden mostrarse sin fotografía
+      o con aviso de documento pendiente.
     */
 
     const reconocimientos = {
+
       excelencia: [
         {
-          titulo: "Primer lugar en la Olimpiada Estatal de Química del Estado de México",
-          imagen: "olimpiada-quimica.jpg"
+          titulo:
+            "Primer lugar en la Olimpiada Estatal de Química 2026",
+          imagen:
+            "JPR_Reconocimiento_1er Lugar en la OEQ 2026.jpg"
         },
         {
-          titulo: "Estímulo Talento Científico y Cultural «José Antonio Alzate»",
-          imagen: "estimulo-alzate.jpg"
+          titulo:
+            "Estímulo al Talento Científico y Cultural «José Antonio Alzate»",
+          drive:
+            documentosDrive.estimulo
         },
         {
-          titulo: "Reconocimiento por ingreso a la Escuela Preparatoria",
-          imagen: "ingreso-preparatoria.jpg"
+          titulo:
+            "Resultado de ingreso al Plantel «Cuauhtémoc» de la Escuela Preparatoria",
+          imagen:
+            "JPR_Reporte de resultados de ingreso al Plantel Cuauhtémoc.jpg"
         },
         {
-          titulo: "Mejor aprovechamiento académico de secundaria",
-          imagen: "mejor-promedio-secundaria.jpg"
+          titulo:
+            "Reconocimiento al mejor promedio académico de secundaria",
+          imagen:
+            "JPR_Reconocimiento_Mejor promedio de secundaria.jpeg"
         },
         {
-          titulo: "Mejor aprovechamiento académico de primaria",
-          imagen: "mejor-promedio-primaria.jpg"
+          titulo:
+            "Reconocimiento al mejor promedio académico de primaria",
+          pendiente: true,
+          mensajePendiente:
+            "Reconocimiento de primaria pendiente de incorporar."
         },
         {
-          titulo: "Reconocimiento «Niños de Oro»",
-          imagen: "ninos-de-oro.jpg"
+          titulo:
+            "Selección para el reconocimiento «Niños de Oro»",
+          imagen:
+            "Seleccionado Niños de Oro.png"
         }
       ],
 
       interpreparatorianos: [
         {
-          titulo: "Concurso de Oratoria «Historia y Memoria»",
-          imagen: "oratoria-historia-memoria.jpg"
+          titulo:
+            "Segundo lugar en el Concurso de Oratoria del Nivel Medio Superior 2026",
+          imagen:
+            "JPR_Segundo lugar oratoria 2026.jpg"
         },
         {
-          titulo: "Rally Interpreparatoriano de Cultura Digital",
-          imagen: "rally-cultura-digital-interpreparatoriano.jpg"
+          titulo:
+            "Reconocimiento en el Rally Interpreparatoriano de Cultura Digital",
+          imagen:
+            "JPR_Reconocimiento_Rally Interpreparatoriano de Cultura Digital.jpg"
         },
         {
-          titulo: "Certamen de Conocimientos UAEMéx",
-          imagen: "certamen-conocimientos-uaemex.jpg"
+          titulo:
+            "Segundo lugar en el Concurso de Conocimientos del Nivel Medio Superior 2026",
+          imagen:
+            "JPR_Reconocimiento_Segundo Lugar Concurso de Conocimientos NMS 2026.jpg"
         },
         {
-          titulo: "Concurso de Oratoria «Valores y Símbolos»",
-          imagen: "oratoria-valores-simbolos.jpg"
+          titulo:
+            "Tercer lugar en el Concurso de Oratoria del Nivel Medio Superior 2024",
+          imagen:
+            "JPR_Reconocimiento_Tercer lugar Concurso Oratoria NMS 2024.jpg"
         }
       ],
 
       internos: [
         {
-          titulo: "Ganador del CEBRATÓN UAEMéx",
-          imagen: "cebraton-uaemex.jpg"
+          titulo:
+            "Ganador del CEBRATÓN del Plantel «Cuauhtémoc»",
+          imagen:
+            "Ganador del cebratón.png"
         },
         {
-          titulo: "Rally de Cultura Digital del Plantel",
-          imagen: "rally-digital-plantel.jpg"
+          titulo:
+            "Primer lugar en la Olimpiada Interna de Historia",
+          imagen:
+            "1er lugar en la olimpiada interna de historia.jpg"
         },
         {
-          titulo: "Selección interna para la Olimpiada de Química",
-          imagen: "seleccion-interna-quimica.jpg"
+          titulo:
+            "Primer lugar en la selección interna de Química",
+          imagen:
+            "1er kugar en la seleccion interna de quimica.png"
         },
         {
-          titulo: "Segundo lugar en el Rally de las Matemáticas",
-          imagen: "rally-matematicas.jpg"
+          titulo:
+            "Segundo lugar en el Rally de Matemáticas",
+          pendiente: true,
+          mensajePendiente:
+            "Constancia de Matemáticas pendiente de incorporar."
         },
         {
-          titulo: "Concurso de Oratoria «El poder de la palabra»",
-          imagen: "oratoria-poder-palabra.jpg"
+          titulo:
+            "Reconocimiento en el concurso de oratoria «El poder de la palabra en nuestra actualidad»",
+          imagen:
+            "JPR_Reconocimiento_El poder de la palabra en nuestra actualidad.jpg"
         }
       ],
 
       otros: [
         {
-          titulo: "Segundo lugar en el concurso escolar «Spelling Bee»",
-          imagen: "spelling-bee.jpg"
+          titulo:
+            "Segundo lugar en el concurso escolar «Spelling Bee»",
+          descripcion:
+            "Distinción obtenida en el concurso escolar de deletreo en inglés.",
+          sinEvidencia: true
         },
         {
-          titulo: "Olimpiada del Conocimiento Infantil",
-          imagen: "olimpiada-conocimiento-infantil.jpg"
+          titulo:
+            "Seleccionado para representar a la primaria en la Olimpiada del Conocimiento Infantil",
+          descripcion:
+            "Fui seleccionado para representar a la Escuela Primaria Daniel Delgadillo en la Olimpiada del Conocimiento Infantil. Sin embargo, la competencia no se llevó a cabo debido a la pandemia de COVID-19.",
+          sinEvidencia: true
         }
       ]
+
     };
 
     /*
+      ========================================
       CURSOS Y CERTIFICACIONES
-
-      Los PDF se vinculan mediante la propiedad drive.
-      Los cursos sin PDF conservan su tarjeta.
+      ========================================
     */
 
     const cursos = {
+
       certificaciones: [
         {
-          titulo: "Diplomado «Creación de Páginas Web»",
-          imagen: "diplomado-paginas-web.jpg",
-          pendiente: true
+          titulo:
+            "Diplomado en Creación de Páginas Web",
+          drive:
+            documentosDrive.diplomadoWeb
         },
         {
-          titulo: "Certificación CONOCER EC0105",
+          titulo:
+            "Certificación CONOCER EC0105: Atención al ciudadano en el sector público",
           institucion:
             "Consejo Nacional de Normalización y Certificación de Competencias Laborales · Universidad Autónoma del Estado de México",
           descripcion:
             "Certificado de Competencia Laboral en el estándar «Atención al ciudadano en el sector público».",
-          fecha: "19 de octubre de 2026",
-          drive: documentosDrive.conocer
+          fecha:
+            "19 de octubre de 2026",
+          drive:
+            documentosDrive.conocer
         }
       ],
 
       tecnologia: [
         {
-          titulo: "«Acelerador de Carrera con Power BI + IA»",
-          drive: documentosDrive.powerbi
+          titulo:
+            "Acelerador de Carrera con Power BI e Inteligencia Artificial",
+          drive:
+            documentosDrive.powerbi
         },
         {
-          titulo: "«Domina la IA con Gemini»",
-          drive: documentosDrive.gemini
+          titulo:
+            "Domina la Inteligencia Artificial con Gemini",
+          drive:
+            documentosDrive.gemini
         },
         {
-          titulo: "Taller «Power Point I»",
-          drive: documentosDrive.powerpoint
+          titulo:
+            "Taller de PowerPoint I",
+          drive:
+            documentosDrive.powerpoint
         },
         {
-          titulo: "«Excel: de intermedio a avanzado»",
-          drive: documentosDrive.excel
+          titulo:
+            "Excel: de intermedio a avanzado",
+          drive:
+            documentosDrive.excel
         },
         {
-          titulo: "«Fundamentos de ChatGPT»",
-          drive: documentosDrive.chatgpt
+          titulo:
+            "Fundamentos de ChatGPT",
+          drive:
+            documentosDrive.chatgpt
         }
       ],
 
       comunicacion: [
         {
-          titulo: "Curso-Taller de Oratoria",
-          imagen: "oratoria-curso-taller.jpg",
+          titulo:
+            "Curso-Taller de Oratoria",
           pendiente: true
         },
         {
-          titulo: "Taller «Lectura y redacción de textos académicos»",
-          drive: documentosDrive.lectura
+          titulo:
+            "Lectura y redacción de textos académicos",
+          drive:
+            documentosDrive.lectura
         },
         {
-          titulo: "«Pensamiento crítico y reflexivo en ambientes digitales»",
-          drive: documentosDrive.pensamiento
+          titulo:
+            "Pensamiento crítico y reflexivo en ambientes digitales",
+          drive:
+            documentosDrive.pensamiento
         }
       ],
 
       liderazgo: [
         {
-          titulo: "Curso «La virtud de servir»",
-          drive: documentosDrive.virtud
+          titulo:
+            "Curso «La virtud de servir»",
+          drive:
+            documentosDrive.virtud
         },
         {
-          titulo: "Curso «Autoridad»",
-          drive: documentosDrive.autoridad
+          titulo:
+            "Curso «Autoridad»",
+          drive:
+            documentosDrive.autoridad
         },
         {
-          titulo: "Curso «Liderazgo»",
-          imagen: "liderazgo.jpg",
-          pendiente: true
+          titulo:
+            "Curso de Liderazgo",
+          drive:
+            documentosDrive.liderazgo
         }
       ],
 
       estadistica: [
         {
-          titulo: "Curso «Estadísticas para las Juventudes»",
-          drive: documentosDrive.estadisticas
+          titulo:
+            "Estadísticas para las Juventudes",
+          drive:
+            documentosDrive.estadisticas
         },
         {
-          titulo: "Curso «Introducción al análisis demográfico»",
-          drive: documentosDrive.demografia
+          titulo:
+            "Introducción al análisis demográfico",
+          drive:
+            documentosDrive.demografia
         },
         {
           titulo:
             "Conferencia «El Derecho a la Ciencia y el Beneficio del Acceso al Conocimiento»",
-          drive: documentosDrive.derechoCiencia
+          drive:
+            documentosDrive.derechoCiencia
         }
       ]
+
     };
 
     /*
+      ========================================
       UTILIDADES
+      ========================================
     */
 
     function crearElemento(etiqueta, clase, texto) {
@@ -932,7 +1154,7 @@
         elemento.className = clase;
       }
 
-      if (texto) {
+      if (texto !== undefined && texto !== null) {
         elemento.textContent = texto;
       }
 
@@ -940,17 +1162,25 @@
     }
 
     function urlVistaDrive(id) {
-      return "https://drive.google.com/file/d/" +
-        encodeURIComponent(id) + "/preview";
+      return (
+        "https://drive.google.com/file/d/" +
+        encodeURIComponent(id) +
+        "/preview"
+      );
     }
 
     function urlDocumentoDrive(id) {
-      return "https://drive.google.com/file/d/" +
-        encodeURIComponent(id) + "/view";
+      return (
+        "https://drive.google.com/file/d/" +
+        encodeURIComponent(id) +
+        "/view"
+      );
     }
 
     /*
-      VISOR DE DOCUMENTOS
+      ========================================
+      VISORES
+      ========================================
     */
 
     const visorDocumento =
@@ -990,6 +1220,12 @@
       );
     }
 
+    /*
+      ========================================
+      ABRIR DOCUMENTO
+      ========================================
+    */
+
     function abrirDocumento(id, titulo) {
       if (!id) return;
 
@@ -998,9 +1234,11 @@
       visorDocumentoTitulo.textContent =
         titulo || "Documento de evidencia";
 
-      visorDocumentoMarco.src = urlVistaDrive(id);
+      visorDocumentoMarco.src =
+        urlVistaDrive(id);
 
-      visorDocumentoEnlace.href = urlDocumentoDrive(id);
+      visorDocumentoEnlace.href =
+        urlDocumentoDrive(id);
 
       visorDocumento.classList.add("abierto");
 
@@ -1030,8 +1268,10 @@
 
       actualizarBloqueo();
 
-      if (focoAnterior &&
-          typeof focoAnterior.focus === "function") {
+      if (
+        focoAnterior &&
+        typeof focoAnterior.focus === "function"
+      ) {
         focoAnterior.focus();
       }
     }
@@ -1041,25 +1281,34 @@
       cerrarDocumento
     );
 
-    visorDocumento.addEventListener("click", function(evento) {
-      if (evento.target === visorDocumento) {
-        cerrarDocumento();
+    visorDocumento.addEventListener(
+      "click",
+      function(evento) {
+        if (evento.target === visorDocumento) {
+          cerrarDocumento();
+        }
       }
-    });
+    );
 
     /*
-      VISOR DE IMÁGENES
+      ========================================
+      ABRIR IMAGEN
+      ========================================
     */
 
     function abrirImagen(ruta, titulo) {
       focoAnterior = document.activeElement;
 
       visorImagenContenido.src = ruta;
-      visorImagenContenido.alt = titulo || "Evidencia";
+      visorImagenContenido.alt =
+        titulo || "Evidencia fotográfica";
 
       visorImagen.classList.add("abierto");
 
-      visorImagen.setAttribute("aria-hidden", "false");
+      visorImagen.setAttribute(
+        "aria-hidden",
+        "false"
+      );
 
       actualizarBloqueo();
 
@@ -1073,14 +1322,19 @@
 
       visorImagen.classList.remove("abierto");
 
-      visorImagen.setAttribute("aria-hidden", "true");
+      visorImagen.setAttribute(
+        "aria-hidden",
+        "true"
+      );
 
       visorImagenContenido.removeAttribute("src");
 
       actualizarBloqueo();
 
-      if (focoAnterior &&
-          typeof focoAnterior.focus === "function") {
+      if (
+        focoAnterior &&
+        typeof focoAnterior.focus === "function"
+      ) {
         focoAnterior.focus();
       }
     }
@@ -1090,49 +1344,62 @@
       cerrarImagen
     );
 
-    visorImagen.addEventListener("click", function(evento) {
-      if (evento.target === visorImagen) {
-        cerrarImagen();
-      }
-    });
-
-    document.addEventListener("keydown", function(evento) {
-      if (evento.key === "Escape") {
-        cerrarDocumento();
-        cerrarImagen();
-      }
-
-      if (evento.key !== "Tab") return;
-
-      if (visorDocumento.classList.contains("abierto")) {
-        const controles = [
-          visorDocumentoEnlace,
-          visorDocumentoCerrar
-        ];
-
-        const indice = controles.indexOf(
-          document.activeElement
-        );
-
-        if (evento.shiftKey &&
-            (indice <= 0)) {
-          evento.preventDefault();
-          controles[controles.length - 1].focus();
-        } else if (!evento.shiftKey &&
-                   indice === controles.length - 1) {
-          evento.preventDefault();
-          controles[0].focus();
+    visorImagen.addEventListener(
+      "click",
+      function(evento) {
+        if (evento.target === visorImagen) {
+          cerrarImagen();
         }
       }
+    );
 
-      if (visorImagen.classList.contains("abierto")) {
-        evento.preventDefault();
-        visorImagenCerrar.focus();
+    document.addEventListener(
+      "keydown",
+      function(evento) {
+        if (evento.key === "Escape") {
+          cerrarDocumento();
+          cerrarImagen();
+        }
+
+        if (evento.key !== "Tab") return;
+
+        if (
+          visorDocumento.classList.contains("abierto")
+        ) {
+          const controles = [
+            visorDocumentoEnlace,
+            visorDocumentoCerrar
+          ];
+
+          const indice = controles.indexOf(
+            document.activeElement
+          );
+
+          if (evento.shiftKey && indice <= 0) {
+            evento.preventDefault();
+            controles[controles.length - 1].focus();
+          } else if (
+            !evento.shiftKey &&
+            indice === controles.length - 1
+          ) {
+            evento.preventDefault();
+            controles[0].focus();
+          }
+        }
+
+        if (
+          visorImagen.classList.contains("abierto")
+        ) {
+          evento.preventDefault();
+          visorImagenCerrar.focus();
+        }
       }
-    });
+    );
 
     /*
-      EVIDENCIAS
+      ========================================
+      VISTA PREVIA DE DRIVE
+      ========================================
     */
 
     function crearVistaDrive(item) {
@@ -1159,7 +1426,6 @@
       marco.src = urlVistaDrive(item.drive);
       marco.title = "Vista previa: " + item.titulo;
       marco.loading = "lazy";
-      marco.referrerPolicy = "no-referrer";
 
       vista.appendChild(marco);
 
@@ -1169,14 +1435,18 @@
       );
 
       cubierta.type = "button";
+
       cubierta.setAttribute(
         "aria-label",
         "Ampliar documento: " + item.titulo
       );
 
-      cubierta.addEventListener("click", function() {
-        abrirDocumento(item.drive, item.titulo);
-      });
+      cubierta.addEventListener(
+        "click",
+        function() {
+          abrirDocumento(item.drive, item.titulo);
+        }
+      );
 
       vista.appendChild(cubierta);
 
@@ -1203,9 +1473,12 @@
 
       verDocumento.type = "button";
 
-      verDocumento.addEventListener("click", function() {
-        abrirDocumento(item.drive, item.titulo);
-      });
+      verDocumento.addEventListener(
+        "click",
+        function() {
+          abrirDocumento(item.drive, item.titulo);
+        }
+      );
 
       acciones.appendChild(verDocumento);
 
@@ -1226,6 +1499,12 @@
       return contenedor;
     }
 
+    /*
+      ========================================
+      EVIDENCIA FOTOGRÁFICA
+      ========================================
+    */
+
     function crearVistaImagen(item) {
       const contenedor = crearElemento(
         "div",
@@ -1240,7 +1519,19 @@
         )
       );
 
-      const ruta = "assets/evidencias/" + item.imagen;
+      /*
+        IMPORTANTE:
+
+        Las imágenes deben encontrarse
+        en la carpeta assets/evidencias/.
+
+        Se utilizan los nombres exactos
+        proporcionados.
+      */
+
+      const ruta =
+        "assets/evidencias/" +
+        encodeURIComponent(item.imagen);
 
       const boton = crearElemento(
         "button",
@@ -1260,28 +1551,40 @@
       imagen.alt = item.titulo;
       imagen.loading = "lazy";
 
-      imagen.addEventListener("error", function() {
-        contenedor.replaceChildren(
-          crearElemento(
-            "div",
-            "evidencia-pendiente",
-            "Evidencia fotográfica pendiente de incorporar."
-          )
-        );
-      });
+      imagen.addEventListener(
+        "error",
+        function() {
+          contenedor.replaceChildren(
+            crearElemento(
+              "div",
+              "evidencia-pendiente",
+              "No se encontró la fotografía. Verifica el nombre del archivo y su ubicación en assets/evidencias/."
+            )
+          );
+        }
+      );
 
       boton.appendChild(imagen);
 
-      boton.addEventListener("click", function() {
-        abrirImagen(ruta, item.titulo);
-      });
+      boton.addEventListener(
+        "click",
+        function() {
+          abrirImagen(ruta, item.titulo);
+        }
+      );
 
       contenedor.appendChild(boton);
 
       return contenedor;
     }
 
-    function crearVistaPendiente() {
+    /*
+      ========================================
+      EVIDENCIA PENDIENTE
+      ========================================
+    */
+
+    function crearVistaPendiente(item) {
       const contenedor = crearElemento(
         "div",
         "evidencia"
@@ -1291,7 +1594,8 @@
         crearElemento(
           "div",
           "evidencia-pendiente",
-          "Documento pendiente de incorporar."
+          item.mensajePendiente ||
+            "Documento pendiente de incorporar."
         )
       );
 
@@ -1299,7 +1603,9 @@
     }
 
     /*
-      TARJETAS
+      ========================================
+      CREACIÓN DE TARJETAS
+      ========================================
     */
 
     function crearTarjeta(item) {
@@ -1353,6 +1659,20 @@
 
       tarjeta.appendChild(contenido);
 
+      /*
+        Si tiene Drive:
+        se muestra el visor PDF.
+
+        Si tiene imagen:
+        se muestra la fotografía.
+
+        Si no necesita evidencia:
+        solo aparece el texto.
+
+        Si está pendiente:
+        aparece el aviso correspondiente.
+      */
+
       if (item.drive) {
         tarjeta.appendChild(
           crearVistaDrive(item)
@@ -1361,9 +1681,9 @@
         tarjeta.appendChild(
           crearVistaImagen(item)
         );
-      } else {
+      } else if (item.pendiente) {
         tarjeta.appendChild(
-          crearVistaPendiente()
+          crearVistaPendiente(item)
         );
       }
 
@@ -1375,17 +1695,22 @@
 
       if (!contenedor) return;
 
-      const fragmento = document.createDocumentFragment();
+      const fragmento =
+        document.createDocumentFragment();
 
       elementos.forEach(function(item) {
-        fragmento.appendChild(crearTarjeta(item));
+        fragmento.appendChild(
+          crearTarjeta(item)
+        );
       });
 
       contenedor.appendChild(fragmento);
     }
 
     /*
+      ========================================
       MOSTRAR RECONOCIMIENTOS
+      ========================================
     */
 
     renderizarGrupo(
@@ -1409,7 +1734,9 @@
     );
 
     /*
+      ========================================
       MOSTRAR CURSOS
+      ========================================
     */
 
     renderizarGrupo(
@@ -1436,6 +1763,7 @@
       "cursos-estadistica",
       cursos.estadistica
     );
+
   </script>
 
 </body>
