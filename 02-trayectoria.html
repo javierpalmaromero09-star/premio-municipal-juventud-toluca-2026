@@ -4,21 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="Formación académica, reconocimientos, distinciones, cursos y certificaciones de Javier Palma Romero, aspirante al Premio Municipal de la Juventud Toluca 2026."
+  >
+
   <meta name="theme-color" content="#762d40">
-  <meta name="description" content="Formación académica, reconocimientos, distinciones, cursos y certificaciones de Javier Palma Romero.">
+
   <title>Trayectoria académica | Javier Palma Romero — PMJ Toluca 2026</title>
+
   <link rel="stylesheet" href="styles.css">
 
   <style>
+    /* ==========================================
+       VARIABLES Y ESTRUCTURA
+    ========================================== */
+
     .trayectoria {
-      --vino: #762d40;
-      --vino-oscuro: #592030;
-      --texto: #29252a;
-      --gris: #746b70;
-      --borde: #e6dedb;
-      --blanco: #fff;
-      color: var(--texto);
-      padding-bottom: 85px;
+      --tray-vino: #762d40;
+      --tray-vino-oscuro: #592030;
+      --tray-texto: #29252a;
+      --tray-gris: #716970;
+      --tray-borde: #e6dedb;
+      --tray-blanco: #ffffff;
+      --tray-fondo: #f8f5f3;
+
+      color: var(--tray-texto);
+      padding-bottom: 90px;
     }
 
     .trayectoria *,
@@ -28,71 +41,84 @@
     }
 
     .trayectoria-container {
-      width: min(1140px, calc(100% - 36px));
+      width: min(1150px, calc(100% - 36px));
       margin-inline: auto;
     }
 
+    /* ==========================================
+       PORTADA
+    ========================================== */
+
     .trayectoria-hero {
       padding: clamp(55px, 7vw, 95px) 0 55px;
-      border-bottom: 1px solid var(--borde);
+      border-bottom: 1px solid var(--tray-borde);
     }
 
     .trayectoria-eyebrow {
       display: block;
-      margin-bottom: 16px;
-      color: var(--vino);
+      margin-bottom: 17px;
+      color: var(--tray-vino);
       font: 700 12px/1.5 Arial, sans-serif;
       letter-spacing: .13em;
       text-transform: uppercase;
     }
 
     .trayectoria-hero h1 {
-      max-width: 900px;
-      margin: 0 0 20px;
-      font: 400 clamp(36px, 5vw, 62px)/1.12 Georgia, serif;
-      letter-spacing: -.03em;
+      max-width: 920px;
+      margin: 0 0 22px;
+      font: 400 clamp(36px, 5vw, 64px)/1.12 Georgia, serif;
+      letter-spacing: -.035em;
     }
 
     .trayectoria-hero p {
-      max-width: 790px;
+      max-width: 810px;
       margin: 0;
-      color: var(--gris);
+      color: var(--tray-gris);
       font-size: 17px;
       line-height: 1.85;
     }
 
+    /* ==========================================
+       SECCIONES
+    ========================================== */
+
     .trayectoria-section {
-      padding-top: 70px;
+      padding-top: 72px;
       scroll-margin-top: 110px;
     }
 
     .trayectoria-section h2 {
-      margin: 0 0 15px;
-      font: 400 clamp(29px, 3.5vw, 42px)/1.2 Georgia, serif;
+      margin: 0 0 16px;
+      font: 400 clamp(30px, 3.5vw, 43px)/1.2 Georgia, serif;
     }
 
     .trayectoria-description {
-      max-width: 820px;
-      margin: 0 0 28px;
-      color: var(--gris);
+      max-width: 850px;
+      margin: 0 0 30px;
+      color: var(--tray-gris);
       line-height: 1.85;
     }
 
     .trayectoria-category {
-      margin-top: 38px;
+      margin-top: 43px;
     }
 
     .trayectoria-category h3 {
-      margin: 0 0 20px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--borde);
-      font: 400 clamp(23px, 2.7vw, 29px)/1.3 Georgia, serif;
+      margin: 0 0 21px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--tray-borde);
+      font: 400 clamp(23px, 2.7vw, 30px)/1.3 Georgia, serif;
     }
+
+    /* ==========================================
+       TARJETAS
+    ========================================== */
 
     .trayectoria-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
+      gap: 20px;
+      align-items: stretch;
     }
 
     .trayectoria-card {
@@ -100,82 +126,156 @@
       flex-direction: column;
       min-width: 0;
       overflow: hidden;
-      border: 1px solid var(--borde);
+      border: 1px solid var(--tray-borde);
       border-radius: 12px;
-      background: var(--blanco);
-      box-shadow: 0 5px 22px rgba(40, 22, 29, .035);
+      background: var(--tray-blanco);
+      box-shadow: 0 6px 25px rgba(40, 22, 29, .035);
     }
 
     .trayectoria-card-body {
       flex: 1;
-      padding: 25px;
+      padding: 26px;
     }
 
     .trayectoria-date {
       display: block;
       margin-bottom: 12px;
-      color: var(--vino);
+      color: var(--tray-vino);
       font: 700 12px/1.5 Arial, sans-serif;
     }
 
     .trayectoria-card h3,
     .trayectoria-card h4 {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       font: 400 23px/1.35 Georgia, serif;
       overflow-wrap: anywhere;
     }
 
     .trayectoria-card p {
       margin: 0;
-      color: var(--gris);
+      color: var(--tray-gris);
       font-size: 14px;
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
     .trayectoria-card p + p {
-      margin-top: 10px;
+      margin-top: 11px;
     }
 
     .trayectoria-card .institution {
-      color: var(--texto);
+      margin-bottom: 11px;
+      color: var(--tray-texto);
       font-weight: 700;
     }
 
+    /* ==========================================
+       EVIDENCIAS
+    ========================================== */
+
     .trayectoria-evidence {
-      padding: 0 25px 25px;
+      padding: 0 26px 26px;
     }
 
     .trayectoria-evidence-label {
       display: block;
       margin-bottom: 12px;
-      color: var(--vino);
-      font: 700 11px Arial, sans-serif;
-      letter-spacing: .1em;
+      color: var(--tray-vino);
+      font: 700 11px/1.5 Arial, sans-serif;
+      letter-spacing: .11em;
       text-transform: uppercase;
     }
 
-    .trayectoria-photo-button {
+    /* ==========================================
+       VISTA PREVIA DE PDF
+    ========================================== */
+
+    .trayectoria-pdf-preview {
+      position: relative;
+      height: 330px;
+      overflow: hidden;
+      border: 1px solid var(--tray-borde);
+      border-radius: 8px;
+      background: var(--tray-fondo);
+    }
+
+    .trayectoria-pdf-preview iframe {
       display: block;
       width: 100%;
-      padding: 10px;
-      border: 1px solid var(--borde);
+      height: 100%;
+      border: 0;
+      background: white;
+    }
+
+    .trayectoria-pdf-overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .trayectoria-pdf-hint {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      padding: 9px 12px;
+      color: white;
+      background: rgba(48, 28, 37, .92);
+      border-radius: 5px;
+      font: 700 12px Arial, sans-serif;
+      pointer-events: none;
+    }
+
+    /* ==========================================
+       FOTOGRAFÍAS
+    ========================================== */
+
+    .trayectoria-photo-button {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 12px;
+      overflow: hidden;
+      border: 1px solid var(--tray-borde);
       border-radius: 8px;
-      background: #f8f5f3;
+      background: var(--tray-fondo);
       cursor: zoom-in;
     }
 
     .trayectoria-photo-button img {
       display: block;
       width: 100%;
-      height: 250px;
+      height: 255px;
       object-fit: contain;
+      transition: transform .25s ease;
     }
+
+    .trayectoria-photo-button:hover img {
+      transform: scale(1.035);
+    }
+
+    .trayectoria-photo-hint {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      padding: 9px 12px;
+      color: white;
+      background: rgba(48, 28, 37, .92);
+      border-radius: 5px;
+      font: 700 12px Arial, sans-serif;
+      pointer-events: none;
+    }
+
+    /* ==========================================
+       BOTONES
+    ========================================== */
 
     .trayectoria-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 13px;
+      margin-top: 14px;
     }
 
     .trayectoria-button {
@@ -184,9 +284,9 @@
       justify-content: center;
       min-height: 43px;
       padding: 10px 16px;
-      border: 1px solid var(--vino);
+      border: 1px solid var(--tray-vino);
       border-radius: 6px;
-      background: var(--vino);
+      background: var(--tray-vino);
       color: #fff;
       text-decoration: none;
       font: 700 13px/1.4 Arial, sans-serif;
@@ -194,45 +294,60 @@
     }
 
     .trayectoria-button:hover {
-      background: var(--vino-oscuro);
-      color: #fff;
+      background: var(--tray-vino-oscuro);
+      color: white;
     }
 
     .trayectoria-button.outline {
       background: transparent;
-      color: var(--vino);
+      color: var(--tray-vino);
     }
 
     .trayectoria-button.outline:hover {
       background: #faf1f3;
     }
 
+    .trayectoria-button:focus-visible,
+    .trayectoria-photo-button:focus-visible,
+    .trayectoria-pdf-overlay:focus-visible {
+      outline: 3px solid var(--tray-vino);
+      outline-offset: 3px;
+    }
+
+    /* ==========================================
+       EVIDENCIA PENDIENTE
+    ========================================== */
+
     .trayectoria-pending {
-      padding: 20px;
+      padding: 24px;
       border: 1px dashed #d9c9cd;
       border-radius: 8px;
       background: #faf8f6;
-      color: var(--gris);
+      color: var(--tray-gris);
       font-size: 13px;
-      line-height: 1.7;
+      line-height: 1.75;
       text-align: center;
     }
 
-    .trayectoria-viewer {
+    /* ==========================================
+       VISOR AMPLIADO DE PDF
+    ========================================== */
+
+    .trayectoria-pdf-modal {
       position: fixed;
       inset: 0;
       z-index: 10000;
       display: none;
       flex-direction: column;
       padding: clamp(8px, 2vw, 20px);
-      background: rgba(21, 13, 18, .96);
+      background: rgba(21, 13, 18, .97);
     }
 
-    .trayectoria-viewer.open {
+    .trayectoria-pdf-modal.open {
       display: flex;
     }
 
-    .trayectoria-viewer-bar {
+    .trayectoria-modal-bar {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
@@ -240,28 +355,34 @@
       padding: 12px;
       border-radius: 8px 8px 0 0;
       background: #2b1b23;
-      color: #fff;
+      color: white;
     }
 
-    .trayectoria-viewer-title {
+    .trayectoria-modal-title {
       flex: 1;
       min-width: 160px;
       font: 700 14px/1.5 Arial, sans-serif;
     }
 
-    .trayectoria-viewer-bar button,
-    .trayectoria-viewer-bar a {
+    .trayectoria-modal-bar button,
+    .trayectoria-modal-bar a {
       padding: 10px 13px;
       border: 1px solid #b9a9b0;
       border-radius: 5px;
       background: transparent;
-      color: #fff;
+      color: white;
       text-decoration: none;
       font: 700 12px Arial, sans-serif;
       cursor: pointer;
     }
 
-    .trayectoria-viewer iframe {
+    .trayectoria-modal-bar button:hover,
+    .trayectoria-modal-bar a:hover {
+      background: rgba(255,255,255,.12);
+      color: white;
+    }
+
+    .trayectoria-pdf-modal iframe {
       display: block;
       flex: 1;
       width: 100%;
@@ -270,22 +391,26 @@
       background: white;
     }
 
-    .trayectoria-image-viewer {
+    /* ==========================================
+       VISOR AMPLIADO DE IMÁGENES
+    ========================================== */
+
+    .trayectoria-image-modal {
       position: fixed;
       inset: 0;
       z-index: 10001;
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 65px 20px 25px;
-      background: rgba(21, 13, 18, .96);
+      padding: 70px 20px 25px;
+      background: rgba(21, 13, 18, .97);
     }
 
-    .trayectoria-image-viewer.open {
+    .trayectoria-image-modal.open {
       display: flex;
     }
 
-    .trayectoria-image-viewer img {
+    .trayectoria-image-modal img {
       max-width: 100%;
       max-height: 85vh;
       object-fit: contain;
@@ -293,13 +418,14 @@
 
     .trayectoria-image-close {
       position: absolute;
-      top: 15px;
+      top: 16px;
       right: 20px;
-      padding: 10px 15px;
-      border: 1px solid #fff;
+      padding: 11px 16px;
+      border: 1px solid white;
       border-radius: 6px;
-      background: #fff;
+      background: white;
       color: #29252a;
+      font: 700 13px Arial, sans-serif;
       cursor: pointer;
     }
 
@@ -307,13 +433,17 @@
       overflow: hidden;
     }
 
-    @media (max-width: 700px) {
+    /* ==========================================
+       RESPONSIVIDAD
+    ========================================== */
+
+    @media (max-width: 760px) {
       .trayectoria-grid {
         grid-template-columns: 1fr;
       }
 
       .trayectoria-section {
-        padding-top: 50px;
+        padding-top: 52px;
       }
 
       .trayectoria-card-body {
@@ -324,18 +454,28 @@
         padding: 0 22px 22px;
       }
 
+      .trayectoria-pdf-preview {
+        height: 300px;
+      }
+
       .trayectoria-photo-button img {
         height: 260px;
       }
 
-      .trayectoria-viewer-title {
+      .trayectoria-modal-title {
         flex-basis: 100%;
       }
 
-      .trayectoria-viewer-bar button,
-      .trayectoria-viewer-bar a {
+      .trayectoria-modal-bar button,
+      .trayectoria-modal-bar a {
         flex: 1;
         text-align: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .trayectoria-photo-button img {
+        transition: none;
       }
     }
   </style>
@@ -343,6 +483,7 @@
 
 <body>
 
+  <!-- ENCABEZADO COMPARTIDO -->
   <div id="header-container"></div>
 
   <main class="trayectoria">
@@ -364,7 +505,8 @@
           Mi trayectoria reúne experiencias de formación,
           distinciones académicas, participaciones en concursos
           y procesos de capacitación que reflejan el compromiso
-          con el conocimiento y la superación continua.
+          con el conocimiento, la excelencia académica
+          y la superación continua.
         </p>
 
       </div>
@@ -372,7 +514,10 @@
 
     <!-- FORMACIÓN ACADÉMICA -->
 
-    <section class="trayectoria-section trayectoria-container" id="formacion">
+    <section
+      class="trayectoria-section trayectoria-container"
+      id="formacion"
+    >
 
       <span class="trayectoria-eyebrow">
         01 / Formación
@@ -387,13 +532,19 @@
         Cada etapa cuenta con documentación de respaldo.
       </p>
 
-      <div class="trayectoria-grid" id="formacion-grid"></div>
+      <div
+        class="trayectoria-grid"
+        id="formacion-grid"
+      ></div>
 
     </section>
 
     <!-- RECONOCIMIENTOS -->
 
-    <section class="trayectoria-section trayectoria-container" id="reconocimientos">
+    <section
+      class="trayectoria-section trayectoria-container"
+      id="reconocimientos"
+    >
 
       <span class="trayectoria-eyebrow">
         02 / Distinciones
@@ -409,29 +560,48 @@
 
       <div class="trayectoria-category">
         <h3>Excelencia académica y científica</h3>
-        <div class="trayectoria-grid" id="reconocimientos-excelencia"></div>
+
+        <div
+          class="trayectoria-grid"
+          id="reconocimientos-excelencia"
+        ></div>
       </div>
 
       <div class="trayectoria-category">
         <h3>Reconocimientos interpreparatorianos</h3>
-        <div class="trayectoria-grid" id="reconocimientos-interpreparatorianos"></div>
+
+        <div
+          class="trayectoria-grid"
+          id="reconocimientos-interpreparatorianos"
+        ></div>
       </div>
 
       <div class="trayectoria-category">
         <h3>Reconocimientos internos del Plantel «Cuauhtémoc»</h3>
-        <div class="trayectoria-grid" id="reconocimientos-internos"></div>
+
+        <div
+          class="trayectoria-grid"
+          id="reconocimientos-internos"
+        ></div>
       </div>
 
       <div class="trayectoria-category">
         <h3>Otros reconocimientos y participaciones</h3>
-        <div class="trayectoria-grid" id="reconocimientos-otros"></div>
+
+        <div
+          class="trayectoria-grid"
+          id="reconocimientos-otros"
+        ></div>
       </div>
 
     </section>
 
     <!-- CAPACITACIÓN -->
 
-    <section class="trayectoria-section trayectoria-container" id="capacitacion">
+    <section
+      class="trayectoria-section trayectoria-container"
+      id="capacitacion"
+    >
 
       <span class="trayectoria-eyebrow">
         03 / Formación complementaria
@@ -447,50 +617,76 @@
 
       <div class="trayectoria-category">
         <h3>Diplomados y certificaciones</h3>
-        <div class="trayectoria-grid" id="cursos-certificaciones"></div>
+
+        <div
+          class="trayectoria-grid"
+          id="cursos-certificaciones"
+        ></div>
       </div>
 
       <div class="trayectoria-category">
         <h3>Tecnología, análisis de datos e inteligencia artificial</h3>
-        <div class="trayectoria-grid" id="cursos-tecnologia"></div>
+
+        <div
+          class="trayectoria-grid"
+          id="cursos-tecnologia"
+        ></div>
       </div>
 
       <div class="trayectoria-category">
         <h3>Comunicación, escritura y expresión oral</h3>
-        <div class="trayectoria-grid" id="cursos-comunicacion"></div>
+
+        <div
+          class="trayectoria-grid"
+          id="cursos-comunicacion"
+        ></div>
       </div>
 
       <div class="trayectoria-category">
         <h3>Liderazgo, ciudadanía y servicio</h3>
-        <div class="trayectoria-grid" id="cursos-liderazgo"></div>
+
+        <div
+          class="trayectoria-grid"
+          id="cursos-liderazgo"
+        ></div>
       </div>
 
       <div class="trayectoria-category">
         <h3>Estadística y divulgación del conocimiento</h3>
-        <div class="trayectoria-grid" id="cursos-estadistica"></div>
+
+        <div
+          class="trayectoria-grid"
+          id="cursos-estadistica"
+        ></div>
       </div>
 
     </section>
 
   </main>
 
+  <!-- PIE DE PÁGINA COMPARTIDO -->
   <div id="footer-container"></div>
 
-  <!-- VISOR PDF -->
+  <!-- VISOR PDF AMPLIADO -->
 
   <div
-    id="pdf-viewer"
-    class="trayectoria-viewer"
+    id="pdf-modal"
+    class="trayectoria-pdf-modal"
     role="dialog"
     aria-modal="true"
     aria-label="Documento ampliado"
     aria-hidden="true"
   >
-    <div class="trayectoria-viewer-bar">
-      <span id="pdf-viewer-title" class="trayectoria-viewer-title"></span>
+
+    <div class="trayectoria-modal-bar">
+
+      <span
+        id="pdf-modal-title"
+        class="trayectoria-modal-title"
+      ></span>
 
       <a
-        id="pdf-viewer-link"
+        id="pdf-modal-link"
         href="#"
         target="_blank"
         rel="noopener noreferrer"
@@ -498,77 +694,89 @@
         Abrir en Google Drive
       </a>
 
-      <button type="button" id="pdf-viewer-close">
+      <button
+        type="button"
+        id="pdf-modal-close"
+      >
         Cerrar ×
       </button>
+
     </div>
 
     <iframe
-      id="pdf-viewer-frame"
+      id="pdf-modal-frame"
       title="Visualizador de documento PDF"
     ></iframe>
+
   </div>
 
-  <!-- VISOR DE FOTOGRAFÍAS -->
+  <!-- VISOR FOTOGRÁFICO -->
 
   <div
-    id="image-viewer"
-    class="trayectoria-image-viewer"
+    id="image-modal"
+    class="trayectoria-image-modal"
     role="dialog"
     aria-modal="true"
     aria-label="Reconocimiento ampliado"
     aria-hidden="true"
   >
+
     <button
       type="button"
       class="trayectoria-image-close"
-      id="image-viewer-close"
+      id="image-modal-close"
     >
       Cerrar ×
     </button>
 
-    <img id="image-viewer-photo" alt="Reconocimiento ampliado">
+    <img
+      id="image-modal-photo"
+      alt="Reconocimiento ampliado"
+    >
+
   </div>
 
+  <!-- SCRIPT GENERAL -->
   <script src="script.js"></script>
 
   <script>
     "use strict";
 
     /*
-      ===================================================
-      CONFIGURACIÓN DE RUTAS
-      ===================================================
+      ==========================================
+      CONFIGURACIÓN GENERAL
+      ==========================================
 
-      Las fotografías están directamente en:
+      Las fotografías se encuentran en:
 
       assets/
 
-      No están en assets/evidencias/.
+      Los PDF se muestran directamente en
+      cada tarjeta mediante Google Drive.
 
-      Se respeta exactamente el nombre de cada archivo,
-      incluidas tildes, espacios y erratas originales.
+      Al hacer clic sobre la vista previa
+      se abre el visor ampliado.
     */
 
     const CARPETA_FOTOS = "assets/";
 
     /*
-      ===================================================
+      ==========================================
       FORMACIÓN ACADÉMICA
-      ===================================================
+      ==========================================
     */
 
     const formacion = [
       {
         titulo: "Educación primaria",
-        institucion: "Escuela Primaria Daniel Delgadillo",
+        institucion: "Escuela Primaria «Daniel Delgadillo»",
         fecha: "2015–2021",
         descripcion: "Formación de nivel primaria.",
         drive: "13lTUeR7rdc09Erq8j6hfC7s2-DHdE788"
       },
       {
         titulo: "Educación secundaria",
-        institucion: "Escuela Secundaria Oficial Núm. 0324 «Lic. Alberto García Pliego»",
+        institucion: "Escuela Secundaria Oficial No. 0324 «Lic. Alberto García Pliego»",
         fecha: "2021–2024",
         descripcion: "Formación de nivel secundaria.",
         drive: "1Z5fFppGgtYwDfj2-7Tvx235qxVP4vDte"
@@ -590,101 +798,132 @@
     ];
 
     /*
-      ===================================================
+      ==========================================
       RECONOCIMIENTOS
-      ===================================================
+      ==========================================
     */
 
     const reconocimientos = {
 
       excelencia: [
         {
-          titulo: "Primer lugar en la Olimpiada Estatal de Química 2026",
+          titulo: "Primer lugar en la Olimpiada Estatal de Química del Estado de México 2026",
+          descripcion: "Destaqué a nivel estatal por mis conocimientos químicos, representando al Plantel «Cuauhtémoc» y a la Universidad Autónoma del Estado de México.",
           imagen: "JPR_Reconocimiento_1er Lugar en la OEQ 2026.jpg"
         },
         {
-          titulo: "Estímulo al Talento Científico y Cultural «José Antonio Alzate»",
+          titulo: "Acreedor al Estímulo Talento Científico y Cultural «José Antonio Alzate»",
+          fecha: "2025B, 2026A y 2026B",
+          descripcion: "Apoyo otorgado por la UAEMéx en reconocimiento a mi trayectoria académica, divulgación científica y actitud innovadora.",
           drive: "1zqNeDLl8QJeGZY9q1ZJr_Ngcx9UeFujS"
         },
         {
-          titulo: "Resultado de ingreso al Plantel «Cuauhtémoc»",
+          titulo: "Segundo lugar en el proceso de selección de nuevo ingreso al Plantel «Cuauhtémoc»",
+          fecha: "Ciclo escolar 2024–2025",
+          descripcion: "Ingresé al Plantel con un lugar sobresaliente entre más de 2,200 aspirantes, gracias a mi promedio académico y al resultado obtenido en el EXANI-I del CENEVAL.",
           imagen: "JPR_Reporte de resultados de ingreso al Plantel Cuauhtémoc.jpg"
         },
         {
-          titulo: "Reconocimiento al mejor promedio académico de secundaria",
+          titulo: "Mejor aprovechamiento académico de la generación 2021–2024",
+          institucion: "Escuela Secundaria Oficial No. 0324 «Lic. Alberto García Pliego»",
+          descripcion: "Reconocimiento por haber obtenido el mejor aprovechamiento académico de mi generación de secundaria.",
           imagen: "JPR_Reconocimiento_Mejor promedio de secundaria.jpeg"
         },
         {
-          titulo: "Reconocimiento al mejor promedio académico de primaria",
-          pendiente: "Evidencia pendiente de incorporar."
+          titulo: "Mejor aprovechamiento académico de la generación 2015–2021",
+          institucion: "Escuela Primaria «Daniel Delgadillo»",
+          descripcion: "Reconocimiento por el mejor aprovechamiento académico de mi generación de primaria.",
+          pendiente: "Evidencia documental pendiente de incorporar."
         },
         {
-          titulo: "Selección para «Niños de Oro»",
+          titulo: "Seleccionado para integrar el Club Nacional de Excelencia Académica «Niños de Oro»",
+          descripcion: "Selección para formar parte de una comunidad orientada al reconocimiento de la excelencia académica.",
           imagen: "Seleccionado Niños de Oro.png"
         }
       ],
 
       interpreparatorianos: [
         {
-          titulo: "Segundo lugar en el Concurso de Oratoria del Nivel Medio Superior 2026",
+          titulo: "Segundo lugar en el Certamen de Oratoria Estudiantil sobre Historia, Memoria y Pertenencia Universitaria",
+          fecha: "Nivel Medio Superior UAEMéx · 2026",
+          descripcion: "Reconocimiento obtenido en una competencia académica universitaria enfocada en la historia, identidad y valores institucionales de la Universidad Autónoma del Estado de México.",
           imagen: "JPR_Segundo lugar oratoria 2026.jpg"
         },
         {
-          titulo: "Reconocimiento en el Rally Interpreparatoriano de Cultura Digital",
+          titulo: "Segundo lugar en el 1er Rally de Conocimientos de Cultura Digital",
+          fecha: "Nivel Medio Superior UAEMéx",
+          descripcion: "Reconocimiento obtenido en una competencia académica universitaria relacionada con competencias digitales y tecnológicas.",
           imagen: "JPR_Reconocimiento_Rally Interpreparatoriano de Cultura Digital.jpg"
         },
         {
-          titulo: "Segundo lugar en el Concurso de Conocimientos del Nivel Medio Superior 2026",
+          titulo: "Segundo lugar en el Certamen Estudiantil de Conocimientos sobre Historia, Memoria y Pertenencia Universitaria",
+          fecha: "Nivel Medio Superior UAEMéx · 2026",
+          descripcion: "Reconocimiento obtenido en una competencia académica universitaria enfocada en la historia, identidad y valores de la Universidad Autónoma del Estado de México.",
           imagen: "JPR_Reconocimiento_Segundo Lugar Concurso de Conocimientos NMS 2026.jpg"
         },
         {
-          titulo: "Tercer lugar en el Concurso de Oratoria del Nivel Medio Superior 2024",
+          titulo: "Tercer lugar en el Concurso Universitario de Oratoria Estudiantil sobre Valores, Símbolos e Historia de la UAEMéx",
+          fecha: "2024",
+          descripcion: "Reconocimiento obtenido por habilidades de argumentación, expresión oral y dominio temático en un certamen universitario de oratoria.",
           imagen: "JPR_Reconocimiento_Tercer lugar Concurso Oratoria NMS 2024.jpg"
         }
       ],
 
       internos: [
         {
-          titulo: "Ganador del Cebratón",
+          titulo: "Ganador del CEBRATÓN UAEMéx 2025",
+          institucion: "Plantel «Cuauhtémoc»",
+          descripcion: "Mi diseño fue plasmado en el cruce peatonal ubicado al exterior del Plantel, dejando una contribución visible para la comunidad universitaria y la comunidad toluqueña.",
           imagen: "Ganador del cebratón.png"
         },
         {
-          titulo: "Primer lugar en la Olimpiada Interna de Historia",
-          imagen: "1er lugar en la olimpiada interna de historia.jpg"
+          titulo: "Primer lugar en el 1er Rally de Conocimientos de Cultura Digital",
+          institucion: "Plantel «Cuauhtémoc»",
+          descripcion: "Reconocimiento obtenido por desempeño sobresaliente en competencias relacionadas con cultura digital y tecnologías de la información."
         },
         {
-          titulo: "Primer lugar en la selección interna de Química",
+          titulo: "Primer lugar en la fase de Selección Interna para la Olimpiada Estatal de Química",
+          institucion: "Plantel «Cuauhtémoc»",
+          descripcion: "Resultado obtenido durante el proceso interno de selección de representantes para la Olimpiada Estatal de Química.",
           imagen: "1er kugar en la seleccion interna de quimica.png"
         },
         {
-          titulo: "Segundo lugar en el Rally de Matemáticas",
+          titulo: "Primer lugar en la fase de Selección Interna para la Olimpiada de Conocimientos de Conciencia Histórica",
+          institucion: "Plantel «Cuauhtémoc»",
+          descripcion: "Reconocimiento por obtener el primer lugar en el proceso interno de selección de Conciencia Histórica.",
+          imagen: "1er lugar en la olimpiada interna de historia.jpg"
+        },
+        {
+          titulo: "Segundo lugar en el Rally de las Matemáticas 2026",
+          institucion: "Plantel «Cuauhtémoc»",
+          descripcion: "Reconocimiento obtenido por desempeño sobresaliente en competencias matemáticas.",
           pendiente: "Constancia de Matemáticas pendiente de incorporar."
         },
         {
-          titulo: "Reconocimiento en «El poder de la palabra en nuestra actualidad»",
+          titulo: "Segundo lugar en el Concurso de Oratoria «El poder de la palabra en la actualidad»",
+          descripcion: "Distinción obtenida por habilidades de expresión oral, argumentación y comunicación de ideas.",
           imagen: "JPR_Reconocimiento_El poder de la palabra en nuestra actualidad.jpg"
         }
       ],
 
       otros: [
         {
-          titulo: "Segundo lugar en el concurso escolar Spelling Bee",
-          descripcion: "Reconocimiento obtenido en una competencia escolar de deletreo en inglés.",
-          sinFoto: true
+          titulo: "Segundo lugar en el concurso escolar «Spelling Bee»",
+          fecha: "2023",
+          descripcion: "Reconocimiento obtenido por desempeño destacado en competencias de lengua inglesa."
         },
         {
-          titulo: "Seleccionado para la Olimpiada del Conocimiento Infantil",
-          descripcion: "Fui seleccionado para representar a la Escuela Primaria Daniel Delgadillo en la Olimpiada del Conocimiento Infantil. Sin embargo, la competencia no se llevó a cabo debido a la pandemia de COVID-19.",
-          sinFoto: true
+          titulo: "Seleccionado para representar a la Escuela Primaria «Daniel Delgadillo» en la Olimpiada del Conocimiento Infantil",
+          fecha: "2020",
+          descripcion: "Fui seleccionado para participar en el proceso correspondiente a la Olimpiada del Conocimiento Infantil; sin embargo, la etapa posterior fue suspendida debido a la contingencia sanitaria por COVID-19."
         }
       ]
-
     };
 
     /*
-      ===================================================
+      ==========================================
       CURSOS Y CERTIFICACIONES
-      ===================================================
+      ==========================================
     */
 
     const cursos = {
@@ -698,6 +937,7 @@
           titulo: "Certificación CONOCER EC0105: Atención al ciudadano en el sector público",
           institucion: "CONOCER · Universidad Autónoma del Estado de México",
           fecha: "2026",
+          descripcion: "Certificación de competencias laborales relacionadas con la atención al ciudadano.",
           drive: "1uSZR6hEDufp6Co7lZcPKT0d5KLTgNXlp"
         }
       ],
@@ -772,26 +1012,30 @@
     };
 
     /*
-      ===================================================
+      ==========================================
       FUNCIONES AUXILIARES
-      ===================================================
+      ==========================================
     */
 
-    function elemento(tag, clase, texto) {
+    function crearElemento(tag, clase, texto) {
       const el = document.createElement(tag);
 
       if (clase) el.className = clase;
 
-      if (texto !== undefined) {
+      if (texto !== undefined && texto !== null) {
         el.textContent = texto;
       }
 
       return el;
     }
 
-    function driveURL(id, tipo = "view") {
-      return "https://drive.google.com/file/d/" +
-        encodeURIComponent(id) + "/" + tipo;
+    function enlaceDrive(id, tipo = "view") {
+      return (
+        "https://drive.google.com/file/d/" +
+        encodeURIComponent(id) +
+        "/" +
+        tipo
+      );
     }
 
     function rutaFoto(nombre) {
@@ -799,28 +1043,28 @@
     }
 
     /*
-      ===================================================
-      VISUALIZACIÓN DE PDF
-      ===================================================
+      ==========================================
+      VISORES
+      ==========================================
     */
 
-    const pdfViewer = document.getElementById("pdf-viewer");
-    const pdfFrame = document.getElementById("pdf-viewer-frame");
-    const pdfTitle = document.getElementById("pdf-viewer-title");
-    const pdfLink = document.getElementById("pdf-viewer-link");
-    const pdfClose = document.getElementById("pdf-viewer-close");
+    const pdfModal = document.getElementById("pdf-modal");
+    const pdfFrame = document.getElementById("pdf-modal-frame");
+    const pdfTitle = document.getElementById("pdf-modal-title");
+    const pdfLink = document.getElementById("pdf-modal-link");
+    const pdfClose = document.getElementById("pdf-modal-close");
 
-    const imageViewer = document.getElementById("image-viewer");
-    const imagePhoto = document.getElementById("image-viewer-photo");
-    const imageClose = document.getElementById("image-viewer-close");
+    const imageModal = document.getElementById("image-modal");
+    const imagePhoto = document.getElementById("image-modal-photo");
+    const imageClose = document.getElementById("image-modal-close");
 
     let previousFocus = null;
 
-    function actualizarModal() {
+    function actualizarBloqueo() {
       document.body.classList.toggle(
         "trayectoria-modal-open",
-        pdfViewer.classList.contains("open") ||
-        imageViewer.classList.contains("open")
+        pdfModal.classList.contains("open") ||
+        imageModal.classList.contains("open")
       );
     }
 
@@ -828,24 +1072,24 @@
       previousFocus = document.activeElement;
 
       pdfTitle.textContent = titulo;
-      pdfFrame.src = driveURL(id, "preview");
-      pdfLink.href = driveURL(id);
+      pdfFrame.src = enlaceDrive(id, "preview");
+      pdfLink.href = enlaceDrive(id, "view");
 
-      pdfViewer.classList.add("open");
-      pdfViewer.setAttribute("aria-hidden", "false");
+      pdfModal.classList.add("open");
+      pdfModal.setAttribute("aria-hidden", "false");
 
-      actualizarModal();
+      actualizarBloqueo();
       pdfClose.focus();
     }
 
     function cerrarPDF() {
-      if (!pdfViewer.classList.contains("open")) return;
+      if (!pdfModal.classList.contains("open")) return;
 
-      pdfViewer.classList.remove("open");
-      pdfViewer.setAttribute("aria-hidden", "true");
+      pdfModal.classList.remove("open");
+      pdfModal.setAttribute("aria-hidden", "true");
       pdfFrame.removeAttribute("src");
 
-      actualizarModal();
+      actualizarBloqueo();
 
       if (previousFocus) previousFocus.focus();
     }
@@ -856,21 +1100,21 @@
       imagePhoto.src = rutaFoto(nombre);
       imagePhoto.alt = titulo;
 
-      imageViewer.classList.add("open");
-      imageViewer.setAttribute("aria-hidden", "false");
+      imageModal.classList.add("open");
+      imageModal.setAttribute("aria-hidden", "false");
 
-      actualizarModal();
+      actualizarBloqueo();
       imageClose.focus();
     }
 
     function cerrarFoto() {
-      if (!imageViewer.classList.contains("open")) return;
+      if (!imageModal.classList.contains("open")) return;
 
-      imageViewer.classList.remove("open");
-      imageViewer.setAttribute("aria-hidden", "true");
+      imageModal.classList.remove("open");
+      imageModal.setAttribute("aria-hidden", "true");
       imagePhoto.removeAttribute("src");
 
-      actualizarModal();
+      actualizarBloqueo();
 
       if (previousFocus) previousFocus.focus();
     }
@@ -878,12 +1122,12 @@
     pdfClose.addEventListener("click", cerrarPDF);
     imageClose.addEventListener("click", cerrarFoto);
 
-    pdfViewer.addEventListener("click", (event) => {
-      if (event.target === pdfViewer) cerrarPDF();
+    pdfModal.addEventListener("click", (event) => {
+      if (event.target === pdfModal) cerrarPDF();
     });
 
-    imageViewer.addEventListener("click", (event) => {
-      if (event.target === imageViewer) cerrarFoto();
+    imageModal.addEventListener("click", (event) => {
+      if (event.target === imageModal) cerrarFoto();
     });
 
     document.addEventListener("keydown", (event) => {
@@ -894,7 +1138,7 @@
 
       if (event.key !== "Tab") return;
 
-      if (pdfViewer.classList.contains("open")) {
+      if (pdfModal.classList.contains("open")) {
         const controles = [pdfLink, pdfClose];
         const indice = controles.indexOf(document.activeElement);
 
@@ -907,151 +1151,253 @@
         }
       }
 
-      if (imageViewer.classList.contains("open")) {
+      if (imageModal.classList.contains("open")) {
         event.preventDefault();
         imageClose.focus();
       }
     });
 
     /*
-      ===================================================
-      CREACIÓN DE TARJETAS
-      ===================================================
+      ==========================================
+      VISTA PREVIA DE PDF
+      ==========================================
+
+      Cada documento se muestra mediante
+      un iframe de Google Drive.
+
+      El usuario puede ver la primera página
+      sin necesidad de abrir otra pestaña.
+
+      Al pulsar sobre la vista previa,
+      se abre el documento ampliado.
+    */
+
+    function crearVistaPDF(item) {
+      const evidence = crearElemento(
+        "div",
+        "trayectoria-evidence"
+      );
+
+      evidence.appendChild(
+        crearElemento(
+          "span",
+          "trayectoria-evidence-label",
+          "Documento de respaldo"
+        )
+      );
+
+      const preview = crearElemento(
+        "div",
+        "trayectoria-pdf-preview"
+      );
+
+      const iframe = document.createElement("iframe");
+
+      iframe.src = enlaceDrive(item.drive, "preview");
+      iframe.title = "Vista previa: " + item.titulo;
+      iframe.loading = "lazy";
+
+      preview.appendChild(iframe);
+
+      const overlay = crearElemento(
+        "button",
+        "trayectoria-pdf-overlay"
+      );
+
+      overlay.type = "button";
+
+      overlay.setAttribute(
+        "aria-label",
+        "Ampliar documento: " + item.titulo
+      );
+
+      overlay.addEventListener("click", () => {
+        abrirPDF(item.drive, item.titulo);
+      });
+
+      preview.appendChild(overlay);
+
+      preview.appendChild(
+        crearElemento(
+          "span",
+          "trayectoria-pdf-hint",
+          "Ampliar PDF"
+        )
+      );
+
+      evidence.appendChild(preview);
+
+      const actions = crearElemento(
+        "div",
+        "trayectoria-actions"
+      );
+
+      const button = crearElemento(
+        "button",
+        "trayectoria-button",
+        "Ver documento completo"
+      );
+
+      button.type = "button";
+
+      button.addEventListener("click", () => {
+        abrirPDF(item.drive, item.titulo);
+      });
+
+      const link = crearElemento(
+        "a",
+        "trayectoria-button outline",
+        "Abrir en Drive"
+      );
+
+      link.href = enlaceDrive(item.drive);
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+
+      actions.appendChild(button);
+      actions.appendChild(link);
+
+      evidence.appendChild(actions);
+
+      return evidence;
+    }
+
+    /*
+      ==========================================
+      VISTA PREVIA DE FOTOGRAFÍAS
+      ==========================================
+    */
+
+    function crearVistaFoto(item) {
+      const evidence = crearElemento(
+        "div",
+        "trayectoria-evidence"
+      );
+
+      evidence.appendChild(
+        crearElemento(
+          "span",
+          "trayectoria-evidence-label",
+          "Evidencia fotográfica"
+        )
+      );
+
+      const button = crearElemento(
+        "button",
+        "trayectoria-photo-button"
+      );
+
+      button.type = "button";
+
+      button.setAttribute(
+        "aria-label",
+        "Ampliar reconocimiento: " + item.titulo
+      );
+
+      const img = document.createElement("img");
+
+      img.src = rutaFoto(item.imagen);
+      img.alt = item.titulo;
+      img.loading = "lazy";
+
+      img.addEventListener("error", () => {
+        evidence.replaceChildren(
+          crearElemento(
+            "div",
+            "trayectoria-pending",
+            "Fotografía no disponible temporalmente."
+          )
+        );
+      });
+
+      button.appendChild(img);
+
+      button.appendChild(
+        crearElemento(
+          "span",
+          "trayectoria-photo-hint",
+          "Ampliar imagen"
+        )
+      );
+
+      button.addEventListener("click", () => {
+        abrirFoto(item.imagen, item.titulo);
+      });
+
+      evidence.appendChild(button);
+
+      return evidence;
+    }
+
+    /*
+      ==========================================
+      TARJETAS
+      ==========================================
     */
 
     function crearTarjeta(item) {
-      const card = elemento("article", "trayectoria-card");
-      const body = elemento("div", "trayectoria-card-body");
+      const card = crearElemento(
+        "article",
+        "trayectoria-card"
+      );
+
+      const body = crearElemento(
+        "div",
+        "trayectoria-card-body"
+      );
 
       if (item.fecha) {
         body.appendChild(
-          elemento("span", "trayectoria-date", item.fecha)
+          crearElemento(
+            "span",
+            "trayectoria-date",
+            item.fecha
+          )
         );
       }
 
       body.appendChild(
-        elemento("h3", "", item.titulo)
+        crearElemento(
+          "h4",
+          "",
+          item.titulo
+        )
       );
 
       if (item.institucion) {
         body.appendChild(
-          elemento("p", "institution", item.institucion)
+          crearElemento(
+            "p",
+            "institution",
+            item.institucion
+          )
         );
       }
 
       if (item.descripcion) {
         body.appendChild(
-          elemento("p", "", item.descripcion)
+          crearElemento(
+            "p",
+            "",
+            item.descripcion
+          )
         );
       }
 
       card.appendChild(body);
 
-      if (item.imagen) {
-        const evidence = elemento("div", "trayectoria-evidence");
-
-        evidence.appendChild(
-          elemento(
-            "span",
-            "trayectoria-evidence-label",
-            "Reconocimiento"
-          )
-        );
-
-        const button = elemento(
-          "button",
-          "trayectoria-photo-button"
-        );
-
-        button.type = "button";
-        button.setAttribute(
-          "aria-label",
-          "Ampliar reconocimiento: " + item.titulo
-        );
-
-        const image = document.createElement("img");
-
-        image.src = rutaFoto(item.imagen);
-        image.alt = item.titulo;
-        image.loading = "lazy";
-
-        /*
-          Se evita mostrar el mensaje de error
-          que aparecía por la carpeta equivocada.
-          Si una imagen realmente no existe,
-          se mantiene un aviso discreto.
-        */
-
-        image.addEventListener("error", () => {
-          evidence.replaceChildren(
-            elemento(
-              "div",
-              "trayectoria-pending",
-              "Fotografía no disponible temporalmente."
-            )
-          );
-        });
-
-        button.appendChild(image);
-
-        button.addEventListener("click", () => {
-          abrirFoto(item.imagen, item.titulo);
-        });
-
-        evidence.appendChild(button);
-        card.appendChild(evidence);
-      }
-
       if (item.drive) {
-        const evidence = elemento("div", "trayectoria-evidence");
-
-        evidence.appendChild(
-          elemento(
-            "span",
-            "trayectoria-evidence-label",
-            "Documento de respaldo"
-          )
-        );
-
-        const actions = elemento(
+        card.appendChild(crearVistaPDF(item));
+      } else if (item.imagen) {
+        card.appendChild(crearVistaFoto(item));
+      } else if (item.pendiente) {
+        const evidence = crearElemento(
           "div",
-          "trayectoria-actions"
+          "trayectoria-evidence"
         );
-
-        const button = elemento(
-          "button",
-          "trayectoria-button",
-          "Consultar documento"
-        );
-
-        button.type = "button";
-
-        button.addEventListener("click", () => {
-          abrirPDF(item.drive, item.titulo);
-        });
-
-        const link = elemento(
-          "a",
-          "trayectoria-button outline",
-          "Abrir en Drive"
-        );
-
-        link.href = driveURL(item.drive);
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-
-        actions.appendChild(button);
-        actions.appendChild(link);
-        evidence.appendChild(actions);
-
-        card.appendChild(evidence);
-      }
-
-      if (item.pendiente) {
-        const evidence = elemento("div", "trayectoria-evidence");
 
         evidence.appendChild(
-          elemento(
+          crearElemento(
             "div",
             "trayectoria-pending",
             item.pendiente
@@ -1063,6 +1409,12 @@
 
       return card;
     }
+
+    /*
+      ==========================================
+      RENDERIZACIÓN
+      ==========================================
+    */
 
     function renderizar(id, datos) {
       const contenedor = document.getElementById(id);
@@ -1079,12 +1431,18 @@
     }
 
     /*
-      ===================================================
-      CARGA DE CONTENIDOS
-      ===================================================
+      ==========================================
+      MOSTRAR FORMACIÓN
+      ==========================================
     */
 
     renderizar("formacion-grid", formacion);
+
+    /*
+      ==========================================
+      MOSTRAR RECONOCIMIENTOS
+      ==========================================
+    */
 
     renderizar(
       "reconocimientos-excelencia",
@@ -1105,6 +1463,12 @@
       "reconocimientos-otros",
       reconocimientos.otros
     );
+
+    /*
+      ==========================================
+      MOSTRAR CURSOS
+      ==========================================
+    */
 
     renderizar(
       "cursos-certificaciones",
@@ -1134,4 +1498,3 @@
 
 </body>
 </html>
-   
