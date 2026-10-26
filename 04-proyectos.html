@@ -1,0 +1,1249 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Proyectos | Javier Palma Romero — PMJ Toluca 2026</title>
+
+  <meta
+    name="description"
+    content="Proyecto de guías de estudio y comunidades de apoyo académico de Javier Palma Romero, orientado a facilitar el acceso a materiales educativos y promover el aprendizaje colaborativo."
+  >
+
+  <meta name="theme-color" content="#762d40">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .proyectos {
+      --vino: #762d40;
+      --vino-oscuro: #592030;
+      --papel: #f6f3ed;
+      --blanco: #ffffff;
+      --texto: #29242a;
+      --gris: #71696d;
+      --borde: #e6dddc;
+      --suave: #f8f1f3;
+
+      color: var(--texto);
+      padding-bottom: 90px;
+    }
+
+    .proyectos *,
+    .proyectos *::before,
+    .proyectos *::after {
+      box-sizing: border-box;
+    }
+
+    .proyectos-container {
+      width: min(1100px, calc(100% - 36px));
+      margin-inline: auto;
+    }
+
+    /* PORTADA */
+
+    .proyectos-hero {
+      padding: clamp(55px, 7vw, 95px) 0 55px;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .proyectos-kicker {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--vino);
+      font: 700 12px/1.5 Arial, sans-serif;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .proyectos-hero h1 {
+      max-width: 900px;
+      margin: 0 0 22px;
+      font: 400 clamp(38px, 5.5vw, 65px)/1.12 Georgia, serif;
+      letter-spacing: -.035em;
+    }
+
+    .proyectos-intro {
+      max-width: 830px;
+      margin: 0;
+      color: var(--gris);
+      font-size: clamp(16px, 1.8vw, 18px);
+      line-height: 1.85;
+    }
+
+    /* INDICADORES */
+
+    .proyectos-indicadores {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .proyectos-indicador {
+      padding: 23px;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      background: var(--blanco);
+    }
+
+    .proyectos-indicador strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--vino);
+      font: 400 clamp(30px, 3.5vw, 42px)/1.1 Georgia, serif;
+    }
+
+    .proyectos-indicador span {
+      color: var(--gris);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    /* SECCIONES */
+
+    .proyectos-seccion {
+      padding-top: 70px;
+      scroll-margin-top: 110px;
+    }
+
+    .proyectos-seccion h2 {
+      margin: 0 0 17px;
+      font: 400 clamp(29px, 3.6vw, 43px)/1.2 Georgia, serif;
+      letter-spacing: -.025em;
+    }
+
+    .proyectos-texto {
+      max-width: 870px;
+      margin: 0 0 20px;
+      color: var(--gris);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* PROBLEMÁTICA Y SOLUCIÓN */
+
+    .proyectos-comparacion {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 27px;
+    }
+
+    .proyectos-panel {
+      min-width: 0;
+      padding: 30px;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      background: var(--blanco);
+    }
+
+    .proyectos-panel.solucion {
+      border-top: 4px solid var(--vino);
+      background: linear-gradient(135deg, #fff, #faf5f6);
+    }
+
+    .proyectos-panel h3 {
+      margin: 0 0 15px;
+      font: 400 26px/1.3 Georgia, serif;
+    }
+
+    .proyectos-panel p {
+      margin: 0 0 15px;
+      color: var(--gris);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .proyectos-panel ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--gris);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .proyectos-panel li + li {
+      margin-top: 7px;
+    }
+
+    /* BENEFICIOS */
+
+    .proyectos-beneficios {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 27px;
+    }
+
+    .proyectos-beneficio {
+      padding: 24px;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      background: var(--blanco);
+    }
+
+    .proyectos-beneficio-numero {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--vino);
+      font: 700 12px Arial, sans-serif;
+      letter-spacing: .1em;
+    }
+
+    .proyectos-beneficio h3 {
+      margin: 0 0 9px;
+      font: 400 21px/1.35 Georgia, serif;
+    }
+
+    .proyectos-beneficio p {
+      margin: 0;
+      color: var(--gris);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    /* COMUNIDADES */
+
+    .proyectos-comunidad {
+      padding: clamp(25px, 4vw, 40px);
+      border: 1px solid #e5d5da;
+      border-left: 4px solid var(--vino);
+      border-radius: 12px;
+      background: linear-gradient(135deg, #fff, #faf5f6);
+    }
+
+    .proyectos-comunidad > p {
+      max-width: 850px;
+      margin: 0 0 24px;
+      color: var(--gris);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .proyectos-actividades {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+    }
+
+    .proyectos-actividad {
+      padding: 20px;
+      border: 1px solid var(--borde);
+      border-radius: 8px;
+      background: white;
+    }
+
+    .proyectos-actividad h3 {
+      margin: 0 0 8px;
+      font: 400 20px/1.35 Georgia, serif;
+    }
+
+    .proyectos-actividad p {
+      margin: 0;
+      color: var(--gris);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    /* EVIDENCIAS */
+
+    .proyectos-evidencias-grupo {
+      margin-top: 35px;
+    }
+
+    .proyectos-evidencias-grupo h3 {
+      margin: 0 0 10px;
+      font: 400 26px/1.3 Georgia, serif;
+    }
+
+    .proyectos-evidencias-grupo > p {
+      max-width: 790px;
+      margin: 0 0 20px;
+      color: var(--gris);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .proyectos-galeria {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .proyectos-evidencia {
+      overflow: hidden;
+      min-width: 0;
+      margin: 0;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      background: white;
+    }
+
+    .proyectos-evidencia button {
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: #f1eceb;
+      cursor: zoom-in;
+    }
+
+    .proyectos-evidencia img {
+      display: block;
+      width: 100%;
+      height: 230px;
+      object-fit: contain;
+      padding: 10px;
+      transition: transform .2s ease;
+    }
+
+    .proyectos-evidencia button:hover img {
+      transform: scale(1.035);
+    }
+
+    .proyectos-evidencia figcaption {
+      padding: 14px 16px;
+      border-top: 1px solid var(--borde);
+      color: var(--gris);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .proyectos-evidencia[hidden] {
+      display: none;
+    }
+
+    .proyectos-evidencias-vacias {
+      padding: 35px 20px;
+      border: 1px dashed #d9c9cd;
+      border-radius: 10px;
+      background: #faf7f6;
+      color: var(--gris);
+      font-size: 14px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    /* PDF */
+
+    .proyectos-documento {
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      background: white;
+    }
+
+    .proyectos-documento-cabecera {
+      padding: 24px;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .proyectos-documento-cabecera h3 {
+      margin: 0 0 9px;
+      font: 400 25px/1.3 Georgia, serif;
+    }
+
+    .proyectos-documento-cabecera p {
+      margin: 0;
+      color: var(--gris);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .proyectos-pdf-pendiente {
+      display: grid;
+      place-content: center;
+      min-height: 280px;
+      padding: 30px;
+      background: linear-gradient(135deg, #f8f4f2, #f1e9e8);
+      text-align: center;
+    }
+
+    .proyectos-pdf-pendiente strong {
+      display: block;
+      margin-bottom: 10px;
+      font: 400 25px Georgia, serif;
+    }
+
+    .proyectos-pdf-pendiente p {
+      max-width: 490px;
+      margin: 0;
+      color: var(--gris);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .proyectos-pdf-visor {
+      width: 100%;
+      height: min(75vh, 780px);
+      min-height: 400px;
+    }
+
+    .proyectos-pdf-visor iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .proyectos-documento-acciones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 20px 24px;
+      border-top: 1px solid var(--borde);
+    }
+
+    .proyectos-boton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 19px;
+      border: 1px solid var(--vino);
+      border-radius: 6px;
+      background: var(--vino);
+      color: white;
+      text-decoration: none;
+      font: 700 13px Arial, sans-serif;
+    }
+
+    .proyectos-boton:hover {
+      background: var(--vino-oscuro);
+      color: white;
+    }
+
+    .proyectos-boton.secundario {
+      background: transparent;
+      color: var(--vino);
+    }
+
+    .proyectos-boton.secundario:hover {
+      background: var(--suave);
+    }
+
+    /* VISOR DE IMÁGENES */
+
+    .proyectos-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: rgba(20, 16, 18, .9);
+    }
+
+    .proyectos-modal.abierto {
+      display: flex;
+    }
+
+    .proyectos-modal-contenido {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      max-width: 1100px;
+      max-height: 100%;
+    }
+
+    .proyectos-modal img {
+      display: block;
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      background: white;
+    }
+
+    .proyectos-modal p {
+      margin: 0;
+      color: white;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .proyectos-modal-cerrar {
+      position: absolute;
+      top: -16px;
+      right: -15px;
+      width: 43px;
+      height: 43px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      background: white;
+      color: #29242a;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* RESPONSIVIDAD */
+
+    @media (max-width: 850px) {
+      .proyectos-beneficios {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .proyectos-galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .proyectos-comparacion,
+      .proyectos-actividades,
+      .proyectos-beneficios,
+      .proyectos-galeria {
+        grid-template-columns: 1fr;
+      }
+
+      .proyectos-indicadores {
+        grid-template-columns: 1fr;
+      }
+
+      .proyectos-seccion {
+        padding-top: 52px;
+      }
+
+      .proyectos-panel {
+        padding: 23px;
+      }
+
+      .proyectos-evidencia img {
+        height: 260px;
+      }
+
+      .proyectos-documento-acciones a {
+        width: 100%;
+      }
+
+      .proyectos-pdf-visor {
+        height: 65vh;
+        min-height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ENCABEZADO COMPARTIDO -->
+  <div id="header-container"></div>
+
+  <main class="proyectos">
+
+    <!-- PORTADA -->
+
+    <section class="proyectos-hero">
+      <div class="proyectos-container">
+
+        <span class="proyectos-kicker">
+          04 / Proyectos e iniciativas
+        </span>
+
+        <h1>
+          Guías de estudio y comunidades de apoyo académico
+        </h1>
+
+        <p class="proyectos-intro">
+          Una iniciativa estudiantil orientada a facilitar
+          el acceso a materiales educativos, favorecer
+          la preparación académica y promover la
+          colaboración entre estudiantes mediante
+          recursos de estudio y comunidades de apoyo.
+        </p>
+
+        <div class="proyectos-indicadores">
+
+          <div class="proyectos-indicador">
+            <strong>2024</strong>
+            <span>Inicio de la iniciativa de apoyo estudiantil</span>
+          </div>
+
+          <div class="proyectos-indicador">
+            <strong>≈550</strong>
+            <span>Integrantes de las comunidades de apoyo académico</span>
+          </div>
+
+          <div class="proyectos-indicador">
+            <strong>2</strong>
+            <span>Ejes: materiales de estudio y acompañamiento académico</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROBLEMÁTICA -->
+
+    <section class="proyectos-seccion proyectos-container">
+
+      <span class="proyectos-kicker">
+        01 / Origen de la iniciativa
+      </span>
+
+      <h2>
+        Una respuesta a las dificultades del estudio digital
+      </h2>
+
+      <p class="proyectos-texto">
+        Durante mi formación académica identifiqué
+        dificultades para consultar y aprovechar
+        los libros electrónicos utilizados en
+        distintas asignaturas. Estos materiales
+        se encuentran alojados en una plataforma
+        que puede presentar lentitud ante una
+        alta demanda de usuarios, requieren
+        conexión a internet y no permiten
+        su descarga directa.
+      </p>
+
+      <p class="proyectos-texto">
+        Además, su disponibilidad está limitada
+        a determinados periodos y su extensión
+        puede dificultar la identificación
+        de los contenidos fundamentales
+        para preparar evaluaciones.
+      </p>
+
+      <div class="proyectos-comparacion">
+
+        <article class="proyectos-panel">
+          <h3>La problemática</h3>
+
+          <ul>
+            <li>
+              Dependencia de una plataforma digital
+              y de una conexión a internet.
+            </li>
+            <li>
+              Posible lentitud en periodos
+              de alta demanda.
+            </li>
+            <li>
+              Restricciones para descargar
+              y conservar los libros electrónicos.
+            </li>
+            <li>
+              Acceso disponible únicamente
+              durante determinados periodos.
+            </li>
+            <li>
+              Contenidos extensos que requieren
+              identificar y organizar
+              la información más relevante.
+            </li>
+          </ul>
+        </article>
+
+        <article class="proyectos-panel solucion">
+          <h3>La propuesta</h3>
+
+          <p>
+            Elaborar guías de estudio a partir
+            de la revisión, selección, síntesis
+            y organización de los contenidos
+            académicos de las asignaturas.
+          </p>
+
+          <p>
+            Los materiales se distribuyen
+            en formatos digitales que pueden
+            descargarse, conservarse,
+            consultarse sin conexión
+            e imprimirse.
+          </p>
+
+          <p>
+            Su finalidad es complementar
+            los recursos institucionales
+            y facilitar el estudio autónomo.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- CARACTERÍSTICAS -->
+
+    <section class="proyectos-seccion proyectos-container">
+
+      <span class="proyectos-kicker">
+        02 / Materiales educativos
+      </span>
+
+      <h2>
+        Guías diseñadas para facilitar el aprendizaje
+      </h2>
+
+      <p class="proyectos-texto">
+        Las guías reúnen los conceptos fundamentales
+        y la información complementaria necesaria
+        para comprender los temas de las asignaturas.
+        Buscan facilitar el repaso y la preparación
+        de exámenes sin sustituir los materiales
+        oficiales de enseñanza.
+      </p>
+
+      <div class="proyectos-beneficios">
+
+        <article class="proyectos-beneficio">
+          <span class="proyectos-beneficio-numero">01</span>
+          <h3>Consulta sin internet</h3>
+          <p>
+            Una vez descargadas, las guías pueden
+            utilizarse sin conexión a la red.
+          </p>
+        </article>
+
+        <article class="proyectos-beneficio">
+          <span class="proyectos-beneficio-numero">02</span>
+          <h3>Portabilidad</h3>
+          <p>
+            Los archivos pueden almacenarse
+            y transportarse en distintos dispositivos.
+          </p>
+        </article>
+
+        <article class="proyectos-beneficio">
+          <span class="proyectos-beneficio-numero">03</span>
+          <h3>Formato imprimible</h3>
+          <p>
+            Permiten estudiar en papel, sin
+            depender permanentemente de una pantalla.
+          </p>
+        </article>
+
+        <article class="proyectos-beneficio">
+          <span class="proyectos-beneficio-numero">04</span>
+          <h3>Disponibilidad permanente</h3>
+          <p>
+            Pueden conservarse y consultarse
+            posteriormente, sin depender del
+            periodo de acceso a los e-books.
+          </p>
+        </article>
+
+        <article class="proyectos-beneficio">
+          <span class="proyectos-beneficio-numero">05</span>
+          <h3>Información organizada</h3>
+          <p>
+            Presentan contenidos seleccionados
+            y estructurados para facilitar
+            su comprensión y repaso.
+          </p>
+        </article>
+
+        <article class="proyectos-beneficio">
+          <span class="proyectos-beneficio-numero">06</span>
+          <h3>Preparación académica</h3>
+          <p>
+            Funcionan como materiales complementarios
+            para estudiar y preparar evaluaciones.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+    <!-- COMUNIDADES DE APOYO -->
+
+    <section class="proyectos-seccion proyectos-container">
+
+      <span class="proyectos-kicker">
+        03 / Aprendizaje colaborativo
+      </span>
+
+      <h2>
+        Comunidades de apoyo académico
+      </h2>
+
+      <div class="proyectos-comunidad">
+
+        <p>
+          Como complemento a la elaboración
+          de las guías, creé y administro
+          grupos de apoyo académico que reúnen
+          a estudiantes de distintas generaciones
+          y planteles de la Escuela Preparatoria
+          de la Universidad Autónoma del Estado
+          de México.
+        </p>
+
+        <p>
+          Estos espacios, con aproximadamente
+          550 integrantes, facilitan la
+          distribución de recursos, la
+          comunicación académica y el
+          acompañamiento entre estudiantes.
+        </p>
+
+        <div class="proyectos-actividades">
+
+          <article class="proyectos-actividad">
+            <h3>Distribución de materiales</h3>
+            <p>
+              Comparto gratuitamente guías
+              de estudio, compendios y
+              otros recursos educativos.
+            </p>
+          </article>
+
+          <article class="proyectos-actividad">
+            <h3>Atención de dudas</h3>
+            <p>
+              Respondo preguntas relacionadas
+              con contenidos escolares,
+              actividades y evaluaciones.
+            </p>
+          </article>
+
+          <article class="proyectos-actividad">
+            <h3>Difusión de avisos</h3>
+            <p>
+              Comunico fechas, indicaciones
+              y avisos de interés académico
+              para los estudiantes.
+            </p>
+          </article>
+
+          <article class="proyectos-actividad">
+            <h3>Apoyo entre compañeros</h3>
+            <p>
+              Promuevo el intercambio de
+              conocimientos y la colaboración
+              entre integrantes de la comunidad.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- EVIDENCIAS -->
+
+    <section class="proyectos-seccion proyectos-container" id="evidencias">
+
+      <span class="proyectos-kicker">
+        04 / Documentación del proyecto
+      </span>
+
+      <h2>
+        Evidencias de elaboración, distribución e impacto
+      </h2>
+
+      <p class="proyectos-texto">
+        Las siguientes galerías permitirán
+        documentar tanto los materiales
+        elaborados como su distribución
+        y recepción entre estudiantes.
+      </p>
+
+      <!-- GALERÍA 1 -->
+
+      <div class="proyectos-evidencias-grupo">
+
+        <h3>Guías de estudio elaboradas</h3>
+
+        <p>
+          Muestras de portadas, índices
+          y páginas interiores de las guías,
+          para apreciar su estructura,
+          organización y contenido.
+        </p>
+
+        <div class="proyectos-galeria" id="galeria-guias"></div>
+
+        <div
+          class="proyectos-evidencias-vacias"
+          id="vacio-guias"
+        >
+          Las evidencias de las guías
+          se incorporarán próximamente.
+        </div>
+
+      </div>
+
+      <!-- GALERÍA 2 -->
+
+      <div class="proyectos-evidencias-grupo">
+
+        <h3>Distribución y recepción de los materiales</h3>
+
+        <p>
+          Capturas de mensajes donde se
+          comparten materiales académicos,
+          se atienden dudas y se reciben
+          agradecimientos por el apoyo brindado.
+        </p>
+
+        <div class="proyectos-galeria" id="galeria-mensajes"></div>
+
+        <div
+          class="proyectos-evidencias-vacias"
+          id="vacio-mensajes"
+        >
+          Las evidencias de los grupos
+          de apoyo se incorporarán próximamente.
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- GUÍA PDF -->
+
+    <section class="proyectos-seccion proyectos-container">
+
+      <span class="proyectos-kicker">
+        05 / Ejemplo del material
+      </span>
+
+      <h2>
+        Consulta de una guía de estudio
+      </h2>
+
+      <p class="proyectos-texto">
+        Este espacio permitirá consultar
+        una guía completa como muestra
+        del trabajo de selección,
+        organización y presentación
+        de contenidos académicos.
+      </p>
+
+      <article class="proyectos-documento">
+
+        <div class="proyectos-documento-cabecera">
+          <h3>Guía de estudio de muestra</h3>
+
+          <p>
+            Documento académico en formato PDF.
+          </p>
+        </div>
+
+        <div id="proyectos-pdf-contenido">
+
+          <div class="proyectos-pdf-pendiente">
+            <div>
+              <strong>Documento en preparación</strong>
+
+              <p>
+                Aquí se incorporará una guía
+                de estudio completa para su
+                consulta desde el sitio web.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <div
+          class="proyectos-documento-acciones"
+          id="proyectos-pdf-acciones"
+          hidden
+        >
+          <a
+            class="proyectos-boton"
+            id="proyectos-pdf-abrir"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar guía completa
+          </a>
+
+          <a
+            class="proyectos-boton secundario"
+            id="proyectos-pdf-drive"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir en Google Drive
+          </a>
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- VISOR DE EVIDENCIAS -->
+
+  <div
+    class="proyectos-modal"
+    id="proyectos-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Evidencia ampliada"
+    aria-hidden="true"
+  >
+    <div class="proyectos-modal-contenido">
+
+      <button
+        class="proyectos-modal-cerrar"
+        id="proyectos-modal-cerrar"
+        type="button"
+        aria-label="Cerrar evidencia"
+      >
+        &times;
+      </button>
+
+      <img
+        id="proyectos-modal-imagen"
+        src=""
+        alt=""
+      >
+
+      <p id="proyectos-modal-texto"></p>
+
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA COMPARTIDO -->
+  <div id="footer-container"></div>
+
+  <!-- SCRIPT GENERAL -->
+  <script src="script.js"></script>
+
+  <script>
+    "use strict";
+
+    /*
+      ========================================
+      CONFIGURACIÓN DE EVIDENCIAS
+      ========================================
+
+      Cuando tengas las imágenes:
+
+      1. Súbelas a la carpeta assets/.
+      2. Agrega su nombre exacto a los
+         arreglos correspondientes.
+      3. Escribe una descripción breve.
+
+      Ejemplo:
+
+      {
+        archivo: "assets/Guia de Quimica.png",
+        descripcion: "Portada de la guía de Química"
+      }
+
+      Las galerías permanecerán ocultas
+      hasta que se agreguen imágenes.
+    */
+
+    const evidenciasGuias = [
+      // Agregar aquí las imágenes de las guías.
+    ];
+
+    const evidenciasMensajes = [
+      // Agregar aquí las capturas de los mensajes.
+    ];
+
+    /*
+      ========================================
+      CONFIGURACIÓN DEL PDF
+      ========================================
+
+      Coloca el identificador de Google Drive
+      de la guía que quieras mostrar.
+
+      Ejemplo de enlace:
+      https://drive.google.com/file/d/ID/view
+
+      Solo copia el ID dentro de las comillas.
+    */
+
+    const GUIA_PDF_ID = "";
+
+    /*
+      ========================================
+      GENERACIÓN DE GALERÍAS
+      ========================================
+    */
+
+    function crearGaleria(evidencias, galeriaId, vacioId) {
+      const galeria = document.getElementById(galeriaId);
+      const vacio = document.getElementById(vacioId);
+
+      if (!evidencias.length) {
+        galeria.hidden = true;
+        vacio.hidden = false;
+        return;
+      }
+
+      galeria.hidden = false;
+      vacio.hidden = true;
+
+      evidencias.forEach((evidencia) => {
+        const figura = document.createElement("figure");
+        figura.className = "proyectos-evidencia";
+
+        const boton = document.createElement("button");
+        boton.type = "button";
+        boton.setAttribute(
+          "aria-label",
+          "Ampliar: " + evidencia.descripcion
+        );
+
+        const imagen = document.createElement("img");
+        imagen.src = evidencia.archivo;
+        imagen.alt = evidencia.descripcion;
+        imagen.loading = "lazy";
+
+        const descripcion = document.createElement("figcaption");
+        descripcion.textContent = evidencia.descripcion;
+
+        boton.appendChild(imagen);
+        figura.appendChild(boton);
+        figura.appendChild(descripcion);
+        galeria.appendChild(figura);
+
+        boton.addEventListener("click", () => {
+          abrirModal(evidencia);
+        });
+      });
+    }
+
+    /*
+      ========================================
+      VISOR DE IMÁGENES
+      ========================================
+    */
+
+    const modal = document.getElementById("proyectos-modal");
+    const modalImagen = document.getElementById(
+      "proyectos-modal-imagen"
+    );
+    const modalTexto = document.getElementById(
+      "proyectos-modal-texto"
+    );
+    const cerrarModalBoton = document.getElementById(
+      "proyectos-modal-cerrar"
+    );
+
+    let focoAnterior = null;
+
+    function abrirModal(evidencia) {
+      focoAnterior = document.activeElement;
+
+      modalImagen.src = evidencia.archivo;
+      modalImagen.alt = evidencia.descripcion;
+      modalTexto.textContent = evidencia.descripcion;
+
+      modal.classList.add("abierto");
+      modal.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+      cerrarModalBoton.focus();
+    }
+
+    function cerrarModal() {
+      modal.classList.remove("abierto");
+      modal.setAttribute("aria-hidden", "true");
+
+      modalImagen.removeAttribute("src");
+      document.body.style.overflow = "";
+
+      if (focoAnterior) {
+        focoAnterior.focus();
+      }
+    }
+
+    cerrarModalBoton.addEventListener("click", cerrarModal);
+
+    modal.addEventListener("click", (evento) => {
+      if (evento.target === modal) {
+        cerrarModal();
+      }
+    });
+
+    document.addEventListener("keydown", (evento) => {
+      if (
+        evento.key === "Escape" &&
+        modal.classList.contains("abierto")
+      ) {
+        cerrarModal();
+      }
+    });
+
+    crearGaleria(
+      evidenciasGuias,
+      "galeria-guias",
+      "vacio-guias"
+    );
+
+    crearGaleria(
+      evidenciasMensajes,
+      "galeria-mensajes",
+      "vacio-mensajes"
+    );
+
+    /*
+      ========================================
+      VISOR DE GUÍA PDF
+      ========================================
+    */
+
+    function configurarPDF() {
+      const id = GUIA_PDF_ID.trim();
+
+      if (!id) return;
+
+      const contenido = document.getElementById(
+        "proyectos-pdf-contenido"
+      );
+
+      const acciones = document.getElementById(
+        "proyectos-pdf-acciones"
+      );
+
+      const abrir = document.getElementById(
+        "proyectos-pdf-abrir"
+      );
+
+      const drive = document.getElementById(
+        "proyectos-pdf-drive"
+      );
+
+      const enlace =
+        "https://drive.google.com/file/d/" +
+        encodeURIComponent(id) +
+        "/view";
+
+      const vista =
+        "https://drive.google.com/file/d/" +
+        encodeURIComponent(id) +
+        "/preview";
+
+      const contenedor = document.createElement("div");
+      contenedor.className = "proyectos-pdf-visor";
+
+      const iframe = document.createElement("iframe");
+      iframe.src = vista;
+      iframe.title = "Guía de estudio de muestra";
+      iframe.setAttribute("allowfullscreen", "");
+
+      contenedor.appendChild(iframe);
+      contenido.replaceChildren(contenedor);
+
+      abrir.href = enlace;
+      drive.href = enlace;
+      acciones.hidden = false;
+    }
+
+    configurarPDF();
+  </script>
+
+</body>
+</html>
