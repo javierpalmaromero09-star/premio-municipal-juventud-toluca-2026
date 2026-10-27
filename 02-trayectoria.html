@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta name="theme-color" content="#762d40">
+
   <meta
     name="description"
     content="Formación académica, reconocimientos, distinciones, cursos y certificaciones de Javier Palma Romero, aspirante al Premio Municipal de la Juventud Toluca 2026."
   >
-
-  <meta name="theme-color" content="#762d40">
 
   <title>Trayectoria académica | Javier Palma Romero — PMJ Toluca 2026</title>
 
@@ -18,19 +18,19 @@
 
   <style>
     /* ==========================================
-       VARIABLES Y ESTRUCTURA
+       ESTILOS GENERALES
     ========================================== */
 
     .trayectoria {
-      --tray-vino: #762d40;
-      --tray-vino-oscuro: #592030;
-      --tray-texto: #29252a;
-      --tray-gris: #716970;
-      --tray-borde: #e6dedb;
-      --tray-blanco: #ffffff;
-      --tray-fondo: #f8f5f3;
+      --vino: #762d40;
+      --vino-oscuro: #592030;
+      --texto: #29252a;
+      --gris: #716970;
+      --borde: #e6dedb;
+      --papel: #f6f3ed;
+      --blanco: #fff;
 
-      color: var(--tray-texto);
+      color: var(--texto);
       padding-bottom: 90px;
     }
 
@@ -50,14 +50,14 @@
     ========================================== */
 
     .trayectoria-hero {
-      padding: clamp(55px, 7vw, 95px) 0 55px;
-      border-bottom: 1px solid var(--tray-borde);
+      padding: clamp(55px, 7vw, 95px) 0 58px;
+      border-bottom: 1px solid var(--borde);
     }
 
     .trayectoria-eyebrow {
       display: block;
       margin-bottom: 17px;
-      color: var(--tray-vino);
+      color: var(--vino);
       font: 700 12px/1.5 Arial, sans-serif;
       letter-spacing: .13em;
       text-transform: uppercase;
@@ -73,7 +73,7 @@
     .trayectoria-hero p {
       max-width: 810px;
       margin: 0;
-      color: var(--tray-gris);
+      color: var(--gris);
       font-size: 17px;
       line-height: 1.85;
     }
@@ -95,7 +95,7 @@
     .trayectoria-description {
       max-width: 850px;
       margin: 0 0 30px;
-      color: var(--tray-gris);
+      color: var(--gris);
       line-height: 1.85;
     }
 
@@ -106,7 +106,7 @@
     .trayectoria-category h3 {
       margin: 0 0 21px;
       padding-bottom: 15px;
-      border-bottom: 1px solid var(--tray-borde);
+      border-bottom: 1px solid var(--borde);
       font: 400 clamp(23px, 2.7vw, 30px)/1.3 Georgia, serif;
     }
 
@@ -126,9 +126,9 @@
       flex-direction: column;
       min-width: 0;
       overflow: hidden;
-      border: 1px solid var(--tray-borde);
+      background: var(--blanco);
+      border: 1px solid var(--borde);
       border-radius: 12px;
-      background: var(--tray-blanco);
       box-shadow: 0 6px 25px rgba(40, 22, 29, .035);
     }
 
@@ -140,7 +140,7 @@
     .trayectoria-date {
       display: block;
       margin-bottom: 12px;
-      color: var(--tray-vino);
+      color: var(--vino);
       font: 700 12px/1.5 Arial, sans-serif;
     }
 
@@ -153,7 +153,7 @@
 
     .trayectoria-card p {
       margin: 0;
-      color: var(--tray-gris);
+      color: var(--gris);
       font-size: 14px;
       line-height: 1.85;
     }
@@ -164,7 +164,7 @@
 
     .trayectoria-card .institution {
       margin-bottom: 11px;
-      color: var(--tray-texto);
+      color: var(--texto);
       font-weight: 700;
     }
 
@@ -179,23 +179,23 @@
     .trayectoria-evidence-label {
       display: block;
       margin-bottom: 12px;
-      color: var(--tray-vino);
+      color: var(--vino);
       font: 700 11px/1.5 Arial, sans-serif;
       letter-spacing: .11em;
       text-transform: uppercase;
     }
 
     /* ==========================================
-       VISTA PREVIA DE PDF
+       PDF INTEGRADOS
     ========================================== */
 
     .trayectoria-pdf-preview {
       position: relative;
       height: 330px;
       overflow: hidden;
-      border: 1px solid var(--tray-borde);
+      border: 1px solid var(--borde);
       border-radius: 8px;
-      background: var(--tray-fondo);
+      background: #f8f5f3;
     }
 
     .trayectoria-pdf-preview iframe {
@@ -220,7 +220,7 @@
       right: 12px;
       bottom: 12px;
       padding: 9px 12px;
-      color: white;
+      color: #fff;
       background: rgba(48, 28, 37, .92);
       border-radius: 5px;
       font: 700 12px Arial, sans-serif;
@@ -237,9 +237,9 @@
       width: 100%;
       padding: 12px;
       overflow: hidden;
-      border: 1px solid var(--tray-borde);
+      border: 1px solid var(--borde);
       border-radius: 8px;
-      background: var(--tray-fondo);
+      background: #f8f5f3;
       cursor: zoom-in;
     }
 
@@ -260,7 +260,7 @@
       right: 12px;
       bottom: 12px;
       padding: 9px 12px;
-      color: white;
+      color: #fff;
       background: rgba(48, 28, 37, .92);
       border-radius: 5px;
       font: 700 12px Arial, sans-serif;
@@ -284,9 +284,9 @@
       justify-content: center;
       min-height: 43px;
       padding: 10px 16px;
-      border: 1px solid var(--tray-vino);
+      border: 1px solid var(--vino);
       border-radius: 6px;
-      background: var(--tray-vino);
+      background: var(--vino);
       color: #fff;
       text-decoration: none;
       font: 700 13px/1.4 Arial, sans-serif;
@@ -294,13 +294,13 @@
     }
 
     .trayectoria-button:hover {
-      background: var(--tray-vino-oscuro);
+      background: var(--vino-oscuro);
       color: white;
     }
 
     .trayectoria-button.outline {
       background: transparent;
-      color: var(--tray-vino);
+      color: var(--vino);
     }
 
     .trayectoria-button.outline:hover {
@@ -310,27 +310,27 @@
     .trayectoria-button:focus-visible,
     .trayectoria-photo-button:focus-visible,
     .trayectoria-pdf-overlay:focus-visible {
-      outline: 3px solid var(--tray-vino);
+      outline: 3px solid var(--vino);
       outline-offset: 3px;
     }
 
     /* ==========================================
-       EVIDENCIA PENDIENTE
+       EVIDENCIAS PENDIENTES
     ========================================== */
 
     .trayectoria-pending {
-      padding: 24px;
+      padding: 25px;
       border: 1px dashed #d9c9cd;
       border-radius: 8px;
       background: #faf8f6;
-      color: var(--tray-gris);
+      color: var(--gris);
       font-size: 13px;
       line-height: 1.75;
       text-align: center;
     }
 
     /* ==========================================
-       VISOR AMPLIADO DE PDF
+       VISOR PDF
     ========================================== */
 
     .trayectoria-pdf-modal {
@@ -378,7 +378,7 @@
 
     .trayectoria-modal-bar button:hover,
     .trayectoria-modal-bar a:hover {
-      background: rgba(255,255,255,.12);
+      background: rgba(255, 255, 255, .12);
       color: white;
     }
 
@@ -392,7 +392,7 @@
     }
 
     /* ==========================================
-       VISOR AMPLIADO DE IMÁGENES
+       VISOR DE IMÁGENES
     ========================================== */
 
     .trayectoria-image-modal {
@@ -664,7 +664,7 @@
 
   </main>
 
-  <!-- PIE DE PÁGINA COMPARTIDO -->
+  <!-- PIE DE PÁGINA -->
   <div id="footer-container"></div>
 
   <!-- VISOR PDF AMPLIADO -->
@@ -710,7 +710,7 @@
 
   </div>
 
-  <!-- VISOR FOTOGRÁFICO -->
+  <!-- VISOR DE IMÁGENES -->
 
   <div
     id="image-modal"
@@ -736,34 +736,33 @@
 
   </div>
 
-  <!-- SCRIPT GENERAL -->
   <script src="script.js"></script>
 
   <script>
     "use strict";
 
     /*
-      ==========================================
-      CONFIGURACIÓN GENERAL
-      ==========================================
+      ========================================
+      CONFIGURACIÓN DE FOTOGRAFÍAS
+      ========================================
 
-      Las fotografías se encuentran en:
+      Todas las imágenes están en:
 
       assets/
 
-      Los PDF se muestran directamente en
-      cada tarjeta mediante Google Drive.
+      Las fotografías pendientes aparecerán
+      automáticamente cuando se suban
+      con el nombre indicado.
 
-      Al hacer clic sobre la vista previa
-      se abre el visor ampliado.
+      No es necesario modificar el código.
     */
 
     const CARPETA_FOTOS = "assets/";
 
     /*
-      ==========================================
+      ========================================
       FORMACIÓN ACADÉMICA
-      ==========================================
+      ========================================
     */
 
     const formacion = [
@@ -798,9 +797,9 @@
     ];
 
     /*
-      ==========================================
+      ========================================
       RECONOCIMIENTOS
-      ==========================================
+      ========================================
     */
 
     const reconocimientos = {
@@ -833,7 +832,8 @@
           titulo: "Mejor aprovechamiento académico de la generación 2015–2021",
           institucion: "Escuela Primaria «Daniel Delgadillo»",
           descripcion: "Reconocimiento por el mejor aprovechamiento académico de mi generación de primaria.",
-          pendiente: "Evidencia documental pendiente de incorporar."
+          imagen: "Reconocimiento mejor promedio primaria.jpg",
+          pendiente: true
         },
         {
           titulo: "Seleccionado para integrar el Club Nacional de Excelencia Académica «Niños de Oro»",
@@ -879,7 +879,8 @@
         {
           titulo: "Primer lugar en el 1er Rally de Conocimientos de Cultura Digital",
           institucion: "Plantel «Cuauhtémoc»",
-          descripcion: "Reconocimiento obtenido por desempeño sobresaliente en competencias relacionadas con cultura digital y tecnologías de la información."
+          descripcion: "Reconocimiento obtenido por desempeño sobresaliente en competencias relacionadas con cultura digital y tecnologías de la información.",
+          imagen: "1er lugar en el rally interno de cultura digital.png"
         },
         {
           titulo: "Primer lugar en la fase de Selección Interna para la Olimpiada Estatal de Química",
@@ -897,7 +898,8 @@
           titulo: "Segundo lugar en el Rally de las Matemáticas 2026",
           institucion: "Plantel «Cuauhtémoc»",
           descripcion: "Reconocimiento obtenido por desempeño sobresaliente en competencias matemáticas.",
-          pendiente: "Constancia de Matemáticas pendiente de incorporar."
+          imagen: "Constancia segundo lugar rally matematicas 2026.jpg",
+          pendiente: true
         },
         {
           titulo: "Segundo lugar en el Concurso de Oratoria «El poder de la palabra en la actualidad»",
@@ -921,9 +923,9 @@
     };
 
     /*
-      ==========================================
+      ========================================
       CURSOS Y CERTIFICACIONES
-      ==========================================
+      ========================================
     */
 
     const cursos = {
@@ -968,7 +970,7 @@
       comunicacion: [
         {
           titulo: "Curso-Taller de Oratoria",
-          pendiente: "Constancia pendiente de incorporar."
+          drive: "1D3M6a2pXlmmFWYLZ1zebE1GKrn3xpMbh"
         },
         {
           titulo: "Lectura y redacción de textos académicos",
@@ -1012,15 +1014,17 @@
     };
 
     /*
-      ==========================================
+      ========================================
       FUNCIONES AUXILIARES
-      ==========================================
+      ========================================
     */
 
     function crearElemento(tag, clase, texto) {
       const el = document.createElement(tag);
 
-      if (clase) el.className = clase;
+      if (clase) {
+        el.className = clase;
+      }
 
       if (texto !== undefined && texto !== null) {
         el.textContent = texto;
@@ -1043,9 +1047,9 @@
     }
 
     /*
-      ==========================================
+      ========================================
       VISORES
-      ==========================================
+      ========================================
     */
 
     const pdfModal = document.getElementById("pdf-modal");
@@ -1073,7 +1077,7 @@
 
       pdfTitle.textContent = titulo;
       pdfFrame.src = enlaceDrive(id, "preview");
-      pdfLink.href = enlaceDrive(id, "view");
+      pdfLink.href = enlaceDrive(id);
 
       pdfModal.classList.add("open");
       pdfModal.setAttribute("aria-hidden", "false");
@@ -1158,18 +1162,9 @@
     });
 
     /*
-      ==========================================
+      ========================================
       VISTA PREVIA DE PDF
-      ==========================================
-
-      Cada documento se muestra mediante
-      un iframe de Google Drive.
-
-      El usuario puede ver la primera página
-      sin necesidad de abrir otra pestaña.
-
-      Al pulsar sobre la vista previa,
-      se abre el documento ampliado.
+      ========================================
     */
 
     function crearVistaPDF(item) {
@@ -1263,9 +1258,16 @@
     }
 
     /*
-      ==========================================
-      VISTA PREVIA DE FOTOGRAFÍAS
-      ==========================================
+      ========================================
+      FOTOGRAFÍAS
+      ========================================
+
+      Si una fotografía aún no está subida,
+      se muestra un aviso provisional.
+
+      Cuando el archivo aparezca en assets/
+      con el nombre configurado, se cargará
+      automáticamente al visitar la página.
     */
 
     function crearVistaFoto(item) {
@@ -1305,7 +1307,9 @@
           crearElemento(
             "div",
             "trayectoria-pending",
-            "Fotografía no disponible temporalmente."
+            item.pendiente
+              ? "Evidencia próximamente disponible."
+              : "Fotografía no disponible temporalmente."
           )
         );
       });
@@ -1330,9 +1334,9 @@
     }
 
     /*
-      ==========================================
-      TARJETAS
-      ==========================================
+      ========================================
+      CREACIÓN DE TARJETAS
+      ========================================
     */
 
     function crearTarjeta(item) {
@@ -1390,30 +1394,15 @@
         card.appendChild(crearVistaPDF(item));
       } else if (item.imagen) {
         card.appendChild(crearVistaFoto(item));
-      } else if (item.pendiente) {
-        const evidence = crearElemento(
-          "div",
-          "trayectoria-evidence"
-        );
-
-        evidence.appendChild(
-          crearElemento(
-            "div",
-            "trayectoria-pending",
-            item.pendiente
-          )
-        );
-
-        card.appendChild(evidence);
       }
 
       return card;
     }
 
     /*
-      ==========================================
+      ========================================
       RENDERIZACIÓN
-      ==========================================
+      ========================================
     */
 
     function renderizar(id, datos) {
@@ -1431,17 +1420,17 @@
     }
 
     /*
-      ==========================================
-      MOSTRAR FORMACIÓN
-      ==========================================
+      ========================================
+      MOSTRAR FORMACIÓN ACADÉMICA
+      ========================================
     */
 
     renderizar("formacion-grid", formacion);
 
     /*
-      ==========================================
+      ========================================
       MOSTRAR RECONOCIMIENTOS
-      ==========================================
+      ========================================
     */
 
     renderizar(
@@ -1465,9 +1454,9 @@
     );
 
     /*
-      ==========================================
+      ========================================
       MOSTRAR CURSOS
-      ==========================================
+      ========================================
     */
 
     renderizar(
