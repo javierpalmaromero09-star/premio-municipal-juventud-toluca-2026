@@ -108,6 +108,12 @@
       border: 1px solid var(--test-borde);
       border-radius: 11px;
       background: var(--test-blanco);
+      transition: border-color .2s, transform .2s;
+    }
+
+    .test-card:hover {
+      border-color: #cbaeb6;
+      transform: translateY(-2px);
     }
 
     .test-number {
@@ -182,7 +188,7 @@
 
     .test-pdf-viewer {
       width: 100%;
-      height: min(75vh, 780px);
+      height: min(80vh, 850px);
       min-height: 430px;
       background: #eee9e7;
     }
@@ -195,7 +201,7 @@
       background: white;
     }
 
-    /* ESPACIO PREPARADO PARA PDF */
+    /* MENSAJE DE RESPALDO */
 
     .test-pdf-pending {
       display: flex;
@@ -230,6 +236,8 @@
       font-size: 14px;
       line-height: 1.75;
     }
+
+    /* BOTONES */
 
     .test-document-actions {
       display: flex;
@@ -312,12 +320,34 @@
         min-height: 360px;
       }
     }
+
+    @media (max-width: 420px) {
+      .test-container {
+        width: min(100% - 28px, 1100px);
+      }
+
+      .test-document-header {
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .test-document-icon {
+        flex-basis: 46px;
+        width: 46px;
+        height: 55px;
+      }
+
+      .test-document-info h3 {
+        font-size: 19px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
   <!-- ENCABEZADO COMPARTIDO -->
+
   <div id="header-container"></div>
 
   <main class="testimonios">
@@ -336,10 +366,10 @@
         <p class="test-intro">
           Los testimonios de quienes han compartido
           experiencias académicas, proyectos y espacios
-          de participación conmigo permiten conocer
-          distintas perspectivas sobre mi desempeño,
-          liderazgo, compañerismo y contribución
-          a la comunidad educativa.
+          de participación permiten conocer distintas
+          perspectivas sobre el desempeño, liderazgo,
+          compañerismo y contribución a la comunidad
+          educativa de Javier Palma Romero.
         </p>
 
       </div>
@@ -353,13 +383,13 @@
         Perspectivas de la comunidad
       </span>
 
-      <h2>Cuatro perspectivas de mi trayectoria</h2>
+      <h2>Cuatro perspectivas de una trayectoria</h2>
 
       <p class="test-section-description">
         El compendio testimonial se organiza en cuatro
         categorías que reúnen experiencias y valoraciones
         de personas vinculadas con distintas etapas
-        y actividades de mi formación.
+        y actividades de su formación.
       </p>
 
       <div class="test-grid">
@@ -370,10 +400,10 @@
           <h3>Liderazgo y compañerismo</h3>
 
           <p>
-            Testimonios de amigos y compañeros
-            sobre mi responsabilidad, colaboración,
-            apoyo cotidiano y participación como
-            representante estudiantil.
+            Testimonios de amigos y compañeros sobre
+            su responsabilidad, colaboración, apoyo
+            cotidiano y participación como representante
+            estudiantil.
           </p>
         </article>
 
@@ -383,9 +413,9 @@
           <h3>Impacto del apoyo académico</h3>
 
           <p>
-            Experiencias de estudiantes que han
-            utilizado mis guías de estudio,
-            compendios y materiales educativos.
+            Experiencias de estudiantes que han utilizado
+            sus guías de estudio, compendios y materiales
+            educativos.
           </p>
         </article>
 
@@ -395,9 +425,8 @@
           <h3>Desempeño y trayectoria académica</h3>
 
           <p>
-            Valoraciones de profesores sobre
-            mi dedicación, constancia,
-            participación, rendimiento
+            Valoraciones de profesores sobre su dedicación,
+            constancia, participación, rendimiento
             e iniciativa académica.
           </p>
         </article>
@@ -408,10 +437,9 @@
           <h3>Contribución institucional</h3>
 
           <p>
-            Testimonios de autoridades y
-            responsables de proyectos acerca
-            de mi compromiso, liderazgo
-            y participación institucional.
+            Testimonios de autoridades y responsables
+            de proyectos acerca de su compromiso,
+            liderazgo y participación institucional.
           </p>
         </article>
 
@@ -433,10 +461,11 @@
       <h2>Compendio de testimonios</h2>
 
       <p class="test-section-description">
-        Las cartas, declaraciones, fotografías
-        y demás evidencias autorizadas se
-        reunirán en un documento PDF para
-        facilitar su lectura y consulta integral.
+        El siguiente documento reúne cartas, declaraciones,
+        fotografías y otras evidencias testimoniales que
+        permiten conocer las experiencias y valoraciones
+        de integrantes de la comunidad educativa respecto
+        a su trayectoria, participación y contribuciones.
       </p>
 
       <article class="test-document">
@@ -465,7 +494,7 @@
           <div class="test-document-info">
             <h3>
               Testimonios y valoraciones sobre
-              mi trayectoria
+              una trayectoria
             </h3>
 
             <p>
@@ -476,7 +505,7 @@
 
         </div>
 
-        <!-- VISOR O MENSAJE TEMPORAL -->
+        <!-- VISOR PDF -->
 
         <div id="test-document-content">
 
@@ -497,12 +526,11 @@
               <path d="M8 17h8"></path>
             </svg>
 
-            <strong>Compendio en preparación</strong>
+            <strong>Cargando compendio testimonial</strong>
 
             <p>
-              El documento reunirá los testimonios
-              autorizados de compañeros, estudiantes,
-              docentes y autoridades.
+              El documento se encuentra disponible
+              para su consulta en esta sección.
             </p>
 
           </div>
@@ -514,6 +542,7 @@
           id="test-document-actions"
           hidden
         >
+
           <a
             class="test-button"
             id="test-open-pdf"
@@ -533,14 +562,15 @@
           >
             Abrir en Google Drive
           </a>
+
         </div>
 
       </article>
 
       <p class="test-document-note">
-        Los testimonios se incorporarán con las
-        autorizaciones correspondientes y respetando
-        su contenido original.
+        Los testimonios se incorporan respetando su
+        contenido original y las autorizaciones
+        correspondientes para su difusión.
       </p>
 
     </section>
@@ -548,10 +578,14 @@
   </main>
 
   <!-- PIE DE PÁGINA COMPARTIDO -->
+
   <div id="footer-container"></div>
 
   <!-- SCRIPT GENERAL DEL SITIO -->
+
   <script src="script.js"></script>
+
+  <!-- CONFIGURACIÓN DEL COMPENDIO TESTIMONIAL -->
 
   <script>
     "use strict";
@@ -560,28 +594,13 @@
       ========================================
       CONFIGURACIÓN DEL DOCUMENTO TESTIMONIAL
       ========================================
-
-      Cuando el PDF esté en Google Drive:
-
-      1. Abre el archivo.
-      2. Copia el enlace para compartir.
-      3. Localiza su identificador.
-
-      Ejemplo:
-
-      https://drive.google.com/file/d/
-      IDENTIFICADOR_DEL_DOCUMENTO/view
-
-      4. Coloca el identificador entre
-         las comillas de la variable siguiente.
-
-      Mientras esté vacío, la página
-      mostrará "Compendio en preparación".
     */
 
-    const TESTIMONIOS_PDF_ID = "";
+    const TESTIMONIOS_PDF_ID =
+      "1yQ4SlivkxXKr7bVtTKue2Nw8DBaGlK8q";
 
     function configurarVisorTestimonios() {
+
       const id = TESTIMONIOS_PDF_ID.trim();
 
       if (!id) {
@@ -608,6 +627,15 @@
           "test-open-drive"
         );
 
+      if (
+        !contenedor ||
+        !acciones ||
+        !botonPDF ||
+        !botonDrive
+      ) {
+        return;
+      }
+
       const vistaPrevia =
         "https://drive.google.com/file/d/" +
         encodeURIComponent(id) +
@@ -629,9 +657,11 @@
       iframe.title =
         "Compendio de testimonios de Javier Palma Romero";
 
+      iframe.setAttribute("allowfullscreen", "");
+
       iframe.setAttribute(
-        "allowfullscreen",
-        ""
+        "loading",
+        "lazy"
       );
 
       visor.appendChild(iframe);
@@ -639,12 +669,14 @@
       contenedor.replaceChildren(visor);
 
       botonPDF.href = enlaceOriginal;
+
       botonDrive.href = enlaceOriginal;
 
       acciones.hidden = false;
     }
 
     configurarVisorTestimonios();
+
   </script>
 
 </body>
