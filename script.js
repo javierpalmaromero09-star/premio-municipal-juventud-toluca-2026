@@ -13,7 +13,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!container) return;
 
     try {
-      const response = await fetch(path);
+      // Evita reutilizar versiones anteriores guardadas en caché.
+      const response = await fetch(`${path}?v=${Date.now()}`, {
+        cache: "no-store"
+      });
 
       if (!response.ok) {
         throw new Error(`No se pudo cargar ${path}: ${response.status}`);
